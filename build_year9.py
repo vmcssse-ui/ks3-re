@@ -239,6 +239,122 @@ WEEKS = [
     ]),
 ]
 
+
+# ------------------------------------------------ what each lesson is about
+# Written to the lesson titles and the unit they sit in — teaching drafts,
+# not taken from the decks themselves.
+SUMMARIES = {
+ 1: "In the UK marriage is a legal contract before it is a religious one. Civil "
+    "ceremonies carry no religious content, and since 2014 same-sex couples have "
+    "been able to marry. Humanists hold their own ceremonies, built on the "
+    "couple's promises rather than on God.",
+ 2: "What sex is for, and who decides. Christian teaching gives it two purposes — "
+    "creating a family, and uniting a couple — and places it inside marriage. "
+    "Humanists judge by consent, honesty and whether anyone is harmed.",
+ 3: "Choosing when, and whether, to have children. The Roman Catholic Church "
+    "allows only natural methods, teaching that every act must stay open to life. "
+    "Most Protestants and Humanists accept contraception as responsible "
+    "parenthood.",
+ 4: "First checkpoint of the year: the key words from marriage, sexual "
+    "relationships and family planning, then an “explain two” question. The DIT "
+    "sheet is worked in the same lesson.",
+ 5: "Everyone is of equal worth — for Christians because all are made in the image "
+    "of God, for Humanists because we share one humanity. The Equality Act 2010 "
+    "turns that principle into law.",
+ 6: "Why marriage is holy for Christians: a sacrament and a covenant made before "
+    "God, not only a contract. The second deck teaches the structure of a 12-mark "
+    "answer, and is worth coming back to all year.",
+ 7: "Denominations disagree. Catholics tie sex to a sacramental marriage open to "
+    "life; the Church of England accepts contraception and, for many members, "
+    "faithful same-sex relationships; Quakers judge by love and faithfulness.",
+ 8: "End of Unit 1: marriage, sexual relationships, family planning and equality, "
+    "with Christian and non-religious views weighed against each other. The "
+    "families lesson and its homework follow the paper.",
+ 9: "What families need, and who provides it — the church, the state and the wider "
+    "community. Christians point to the family as God-given; Humanists to "
+    "wellbeing and mutual support.",
+10: "Contraception again, this time from the Christian side: Humanae Vitae against "
+    "Anglican acceptance, and what responsible parenthood means when health or "
+    "poverty are involved.",
+11: "Checkpoint on families and family planning. Paper, then a DIT deck in the "
+    "same lesson; the homework is a human rights poster, which opens the justice "
+    "material to come.",
+12: "Mark 10:9 says what God has joined together must not be separated. Catholics "
+    "allow an annulment but not a divorce; Anglicans and most Protestants allow "
+    "divorce and, in some cases, remarriage in church.",
+13: "Ephesians has been read as giving the husband headship and the wife a "
+    "subordinate role. Most Christians today, and Humanists, argue instead for "
+    "equal partnership — shared money, shared parenting, shared decisions.",
+14: "Prejudice is the attitude, discrimination the act. Unequal pay, the "
+    "suffragettes who won the vote by protest, and the churches that do and do not "
+    "ordain women.",
+15: "End of Unit 2, and two papers: marriage, divorce, equality at home and gender "
+    "discrimination. Each paper has its own DIT deck. The justice lesson that "
+    "follows opens Unit 3.",
+16: "What crime is, and why people commit it. Humanists look at the causes — "
+    "poverty, addiction, poor education — and argue that reducing those prevents "
+    "more crime than punishment alone. The justice deck sets out the vocabulary.",
+17: "Rights you hold simply for being human, set out in the 1948 Universal "
+    "Declaration and defended by the United Nations. Freedom of expression, the "
+    "right to a fair trial, and what happens when two rights collide.",
+18: "The five aims of punishment — protection, retribution, deterrence, "
+    "reformation and reparation. Which one a society puts first tells you what it "
+    "thinks punishment is actually for.",
+19: "Checkpoint on crime, human rights and attitudes to punishment. Paper first, "
+    "then the DIT deck in the same lesson.",
+20: "Offender and victim meet, so the offender hears the harm they caused and "
+    "agrees how to put it right. Lower reoffending, and victims who feel heard — "
+    "but it does not suit every crime.",
+21: "Moral evil comes from human choice; natural evil comes from the world itself. "
+    "Both raise the same question: how could a good, all-powerful God allow this "
+    "much suffering?",
+22: "End of Unit 3: justice, punishment, rehabilitation and rights from "
+    "non-religious perspectives, closing with a 12-mark evaluation. The DIT deck "
+    "follows in the next lesson.",
+23: "Allah is both perfectly just and endlessly merciful. Muslims are told to "
+    "stand firm for justice even when it goes against themselves, and Shari'ah "
+    "sets out what that means in law.",
+24: "What Islam counts as crime and why — offences against God, against other "
+    "people and against property — with the harm done to the whole ummah kept in "
+    "view.",
+25: "Hadd offences carry fixed punishments named in the Qur'an. The standards of "
+    "evidence required are extremely high, which is why many Muslims argue they "
+    "should almost never apply in practice.",
+26: "Muslim views on what a punishment should achieve, set beside the "
+    "non-religious aims met in Unit 3. Mercy and deterrence pulling in opposite "
+    "directions.",
+27: "Checkpoint on Islam and the law: justice, crime, the hadd and attitudes to "
+    "punishment.",
+28: "Protection, deterrence, retribution and reform, judged against Islamic "
+    "teaching about mercy and about what victims are owed.",
+29: "End of Unit 4: law, civil rights, perpetrators and victims, closing with the "
+    "12-mark question on protecting society against reforming offenders. A "
+    "questions sheet and a DIT deck come with it.",
+30: "How prisoners are treated is a test of a society's values — conditions, a "
+    "fair trial, legal representation. Islam requires punishment to be just, and "
+    "never cruel.",
+31: "The Qur'an permits the death penalty for murder, but praises those who "
+    "forgive instead. Set that against wrongful convictions, the sanctity of life, "
+    "and the evidence on whether it deters.",
+32: "Giving up the right to revenge. Allah is described as the Most Merciful; "
+    "Jesus forgave from the cross. Forgiving someone is not the same as cancelling "
+    "their punishment.",
+33: "Does God exist, and what would count as evidence either way? Arguments from "
+    "design and from cause, set against the problem of suffering — the bridge "
+    "into GCSE.",
+34: "The five moves you need on the relationships half of the paper: define the "
+    "key words, name a teaching, give both sides, weigh them against each other, "
+    "and conclude.",
+35: "The same five moves on the crime and punishment half: key words, a teaching "
+    "or principle, both sides, weighed, and a conclusion that follows from the "
+    "argument.",
+36: "Two sections — marriage and relationships, then Islam and law. Each has a "
+    "key-word match, an “explain two” worth 4 marks, and a 12-mark evaluation.",
+37: "The paper comes back. Correct the key words, rebuild the weaker 4-mark point, "
+    "find the level you reached on the 12-mark ladder, and write two paragraphs at "
+    "the level above it.",
+}
+
 COMPANION = "Y9 Student Companion.docx"
 LEARNING_JOURNEY = "RESOURCES/YEAR 9 LEARNING JOURNEY.docx"
 COMPANION_WEB = "https://claude.ai/code/artifact/1f4463ac-d0e5-4d2d-8ad9-4765191b821c"
@@ -341,7 +457,10 @@ nav.jump a:focus-visible,button:focus-visible{outline:2px solid var(--plum); out
 .week .main{padding:16px 20px 18px}
 .week .head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
 .week h3{font-size:20px}
-.week .note{color:var(--ink-2); font-size:14px; margin:8px 0 0; max-width:74ch}
+.week .summary{color:var(--ink-2); font-size:15px; margin:9px 0 0; max-width:76ch}
+.week .note{color:var(--ink-3); font-size:13.5px; margin:7px 0 0; max-width:76ch}
+.week .note b{color:var(--brass); font-size:10px; letter-spacing:.12em;
+  text-transform:uppercase; margin-right:6px}
 .res{display:flex; flex-wrap:wrap; gap:8px; margin-top:13px}
 
 .btn{display:inline-flex; align-items:center; gap:7px; text-decoration:none;
@@ -450,7 +569,9 @@ def render():
         for w in weeks:
             klabel, kcls = KINDS[w["kind"]]
             res = "".join(btn(lab, sp(rel), ICON.get(t, "")) for lab, t, rel in w["res"])
-            note = f'<p class="note">{E(w["note"])}</p>' if w["note"] else ""
+            summ = SUMMARIES.get(w["n"], "")
+            summ = f'<p class="summary">{E(summ)}</p>' if summ else ""
+            note = f'<p class="note"><b>Note</b> {E(w["note"])}</p>' if w["note"] else ""
             body.append(f"""
 <article class="week" id="w{w['n']}" data-unit="{u['key']}" data-kind="{w['kind']}">
   <div class="num"><b>{w['n']}</b><span>Week</span></div>
@@ -463,7 +584,7 @@ def render():
         <button type="button" data-copy="w{w['n']}">copy link</button>
       </span>
     </div>
-    {note}
+    {summ}{note}
     <div class="res">{res}</div>
   </div>
 </article>""")

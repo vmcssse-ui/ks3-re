@@ -1,0 +1,562 @@
+{
+  "unit": 1,
+  "name": "Beliefs",
+  "icon": "help-circle",
+  "big_question": "What do people believe, and how do they show those beliefs?",
+  "glossary": [
+    {"w": "Religious Education", "d": "the study of religious beliefs, behaviours and institutions"},
+    {"w": "Belief", "d": "an idea that someone accepts as true or real"},
+    {"w": "Fact", "d": "a statement or idea that can be proven true"},
+    {"w": "Opinion", "d": "an idea that expresses how someone feels about something"},
+    {"w": "Theism", "d": "the belief that there is a God"},
+    {"w": "Atheist", "d": "a person who does not believe in God"},
+    {"w": "Agnostic", "d": "a person who is not sure God exists"},
+    {"w": "Holy book", "d": "a religious document with teachings about God"},
+    {"w": "Place of worship", "d": "a place where religious people meet in their religion"},
+    {"w": "Jummah prayer", "d": "a prayer Muslims practice together on Friday afternoons"},
+    {"w": "Lord's Prayer", "d": "a prayer taught by Jesus to his followers"},
+    {"w": "Artefact", "d": "an object with religious, cultural or personal significance"},
+    {"w": "Prayer mat", "d": "a mat Muslims use so they can pray in a clean place"},
+    {"w": "Sign", "d": "something that indicates a fact or information"},
+    {"w": "Symbol", "d": "something that represents or stands for something"},
+    {"w": "Crucifix", "d": "a cross with an image of Jesus on it"}
+  ],
+  "lessons": [
+    {
+      "n": 1,
+      "title": "Why study RE?",
+      "icon": "globe",
+      "big_question": "What is the importance of RE? Why do we study it?",
+      "aims": [
+        "DESCRIBE — what Religious Education is",
+        "DISCUSS — why RE matters in a world of many religions",
+        "EXPLAIN — how RE builds respect and empathy"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Write down three reasons why it is important to study RE.",
+          "Name any three religions you have heard of.",
+          "How should you behave in an RE lesson? Give two rules."
+        ]
+      },
+      "keywords": ["Religious Education", "Belief", "Respect", "Empathy"],
+      "learn": {
+        "caption": "Why Religious Education matters",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "RE = the study of religion",
+          "8 billion people live in the world",
+          "85% are religious - 7 billion people",
+          "1 billion people are not religious",
+          "RE builds respect and empathy"
+        ]
+      },
+      "source": {
+        "quote": "The United Nations estimates that there are 8 billion people living in the world today. 85% of the people, or 7 billion people in the world, are religious.",
+        "attrib": "— Unit 1 lesson slides, on why we study RE",
+        "task": "Underline the two numbers in the quote. Then write one sentence on why RE is worth studying."
+      },
+      "stretch": {
+        "question": "Explain two reasons why we study Religious Education.",
+        "wordbank": ["religion", "respect", "empathy", "culture", "beliefs"],
+        "starters": [
+          "Firstly, one reason is",
+          "This means that",
+          "Secondly, another reason is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Everyone should study Religious Education at school.",
+        "agree": [
+          "Most of the world is religious, so RE helps you understand the people around you.",
+          "RE teaches respect and empathy, which you need when you travel or try new foods."
+        ],
+        "disagree": [
+          "One billion people are not religious, so some students may feel RE is not for them.",
+          "School time is short, and some people think subjects like maths matter more."
+        ],
+        "how_to_win": "Use the numbers from the slides, then say which side has the stronger reason and why."
+      },
+      "quickfire": [
+        {"tag": "THIS LESSON", "q": "What do the letters RE stand for?"},
+        {"tag": "THIS LESSON", "q": "What is the definition of Religious Education?"},
+        {"tag": "THIS LESSON", "q": "How many people live in the world today?"},
+        {"tag": "THIS LESSON", "q": "What percentage of people are religious?"},
+        {"tag": "THIS LESSON", "q": "How many people are not religious?"},
+        {"tag": "THIS LESSON", "q": "Name two virtues that RE promotes."}
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Baseline test",
+      "icon": "target",
+      "big_question": "How much do I already know about religion and belief?",
+      "aims": [
+        "DESCRIBE — key words about God, holy books and worship",
+        "DISCUSS — which answers I found easy and which were hard",
+        "EXPLAIN — two reasons why we study religious education"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "What is Religious Education? Answer in a full sentence.",
+          "Give two reasons why studying RE is important.",
+          "What percentage of the world's people are religious?"
+        ]
+      },
+      "keywords": ["Holy book", "Place of worship", "Atheists", "Polytheism"],
+      "learn": {
+        "caption": "Topics your baseline test covers",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Key words: theism and atheism",
+          "Holy books and places of worship",
+          "Founders: Jesus, Buddha, Guru Nanak",
+          "Polytheism: the belief in many Gods",
+          "Two reasons why we study RE"
+        ]
+      },
+      "source": {
+        "quote": "Theism is the belief there is God. Atheists are people who do not believe in God. Agnostics are people who are not sure God exists.",
+        "attrib": "— Unit 1 baseline test, key word definitions",
+        "task": "Copy the three key words into your book. Highlight the one word that means belief in God."
+      },
+      "stretch": {
+        "question": "Outline two reasons why we study religious education.",
+        "wordbank": ["religion", "culture", "respect", "understand", "beliefs"],
+        "starters": [
+          "Firstly, one reason is",
+          "This means that",
+          "Secondly, another reason is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "A test at the start of a unit is a waste of lesson time.",
+        "agree": [
+          "You cannot be tested on things you have not been taught yet, so the marks feel unfair.",
+          "The time could be spent learning new facts about religion instead of sitting in silence."
+        ],
+        "disagree": [
+          "A baseline test shows your teacher what you already know, so lessons can be pitched right.",
+          "Comparing it with the end test proves how much you have learned in the unit."
+        ],
+        "how_to_win": "Say what a baseline test is for, then judge whether that purpose is worth one lesson."
+      },
+      "quickfire": [
+        {"tag": "LAST LESSON", "q": "What do the letters RE stand for?"},
+        {"tag": "LAST LESSON", "q": "How many people in the world are religious?"},
+        {"tag": "LAST LESSON", "q": "Name one virtue that RE promotes."},
+        {"tag": "LAST LESSON", "q": "How many people are not religious?"},
+        {"tag": "THIS LESSON", "q": "Define theism."},
+        {"tag": "THIS LESSON", "q": "What is a holy book?"}
+      ]
+    },
+    {
+      "n": 3,
+      "title": "What is a belief?",
+      "icon": "message-circle",
+      "big_question": "What is a belief and why do people hold different beliefs?",
+      "aims": [
+        "DESCRIBE — what a belief, a fact and an opinion are",
+        "DISCUSS — which statements are facts and which are opinions",
+        "EXPLAIN — the difference between a belief and a fact"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "List three facts about any religion that you already know.",
+          "Which baseline test question did you find hardest? Why?",
+          "What is the study of religion called?"
+        ]
+      },
+      "keywords": ["Belief", "Fact", "Opinion", "Religion"],
+      "learn": {
+        "caption": "Belief, fact and opinion",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Belief: accepted as true or real",
+          "Fact: it can be proven true",
+          "Opinion: how someone feels",
+          "Fact: 2 + 2 = 4",
+          "Opinion: flowers are beautiful"
+        ]
+      },
+      "source": {
+        "quote": "A belief is an idea that someone accepts as true or real. A fact is a statement or idea that can be proven true. An opinion expresses how someone feels about something.",
+        "attrib": "— Unit 1 lesson slides, on belief, fact and opinion",
+        "task": "Sort these three into fact, opinion or belief: water boils at 100C; mint choc chip is best; murder is wrong."
+      },
+      "stretch": {
+        "question": "Explain the difference between a fact and an opinion.",
+        "wordbank": ["fact", "opinion", "belief", "proven", "feelings"],
+        "starters": [
+          "Firstly, a fact is",
+          "This means that",
+          "Secondly, an opinion is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "A belief is not worth as much as a fact.",
+        "agree": [
+          "A fact can be proven true, but a belief cannot be proven, so facts are more reliable.",
+          "Science works on facts, and a fact stays the same no matter how anyone feels about it."
+        ],
+        "disagree": [
+          "Beliefs guide how billions of people live, so they matter enormously in real life.",
+          "Important ideas, like the idea that murder is wrong, are beliefs and cannot be proven."
+        ],
+        "how_to_win": "Define fact and belief first, then say what each one is actually useful for."
+      },
+      "quickfire": [
+        {"tag": "LAST LESSON", "q": "Define theism."},
+        {"tag": "LAST LESSON", "q": "What is a place of worship?"},
+        {"tag": "LAST LESSON", "q": "Why is it important to study RE?"},
+        {"tag": "LAST LESSON", "q": "What is a holy book?"},
+        {"tag": "THIS LESSON", "q": "What is a belief?"},
+        {"tag": "THIS LESSON", "q": "What is an opinion?"}
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Is seeing believing?",
+      "icon": "eye",
+      "big_question": "Is seeing always believing?",
+      "aims": [
+        "DESCRIBE — what theists, atheists and agnostics believe",
+        "DISCUSS — whether everyone sees the world the same way",
+        "EXPLAIN — how Christians and Muslims show belief in God"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Have you ever seen something that was not real? Describe it.",
+          "Can you believe in something you cannot see? Give one example.",
+          "What is the difference between a fact and an opinion?"
+        ]
+      },
+      "keywords": ["Theism", "Atheist", "Agnostic", "Jummah prayer"],
+      "learn": {
+        "caption": "Ways of seeing and ways of showing belief",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Theism: belief that there is a God",
+          "Atheist: does not believe in God",
+          "Agnostic: not sure God exists",
+          "Christian prayer: thanks or blessing",
+          "Jummah: Muslim Friday prayer"
+        ]
+      },
+      "source": {
+        "quote": "People who follow a religion may see the same world as everyone else but perceive it differently. In RE we look at those different ways of seeing the world and try to understand them.",
+        "attrib": "— Unit 1 lesson slides, on is seeing believing",
+        "task": "Look at an optical illusion with a partner. Write what you each saw, then why it differed."
+      },
+      "stretch": {
+        "question": "Explain two ways that believers show their belief in God.",
+        "wordbank": ["prayer", "Jummah", "mosque", "blessing", "Lord's Prayer"],
+        "starters": [
+          "Firstly, one way is",
+          "This means that",
+          "Secondly, another way is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "You should only believe in things you can see.",
+        "agree": [
+          "If you cannot see something there is no proof it is there, so believing is only guessing.",
+          "Optical illusions show that even our own eyes can trick us, so we need real evidence."
+        ],
+        "disagree": [
+          "Nobody can see kindness or love, but almost everyone agrees these things are real.",
+          "Millions of Muslims and Christians pray to a God they cannot see and it changes their lives."
+        ],
+        "how_to_win": "Use one optical illusion example and one prayer example, then say which side is stronger."
+      },
+      "quickfire": [
+        {"tag": "LAST LESSON", "q": "What is a belief?"},
+        {"tag": "LAST LESSON", "q": "Give an example of a fact and an opinion."},
+        {"tag": "LAST LESSON", "q": "What is a fact?"},
+        {"tag": "LAST LESSON", "q": "Define religious education."},
+        {"tag": "THIS LESSON", "q": "Define agnostic."},
+        {"tag": "THIS LESSON", "q": "What are the Friday prayers for Muslims called?"}
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Is there a God?",
+      "icon": "compass",
+      "big_question": "Is there a God, and if so why do people disagree?",
+      "aims": [
+        "DESCRIBE — what a theist, atheist and agnostic believe",
+        "DISCUSS — why people in Britain disagree about God",
+        "EXPLAIN — two different beliefs about God in Britain"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Do you believe in God? Give a convincing argument for or against.",
+          "Define atheist in a full sentence.",
+          "What happens in Muslim Friday prayer?"
+        ]
+      },
+      "keywords": ["Theist", "Atheist", "Agnostic", "Worldview"],
+      "learn": {
+        "caption": "Three views people hold about God",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Theist: does believe in God",
+          "Atheist: does not believe in God",
+          "Agnostic: not sure if God exists",
+          "Amir prays daily: theist",
+          "Sophia sees no evidence: atheist"
+        ]
+      },
+      "source": {
+        "quote": "Amir prays everyday because he believes God listens to him. Sophia says there is no evidence for God, so she does not believe God exists.",
+        "attrib": "— Unit 1 lesson slides, on views about God",
+        "task": "Luca says nobody can be certain if God exists. Which of the three views is Luca? Say why."
+      },
+      "stretch": {
+        "question": "Explain two different beliefs about God in Britain.",
+        "wordbank": ["atheist", "theist", "agnostic", "science", "religion"],
+        "starters": [
+          "Firstly, one belief is",
+          "This means that",
+          "Secondly, another belief is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "There is no good reason to believe in God today.",
+        "agree": [
+          "Atheists like Sophia say there is no evidence for God, and evidence is what proof needs.",
+          "Science can explain how the world works without needing a God to have made it."
+        ],
+        "disagree": [
+          "Theists like Amir say God listens when they pray, which is a reason from experience.",
+          "Agnostics like Luca say nobody can be certain, so nobody can rule God out either."
+        ],
+        "how_to_win": "Name the three views, use one example of each, then give your own view with a reason."
+      },
+      "quickfire": [
+        {"tag": "LAST LESSON", "q": "Define theism."},
+        {"tag": "LAST LESSON", "q": "Define atheist."},
+        {"tag": "LAST LESSON", "q": "Describe what happens in Christian prayer."},
+        {"tag": "LAST LESSON", "q": "What day is the Jummah prayer?"},
+        {"tag": "THIS LESSON", "q": "Give the difference between an atheist and theist."},
+        {"tag": "THIS LESSON", "q": "Why might someone be an agnostic?"}
+      ]
+    },
+    {
+      "n": 6,
+      "title": "Religious artefacts",
+      "icon": "package",
+      "big_question": "What are religious artefacts? Why are they important?",
+      "aims": [
+        "DESCRIBE — what a religious artefact is",
+        "DISCUSS — why certain objects matter to believers",
+        "EXPLAIN — two artefacts from two different religions"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Is there an object that is important to you? Which one and why?",
+          "Define agnostic in a full sentence.",
+          "Name one thing Muslims use to help them pray."
+        ]
+      },
+      "keywords": ["Artefact", "Rosary beads", "Prayer mat", "Qur'an stand"],
+      "learn": {
+        "caption": "Artefacts in Christianity and Islam",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Artefact: an object of significance",
+          "Rosary beads: remember prayers",
+          "Crucifix: God's forgiveness",
+          "Prayer mat: a clean place to pray",
+          "Compass: finds the way to Mecca"
+        ]
+      },
+      "source": {
+        "quote": "A religious artefact is an object that can have religious, cultural or personal significance. All religious traditions have objects that are used in worship or in festivals.",
+        "attrib": "— Unit 1 lesson slides, on religious artefacts",
+        "task": "Draw one Christian artefact and one Muslim artefact. Label each with what it is used for."
+      },
+      "stretch": {
+        "question": "Explain two religious artefacts from two different religions.",
+        "wordbank": ["rosary", "crucifix", "prayer mat", "compass", "Qur'an stand"],
+        "starters": [
+          "Firstly, one artefact is",
+          "This means that",
+          "Secondly, another artefact is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Religious objects are just ordinary things with no real power.",
+        "agree": [
+          "A prayer mat is only cloth and a rosary is only beads, so the object itself does nothing.",
+          "Believers could still pray perfectly well without owning any of these objects at all."
+        ],
+        "disagree": [
+          "A crucifix reminds Christians of God's forgiveness, so the object carries a huge meaning.",
+          "A prayer mat gives Muslims a clean place to pray anywhere, so it really does help worship."
+        ],
+        "how_to_win": "Say what the object does for the believer, not what it is made of, then judge."
+      },
+      "quickfire": [
+        {"tag": "LAST LESSON", "q": "Define theist."},
+        {"tag": "LAST LESSON", "q": "Why might someone be an agnostic?"},
+        {"tag": "LAST LESSON", "q": "Name the three views people hold about God."},
+        {"tag": "LAST LESSON", "q": "What is a fact? Give an example."},
+        {"tag": "THIS LESSON", "q": "What is a religious artefact?"},
+        {"tag": "THIS LESSON", "q": "Why do Muslims use a prayer mat?"}
+      ]
+    },
+    {
+      "n": 7,
+      "title": "Religious symbols",
+      "icon": "aperture",
+      "big_question": "Why are religious symbols important to believers?",
+      "aims": [
+        "DESCRIBE — the main symbol of five world religions",
+        "DISCUSS — the difference between a sign and a symbol",
+        "EXPLAIN — what two religious symbols mean to believers"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Why do you think religious symbols exist?",
+          "Why are religious symbols important?",
+          "Name two religious artefacts you learned last lesson."
+        ]
+      },
+      "keywords": ["Symbol", "Sign", "Crucifix", "Aum"],
+      "learn": {
+        "caption": "The main symbols of five religions",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Christianity: cross and crucifix",
+          "Hinduism: Aum, the most holy sound",
+          "Buddhism: the Dharma Wheel",
+          "Judaism: the Star of David",
+          "Islam: crescent moon and star"
+        ]
+      },
+      "source": {
+        "quote": "Some ideas and feelings are very complicated and cannot be explained in words. One way to do it is through the use of symbols. Symbols express complex ideas in a simple way.",
+        "attrib": "— Unit 1 lesson slides, on religious symbols",
+        "task": "Draw the cross and the Aum symbol. Beside each, write one sentence about what it means."
+      },
+      "stretch": {
+        "question": "Explain two religious symbols from two different religions.",
+        "wordbank": ["cross", "crucifix", "Aum", "Dharma Wheel", "Khanda"],
+        "starters": [
+          "Firstly, one symbol is",
+          "This means that",
+          "Secondly, another symbol is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "A symbol can say more than words ever could.",
+        "agree": [
+          "The slides say some feelings are too complicated for words, so symbols express them simply.",
+          "One glance at a crucifix reminds a Christian of the whole story of Jesus dying on the cross."
+        ],
+        "disagree": [
+          "A symbol only works if you already know its meaning, so words have to explain it first.",
+          "The crescent moon was used by the city of Byzantium before Islam, so meanings can change."
+        ],
+        "how_to_win": "Give one symbol whose meaning is obvious and one that must be taught, then decide."
+      },
+      "quickfire": [
+        {"tag": "LAST LESSON", "q": "Define agnostic."},
+        {"tag": "LAST LESSON", "q": "Why might Christians pray?"},
+        {"tag": "LAST LESSON", "q": "What is a religious artefact?"},
+        {"tag": "LAST LESSON", "q": "What is a compass used for?"},
+        {"tag": "THIS LESSON", "q": "What does the image of Jesus on a cross show?"},
+        {"tag": "THIS LESSON", "q": "What is the most powerful word in Hinduism?"}
+      ]
+    },
+    {
+      "n": 8,
+      "title": "Summative assessment",
+      "icon": "award",
+      "big_question": "How much have I learned about beliefs this unit?",
+      "aims": [
+        "DESCRIBE — the key words from the whole Beliefs unit",
+        "DISCUSS — which topics I still need to revise",
+        "EXPLAIN — two views about God and two forms of prayer"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Define belief, fact and opinion in three full sentences.",
+          "Name the three views people hold about God.",
+          "Name two religious artefacts and say who uses them."
+        ]
+      },
+      "keywords": ["Theism", "Agnosticism", "Jummah prayer", "Lord's Prayer"],
+      "learn": {
+        "caption": "Topics your summative test covers",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Belief, fact and opinion",
+          "Theism, atheism and agnosticism",
+          "Lord's Prayer and Jummah prayer",
+          "Artefacts, symbols and the compass",
+          "Two reasons why we study RE"
+        ]
+      },
+      "source": {
+        "quote": "Theism is the belief there is God. Atheism is the belief there is no god. Agnosticism is doubt if there is or is not a god.",
+        "attrib": "— Unit 1 summative test, key word definitions",
+        "task": "Learn these three definitions by heart. Then cover them and write each one from memory."
+      },
+      "stretch": {
+        "question": "Explain two views about God and two forms of prayer.",
+        "wordbank": ["theism", "agnosticism", "Lord's Prayer", "Jummah", "blessings"],
+        "starters": [
+          "Firstly, one view is",
+          "This means that",
+          "Secondly, another view is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "An end of unit test is the best way to show what you know.",
+        "agree": [
+          "A test makes you revise everything, so you find the gaps you did not know you had.",
+          "Comparing it with the baseline test proves exactly how much progress you have made."
+        ],
+        "disagree": [
+          "Some people panic in tests, so the mark can show their nerves and not their knowledge.",
+          "RE is about discussing beliefs, and a written test cannot capture a good discussion."
+        ],
+        "how_to_win": "Say what a test can and cannot measure, then give a clear judgement with one reason."
+      },
+      "quickfire": [
+        {"tag": "LAST LESSON", "q": "What does a crucifix represent?"},
+        {"tag": "LAST LESSON", "q": "What is the main symbol of Hinduism?"},
+        {"tag": "LAST LESSON", "q": "Give the difference between a sign and a symbol."},
+        {"tag": "LAST LESSON", "q": "Which religion uses the Star of David?"},
+        {"tag": "THIS LESSON", "q": "Define agnosticism."},
+        {"tag": "THIS LESSON", "q": "Give two reasons why we study RE."}
+      ]
+    }
+  ]
+}

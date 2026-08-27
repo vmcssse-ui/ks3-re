@@ -1,0 +1,294 @@
+{
+  "unit": 6,
+  "name": "Film and Faith",
+  "icon": "film",
+  "big_question": "How can a film tell a religious story without ever naming a religion?",
+  "glossary": [
+    {"w": "Symbol", "d": "something in a story that stands for a bigger idea"},
+    {"w": "Symbolism", "d": "using one thing in a story to stand for another thing"},
+    {"w": "Sin", "d": "a wrong choice that breaks the link between people and God"},
+    {"w": "Betrayal", "d": "letting down someone who trusted you"},
+    {"w": "Sacrifice", "d": "giving something up, even your life, for someone else"},
+    {"w": "Forgiveness", "d": "choosing not to punish someone for the wrong they did"},
+    {"w": "Aslan", "d": "the lion in Narnia who stands for Jesus in the story"},
+    {"w": "Prayer", "d": "an act of communication by humans with the holy, or with God"},
+    {"w": "Corporate prayer", "d": "prayer said together, as a group"},
+    {"w": "Personal prayer", "d": "prayer said alone, in your own words"},
+    {"w": "Faith", "d": "trusting in God even when there is no proof"},
+    {"w": "Church", "d": "a Christian holy building where people meet and pray"},
+    {"w": "Temptation", "d": "the desire to do something, especially something wrong or unwise"},
+    {"w": "Adam and Eve", "d": "the first humans in the Bible, who gave in to temptation"},
+    {"w": "Consequence", "d": "what happens as a result of a choice someone makes"},
+    {"w": "Resurrection", "d": "bringing someone back to life after they have died"}
+  ],
+  "lessons": [
+    {
+      "n": 1,
+      "title": "Religious meaning in film",
+      "icon": "eye",
+      "big_question": "Can a story about a talking lion tell you what Christians believe?",
+      "aims": [
+        "DESCRIBE — four basic Christian beliefs about sin and Jesus",
+        "DISCUSS — what the lion Aslan stands for in Narnia",
+        "EXPLAIN — how Narnia shows Christian beliefs as symbols"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "What is your favourite film, and why is it your favourite?",
+          "Does a film have to mention God to teach a religious idea?",
+          "Name a film where a character gives something up for a friend."
+        ]
+      },
+      "keywords": ["Symbol", "Sin", "Sacrifice", "Resurrection"],
+      "learn": {
+        "caption": "The Chronicles of Narnia: belief becomes symbol",
+        "col1": "Christian belief",
+        "col2": "How the film shows it",
+        "rows": [
+          "Humans made a mistake: this is sin",
+          "Someone had to pay the price",
+          "God's own Son became a man",
+          "The Son of God died in our place",
+          "The Son of God rose from the dead"
+        ]
+      },
+      "source": {
+        "quote": "Aslan resurrects because he gave his life for Edmund even though Aslan had made no mistake. After his resurrection, they can overcome the Witch.",
+        "attrib": "— Unit 6 lesson slides, on Narnia and Christian belief",
+        "task": "Underline the part that matches a Christian belief. Then name the belief and say why it matches."
+      },
+      "stretch": {
+        "question": "The Chronicles of Narnia can relate to many of the teachings within Christianity.",
+        "wordbank": ["Symbol", "Sacrifice", "Sin", "Forgiveness", "Resurrection"],
+        "starters": [
+          "Firstly, we learn about",
+          "This means that",
+          "Secondly, we learn about",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Narnia is just a story about a lion, not a story about religion",
+        "agree": [
+          "Narnia never uses the word God or Jesus, so it is simply an exciting adventure story.",
+          "Most children watch Narnia for the battles and talking animals, not for a lesson on sin."
+        ],
+        "disagree": [
+          "Aslan dies for Edmund and then rises again, which is exactly the Christian story of Jesus.",
+          "The writer put the symbols there on purpose, so the religious meaning is built in."
+        ],
+        "how_to_win": "Use one scene from Narnia as your evidence, then name the Christian belief it stands for."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Which hero of faith fought apartheid?"},
+        {"tag": "LAST UNIT", "q": "Who gave the I Have a Dream speech?"},
+        {"tag": "LAST UNIT", "q": "Which young hero was shot for going to school?"},
+        {"tag": "LAST UNIT", "q": "Who led India to freedom without violence?"},
+        {"tag": "THIS LESSON", "q": "In Narnia, which character stands for Jesus?"},
+        {"tag": "THIS LESSON", "q": "Which word means a wrong choice against God?"}
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Prayer in films",
+      "icon": "message-circle",
+      "big_question": "What can three film prayers teach us about why people pray?",
+      "aims": [
+        "DESCRIBE — what prayer is and the forms it can take",
+        "DISCUSS — why the characters in three films pray",
+        "EXPLAIN — how a film shows faith through a prayer scene"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Why do people pray? Does praying increase or decrease faith?",
+          "Have you seen a character pray in a film? What did they want?",
+          "Can a person pray anywhere, or do they need a holy building?"
+        ]
+      },
+      "keywords": ["Prayer", "Faith", "Church", "Personal prayer"],
+      "learn": {
+        "caption": "Three film prayers and what each one asks for",
+        "col1": "Film scene",
+        "col2": "What the prayer shows",
+        "rows": [
+          "Facing the Giants: a coach prays",
+          "Hunchback of Notre Dame: she prays",
+          "Home Alone: Kevin goes into a church",
+          "Personal prayer: alone, own words",
+          "Corporate prayer: said as a group"
+        ]
+      },
+      "source": {
+        "quote": "Prayer: an act of communication by humans with the sacred or holy God. Found in all religions in all times, prayer may be a group act or a personal act.",
+        "attrib": "— Unit 6 lesson slides, on what prayer is",
+        "task": "Highlight the words that say who a prayer is aimed at. Then say if Kevin's prayer is group or personal."
+      },
+      "stretch": {
+        "question": "Explain what The Lord is my rock, my protection means to a person who prays.",
+        "wordbank": ["Prayer", "Faith", "Protection", "Safety", "Trust"],
+        "starters": [
+          "Firstly, this verse says",
+          "This means that",
+          "Secondly, a person praying",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Praying in a film is only a way to show a character has run out of options",
+        "agree": [
+          "Kevin only goes into the church in Home Alone when he is lonely and afraid at Christmas.",
+          "In Facing the Giants the coach prays when his team keeps losing and nothing else works."
+        ],
+        "disagree": [
+          "Prayer is communication with God, so it is a relationship and not a last resort.",
+          "Believers also pray in good times, to say thank you and to pray for other people."
+        ],
+        "how_to_win": "Say what each character asks for, then say whether the prayer is only about themselves."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Which hero of faith spent 27 years in prison?"},
+        {"tag": "LAST UNIT", "q": "Which hero campaigned for girls' schooling?"},
+        {"tag": "LAST LESSON", "q": "Which lion in Narnia stands for Jesus?"},
+        {"tag": "LAST LESSON", "q": "Who tempts Edmund with Turkish Delight?"},
+        {"tag": "THIS LESSON", "q": "Give the meaning of the word prayer."},
+        {"tag": "THIS LESSON", "q": "Name one film with a prayer scene."}
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Temptation in movies",
+      "icon": "compass",
+      "big_question": "Why do stories keep warning us about giving in to temptation?",
+      "aims": [
+        "DESCRIBE — what temptation means, with an example",
+        "DISCUSS — the choice Adam and Eve made in the Bible",
+        "EXPLAIN — how a cartoon teaches a lesson about temptation"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Is giving in to temptation always a bad thing?",
+          "Name something people are often tempted to do at school.",
+          "Who is to blame: the one who tempts, or the one who gives in?"
+        ]
+      },
+      "keywords": ["Temptation", "Adam and Eve", "Consequence", "Forgiveness"],
+      "learn": {
+        "caption": "Temptation: the choice, the fall and the fix",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Temptation: wanting to do wrong",
+          "Adam and Eve were given a choice",
+          "They chose wrong and gave in",
+          "The consequence: a split from God",
+          "Larry Boy and the Bad Apple"
+        ]
+      },
+      "source": {
+        "quote": "The basic teaching about temptation in the Bible comes from the story of Adam and Eve. They had a chance between right or wrong. They chose wrong. They gave into temptation.",
+        "attrib": "— Unit 6 lesson slides, on temptation",
+        "task": "Underline the moment of choice. Then write what this choice caused between people and God."
+      },
+      "stretch": {
+        "question": "What does Watch and pray so you will not fall into temptation mean? (Matthew 26:41)",
+        "wordbank": ["Temptation", "Prayer", "Choice", "Weakness", "Consequence"],
+        "starters": [
+          "Firstly, this verse tells us",
+          "This means that",
+          "Secondly, a believer would",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "People cannot help giving in to temptation, so they should not be blamed",
+        "agree": [
+          "The Bible itself says the spirit is willing but the flesh is weak, so people are not strong.",
+          "Adam and Eve were the first humans, and even they gave in almost straight away."
+        ],
+        "disagree": [
+          "Adam and Eve had a real chance between right and wrong, so the choice was truly theirs.",
+          "The same verse says watch and pray, so people are told how to resist temptation."
+        ],
+        "how_to_win": "Use Adam and Eve on one side and the Matthew verse on the other, then decide which is stronger."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Which hero used peaceful protest in India?"},
+        {"tag": "LAST UNIT", "q": "Which hero of faith led South Africa?"},
+        {"tag": "LAST LESSON", "q": "What does the word prayer mean?"},
+        {"tag": "LAST LESSON", "q": "Which boy prays in a church in Home Alone?"},
+        {"tag": "THIS LESSON", "q": "What does the word temptation mean?"},
+        {"tag": "THIS LESSON", "q": "Which Bible pair gave in to temptation?"}
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Resurrection in movies",
+      "icon": "sunrise",
+      "big_question": "Why do so many modern films bring their hero back from the dead?",
+      "aims": [
+        "DESCRIBE — what the word resurrection means",
+        "DISCUSS — where the idea of resurrection came from",
+        "EXPLAIN — how two modern films show a resurrection"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Name a film where a character dies and comes back to life.",
+          "Is coming back to life the same as never having died at all?",
+          "Why might a story feel unfinished if the hero stays dead?"
+        ]
+      },
+      "keywords": ["Resurrection", "Life after death", "Jesus Christ", "Sacrifice"],
+      "learn": {
+        "caption": "Resurrection: the belief and the films",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Resurrection: brought back to life",
+          "Believed by Jews, Christians, Muslims",
+          "Jesus rose in a body people touched",
+          "Harry Potter dies, then returns",
+          "Superman dies, then is brought back"
+        ]
+      },
+      "source": {
+        "quote": "Potter had to die to let a part of Voldemort that lives in him die. He came back to life in his body to help his friends win the war against the forces of darkness.",
+        "attrib": "— Unit 6 lesson slides, on resurrection in films",
+        "task": "Underline what Harry gains by dying. Then give one way this is like, and one way it is unlike, Jesus."
+      },
+      "stretch": {
+        "question": "What have you learnt about the resurrection of Jesus Christ?",
+        "wordbank": ["Resurrection", "Body", "Sacrifice", "Life after death", "Belief"],
+        "starters": [
+          "Firstly, I have learnt",
+          "This means that",
+          "Secondly, I have learnt",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Superman rising from the dead is just a copy of the story of Jesus",
+        "agree": [
+          "Superman dies to save humanity and is brought back to save it again, just like Jesus.",
+          "Writers know that audiences already know the Jesus story, so it makes the hero feel holy."
+        ],
+        "disagree": [
+          "Superman is brought back by other heroes, while Christians believe God raised Jesus.",
+          "Stories about the dead returning existed long before films, so this is not simply copying."
+        ],
+        "how_to_win": "Compare who does the raising in each story, then say whether that difference matters."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Which hero of faith was jailed for 27 years?"},
+        {"tag": "LAST UNIT", "q": "Which hero of faith was a Baptist minister?"},
+        {"tag": "LAST LESSON", "q": "What does the word temptation mean?"},
+        {"tag": "LAST LESSON", "q": "Which cartoon hero faces the bad apple?"},
+        {"tag": "THIS LESSON", "q": "What does the word resurrection mean?"},
+        {"tag": "THIS LESSON", "q": "Name a film where a hero comes back to life."}
+      ]
+    }
+  ]
+}

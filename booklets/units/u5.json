@@ -1,0 +1,294 @@
+{
+  "unit": 5,
+  "name": "Heroes of Faith",
+  "icon": "award",
+  "big_question": "What makes someone a hero of faith?",
+  "glossary": [
+    {"w": "Hero", "d": "someone admired for their courage and for standing up for others"},
+    {"w": "Ahimsa", "d": "the teaching that no harm should be caused to any living thing"},
+    {"w": "Ashram", "d": "an Indian word meaning a spiritual community"},
+    {"w": "Racism", "d": "believing some people are better than others because of skin colour"},
+    {"w": "Non-violence", "d": "refusing to use force or harm to win a struggle"},
+    {"w": "Humble", "d": "modest; not thinking you are more important than other people"},
+    {"w": "Harmony", "d": "living together peacefully, even when people are different"},
+    {"w": "Apartheid", "d": "South African rule that kept Black and white people apart"},
+    {"w": "Discrimination", "d": "treating a person worse because of who they are"},
+    {"w": "Justice", "d": "fairness; making sure people get what is right"},
+    {"w": "Equality", "d": "the belief that every person has the same worth and rights"},
+    {"w": "Segregation", "d": "keeping groups apart by law, such as in schools or buses"},
+    {"w": "Oppression", "d": "treating a group of people cruelly and unfairly for a long time"},
+    {"w": "Education", "d": "learning at school, which Malala says is a right for every girl"},
+    {"w": "Feminism", "d": "the belief that women and girls should have equal rights"},
+    {"w": "Courage", "d": "doing what is right even when it is frightening or dangerous"}
+  ],
+  "lessons": [
+    {
+      "n": 1,
+      "title": "Gandhi",
+      "icon": "feather",
+      "big_question": "Why is Gandhi remembered as a hero today?",
+      "aims": [
+        "DESCRIBE — who Gandhi was and where he lived and worked",
+        "DISCUSS — what makes a person a hero",
+        "EXPLAIN — how ahimsa shaped Gandhi's response to racism"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "What characteristics does a hero have? Give two.",
+          "Name a person you think is a hero. Say why.",
+          "Can an ordinary person be a hero? Explain your answer."
+        ]
+      },
+      "keywords": ["Ahimsa", "Racism", "Ashram", "Non-violence"],
+      "learn": {
+        "caption": "Gandhi: his life, his beliefs and his response",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Who Gandhi was",
+          "Racism in South Africa",
+          "Ahimsa: harm no living thing",
+          "Setting up an ashram",
+          "Living together in harmony"
+        ]
+      },
+      "source": {
+        "quote": "In Gandhi's ashram people of different religions, races and backgrounds shared all their possessions, ate together and were involved in the struggle to live in harmony.",
+        "attrib": "— Unit 5 lesson slides, on Gandhi's ashram",
+        "task": "Underline what the people in the ashram shared. Explain how this answered the racism Gandhi saw."
+      },
+      "stretch": {
+        "question": "Explain two teachings we learn from Gandhi.",
+        "wordbank": ["Humble", "Community", "Respect", "Non-violence", "Equality"],
+        "starters": [
+          "Firstly, Gandhi taught",
+          "This means that",
+          "Secondly, Gandhi taught",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Non-violence is always the best way to fight unfairness",
+        "agree": [
+          "Gandhi followed ahimsa, causing no harm, and he still changed the way people were treated.",
+          "Violence usually makes enemies hate each other more, so the unfairness never really ends."
+        ],
+        "disagree": [
+          "Some people in power ignore peaceful protest, so nothing changes and the suffering goes on.",
+          "Gandhi's work took many years, and people treated badly may not have that long to wait."
+        ],
+        "how_to_win": "Use the word ahimsa and give one real example from Gandhi's life to back up your point."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Who was the first Guru of Sikhism?"},
+        {"tag": "LAST UNIT", "q": "Name two of the Five Ks."},
+        {"tag": "LAST UNIT", "q": "What is a gurdwara?"},
+        {"tag": "LAST UNIT", "q": "What do Sikhs teach about nature?"},
+        {"tag": "THIS LESSON", "q": "What does Ahimsa mean?"},
+        {"tag": "THIS LESSON", "q": "How did Gandhi respond to racism?"}
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Nelson Mandela",
+      "icon": "shield",
+      "big_question": "Why is Nelson Mandela remembered as a hero?",
+      "aims": [
+        "DESCRIBE — what apartheid was in South Africa",
+        "DISCUSS — whether it is ever right to break a law",
+        "EXPLAIN — why Mandela is remembered as a hero"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Is it ever okay to break a law? Explain why or why not.",
+          "Name one law you think is fair. Say why it is fair.",
+          "What should people do if a law is unfair?"
+        ]
+      },
+      "keywords": ["Apartheid", "Discrimination", "Justice", "Equality"],
+      "learn": {
+        "caption": "Apartheid, and how Mandela stood against it",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Apartheid: the state of being apart",
+          "South Africa in the 1940s",
+          "Unfair treatment set down in law",
+          "Mandela's belief in equality",
+          "27 years in prison"
+        ]
+      },
+      "source": {
+        "quote": "In the 1940s South Africa was under apartheid rule. This meant white people were treated as superior to Black people. Mandela believed everybody should be treated the same.",
+        "attrib": "— Unit 5 lesson slides, on the apartheid rule",
+        "task": "Underline what apartheid meant. Then write one sentence saying what Mandela believed instead."
+      },
+      "stretch": {
+        "question": "Explain two reasons why Nelson Mandela is remembered as a hero.",
+        "wordbank": ["27 years", "Equality", "Social justice", "Apartheid", "Prison"],
+        "starters": [
+          "Firstly, Mandela",
+          "This means that",
+          "Secondly, Mandela",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Mandela being imprisoned was clearly the wrong decision",
+        "agree": [
+          "He was asking for Black and white people to be treated the same, which is only fair.",
+          "In 1996 the United Nations called apartheid a crime against humanity."
+        ],
+        "disagree": [
+          "He did break the law, and courts are meant to treat everyone who breaks a law the same.",
+          "Some would say he could have kept campaigning and stayed free to lead his people."
+        ],
+        "how_to_win": "Say what apartheid was before you give your opinion, and use the words justice and equality."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What are the Five Ks in Sikhism?"},
+        {"tag": "LAST UNIT", "q": "Where do Sikhs go to worship?"},
+        {"tag": "LAST LESSON", "q": "What does Ahimsa mean?"},
+        {"tag": "LAST LESSON", "q": "What is an Ashram?"},
+        {"tag": "THIS LESSON", "q": "What does apartheid mean?"},
+        {"tag": "THIS LESSON", "q": "How long was Mandela in prison?"}
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Martin Luther King",
+      "icon": "mic",
+      "big_question": "Why is Martin Luther King remembered as a hero?",
+      "aims": [
+        "DESCRIBE — what segregation meant for Black Americans",
+        "DISCUSS — what King's dream for the future was",
+        "EXPLAIN — two ideas King used to fight segregation"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "What is one dream you have for the world? Explain it.",
+          "Why do people need hope when life is unfair?",
+          "Name one thing you would change about the world today."
+        ]
+      },
+      "keywords": ["Racism", "Segregation", "Justice", "Oppression"],
+      "learn": {
+        "caption": "Segregation, and how King answered it",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Life under segregation",
+          "Where racism comes from",
+          "Who Martin Luther King was",
+          "The I Have a Dream speech",
+          "All made in the image of God"
+        ]
+      },
+      "source": {
+        "quote": "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character.",
+        "attrib": "— Martin Luther King, I Have a Dream speech",
+        "task": "Underline the words that say how King wants people to be judged. Explain what that means."
+      },
+      "stretch": {
+        "question": "Explain two ideas Martin Luther King used to stop segregation.",
+        "wordbank": ["Segregation", "Justice", "Image of God", "Love neighbours", "Freedom"],
+        "starters": [
+          "Firstly, we are all made in the image of God",
+          "This means that",
+          "Secondly, we must love our neighbours",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "A speech can do more to end racism than a law can",
+        "agree": [
+          "King's I Have a Dream speech changed how millions of people thought about racism.",
+          "Laws can be ignored, but words like King's still give people hope today."
+        ],
+        "disagree": [
+          "Segregation was written into law, so only a change in the law could truly end it.",
+          "Speeches can be forgotten, but a law protects people every single day."
+        ],
+        "how_to_win": "Quote one line from the speech, then say what a law can do that a speech cannot."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Who was Guru Nanak?"},
+        {"tag": "LAST UNIT", "q": "How many Ks are in the Five Ks?"},
+        {"tag": "LAST LESSON", "q": "What was apartheid?"},
+        {"tag": "LAST LESSON", "q": "How long was Mandela imprisoned for?"},
+        {"tag": "THIS LESSON", "q": "What is segregation?"},
+        {"tag": "THIS LESSON", "q": "What famous speech did MLK give?"}
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Malala Yousafzai",
+      "icon": "pen-tool",
+      "big_question": "Why is Malala considered a hero by millions of people?",
+      "aims": [
+        "DESCRIBE — what happened to Malala in 2008 and 2012",
+        "DISCUSS — why every girl should be able to go to school",
+        "EXPLAIN — two lessons we can learn from Malala"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Why is going to school important? Give two reasons.",
+          "Is education a right or a reward? Explain your answer.",
+          "What would you miss most if school were taken away?"
+        ]
+      },
+      "keywords": ["Education", "Feminism", "Courage", "Nobel Peace Prize"],
+      "learn": {
+        "caption": "Malala: her life, her courage and her fund",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Islam on men and women",
+          "Girls out of school today",
+          "Born in Mingora, Pakistan, 1997",
+          "Banned from school in 2008",
+          "Malala Fund and the 2014 prize"
+        ]
+      },
+      "source": {
+        "quote": "I could live a quiet life or I could make the most of this new life I had been given. I chose to continue my fight until every girl could go to school.",
+        "attrib": "— Malala Yousafzai, on her life after 2012",
+        "task": "Underline the choice Malala made. Explain in one sentence why that choice took courage."
+      },
+      "stretch": {
+        "question": "Explain two lessons we can learn from Malala.",
+        "wordbank": ["Education", "Courage", "Equality", "Malala Fund", "Nobel Prize"],
+        "starters": [
+          "Firstly, Malala shows us",
+          "This means that",
+          "Secondly, Malala shows us",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Every girl should have twelve years of free education",
+        "agree": [
+          "Malala says more than 130 million girls are out of school today, which is unfair on them.",
+          "Education helps people out of poverty, so teaching girls helps whole countries."
+        ],
+        "disagree": [
+          "Some countries are too poor to build enough schools, so the promise could not be kept.",
+          "Some families need older children at home or at work, so twelve years may not suit all."
+        ],
+        "how_to_win": "Use one statistic from the lesson, then say who would have to pay for the schools."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What is the Sikh place of worship called?"},
+        {"tag": "LAST UNIT", "q": "Name one of the Five Ks."},
+        {"tag": "LAST LESSON", "q": "What is segregation?"},
+        {"tag": "LAST LESSON", "q": "What famous speech did MLK give?"},
+        {"tag": "THIS LESSON", "q": "What happened to Malala in 2012?"},
+        {"tag": "THIS LESSON", "q": "What prize did Malala win in 2014?"}
+      ]
+    }
+  ]
+}

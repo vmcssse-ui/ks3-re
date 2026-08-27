@@ -1,0 +1,374 @@
+{
+  "unit": 2,
+  "name": "Hinduism",
+  "icon": "sunrise",
+  "big_question": "What do Hindus believe about God, life after death and the natural world?",
+  "glossary": [
+    {"w": "Diwali", "d": "the Hindu festival of lights, the victory of good over evil"},
+    {"w": "Diva", "d": "a small lamp; divas guided Rama and Sita home in the story"},
+    {"w": "Aum", "d": "the most holy sound in Hinduism, said as a chant before meditating"},
+    {"w": "Mandir", "d": "a Hindu place of worship"},
+    {"w": "Murti", "d": "an image or statue of a deity"},
+    {"w": "Puja", "d": "Hindu worship"},
+    {"w": "Vedas", "d": "Hindu holy books"},
+    {"w": "Atman", "d": "the eternal soul that lives on after death"},
+    {"w": "Samsara", "d": "the cycle of life, death and rebirth"},
+    {"w": "Moksha", "d": "freedom from samsara and being reunited with Brahman"},
+    {"w": "Reincarnation", "d": "coming back to life as another being in the afterlife"},
+    {"w": "Karma", "d": "the belief that all actions bring consequences"},
+    {"w": "Brahman", "d": "the universal soul and formless, genderless source of all reality"},
+    {"w": "Trimurti", "d": "the name given to the three main Hindu gods together"},
+    {"w": "Vishnu", "d": "the preserver and protector of the universe"},
+    {"w": "Shiva", "d": "the destroyer of the universe, who controls life and death"}
+  ],
+  "lessons": [
+    {
+      "n": 1,
+      "title": "Diwali",
+      "icon": "sun",
+      "big_question": "Why do Hindus celebrate Diwali as the victory of good over evil?",
+      "aims": [
+        "DESCRIBE — what Diwali is and when Hindus celebrate it",
+        "DISCUSS — why light stands for the victory of good over evil",
+        "EXPLAIN — two lessons the story of Rama and Sita teaches"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Do you celebrate a religious festival?",
+          "If so, which one, and how do you celebrate it?",
+          "How do you think Hindus celebrate Diwali?"
+        ]
+      },
+      "keywords": ["Diwali", "Diva", "Rama and Sita", "Good over evil"],
+      "learn": {
+        "caption": "The story and meaning of the festival of lights",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": ["Diwali", "Divas", "Rama and Sita", "Hanuman", "Light and darkness"]
+      },
+      "source": {
+        "quote": "The festival takes place on the darkest nights of late autumn. Whichever story is told, it includes light, which stands for the victory of good over evil.",
+        "attrib": "— Unit 2 lesson slides, on Diwali",
+        "task": "Underline the words that say when Diwali happens. Then explain why light is used as a symbol."
+      },
+      "stretch": {
+        "question": "Explain two lessons we can learn from the festival of Diwali.",
+        "wordbank": ["patience", "good over evil", "new beginnings", "strength", "divas"],
+        "starters": ["Firstly, ...", "This means that", "Secondly, ...", "This means that"]
+      },
+      "debate": {
+        "statement": "Festivals are the best way to teach children right from wrong.",
+        "agree": [
+          "A story like Rama and Sita stays in your memory, so the lesson about good and evil sticks.",
+          "Celebrating the same festival every year reminds a whole family of the same values."
+        ],
+        "disagree": [
+          "You can learn right from wrong from your family and school without any festival at all.",
+          "Many people enjoy the lights and the food at Diwali but never think about the meaning."
+        ],
+        "how_to_win": "Use the story of Rama and Sita as your example, then say what a person really learns from it."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Why do we study RE?"},
+        {"tag": "LAST UNIT", "q": "Name three different religions."},
+        {"tag": "LAST UNIT", "q": "What is a rosary?"},
+        {"tag": "LAST UNIT", "q": "What are the three views about God in the UK?"},
+        {"tag": "THIS LESSON", "q": "What does Diwali mean?"},
+        {"tag": "THIS LESSON", "q": "What is a diva?"}
+      ]
+    },
+    {
+      "n": 2,
+      "title": "The Alien Project",
+      "icon": "globe",
+      "big_question": "What are the symbols of the Big Six religions and what do they mean?",
+      "aims": [
+        "DESCRIBE — what a religious symbol is and why it matters",
+        "DISCUSS — the symbols of the Big Six world religions",
+        "EXPLAIN — the meaning of the Hindu symbol Aum"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "What is a religious symbol?",
+          "Name one religious symbol you already know.",
+          "Why might a symbol matter more to a believer than words do?"
+        ]
+      },
+      "keywords": ["Aum", "Symbol", "Brahman", "Mantra"],
+      "learn": {
+        "caption": "What each poster must tell the aliens",
+        "col1": "What to include",
+        "col2": "My notes for each religion",
+        "rows": [
+          "The founder of the religion",
+          "The symbol and its meaning",
+          "How many followers it has",
+          "How old the religion is",
+          "Its holy book and afterlife belief"
+        ]
+      },
+      "source": {
+        "quote": "Aum is said to be the most powerful word ever spoken and is the word used by Brahman to create the whole universe. It is the most holy sound in Hinduism.",
+        "attrib": "— Unit 2 lesson slides, on the Hindu symbol Aum",
+        "task": "Say what Aum is and what Hindus believe it created. Then draw the symbol on your poster."
+      },
+      "stretch": {
+        "question": "Explain why the Aum symbol is important to Hindus.",
+        "wordbank": ["Aum", "syllable", "mantra", "meditate", "Brahman"],
+        "starters": ["Firstly, ...", "This means that", "Secondly, ...", "This means that"]
+      },
+      "debate": {
+        "statement": "A religion is explained better by a symbol than by words.",
+        "agree": [
+          "A symbol like Aum can be seen and heard, so even an alien would notice it straight away.",
+          "One symbol can carry a whole story: the cross tells of Jesus dying and rising again."
+        ],
+        "disagree": [
+          "A symbol means nothing until somebody explains it, so the words have to come first.",
+          "The crescent moon was used long before Islam, so a symbol on its own can mislead you."
+        ],
+        "how_to_win": "Pick one symbol, say what it stands for, then judge whether that meaning is clear without words."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What is the difference between fact and belief?"},
+        {"tag": "LAST UNIT", "q": "What is a religious artefact?"},
+        {"tag": "LAST LESSON", "q": "What does Diwali mean?"},
+        {"tag": "LAST LESSON", "q": "Who was kidnapped by Ravana?"},
+        {"tag": "THIS LESSON", "q": "What is the main symbol of Hinduism?"},
+        {"tag": "THIS LESSON", "q": "Which religion uses the Dharma Wheel?"}
+      ]
+    },
+    {
+      "n": 3,
+      "title": "The Mandir",
+      "icon": "home",
+      "big_question": "What is the Mandir and why is it important to Hindus?",
+      "aims": [
+        "DESCRIBE — what a Mandir is and what is found inside",
+        "DISCUSS — how Hindus show respect when they enter",
+        "EXPLAIN — two reasons the Mandir matters to Hindus"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Why are religious buildings important to believers?",
+          "What features do you think a Mandir has?",
+          "Name one religious building you have heard of."
+        ]
+      },
+      "keywords": ["Mandir", "Murti", "Puja", "Vedas"],
+      "learn": {
+        "caption": "Inside a Hindu place of worship",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": ["Mandir", "Murti", "Puja", "Vedas", "The diva lamp"]
+      },
+      "source": {
+        "quote": "Firstly, one way the Mandir is important to Hindus is because they can meet the deities. This means that they can show how thankful they are by bringing offerings like food.",
+        "attrib": "— Unit 2 slides, model answer on the Mandir",
+        "task": "Highlight the point and the development. Then write a second reason in the same way."
+      },
+      "stretch": {
+        "question": "Explain two reasons why the Mandir is important to Hindus.",
+        "wordbank": ["deities", "thankful", "offerings", "Bhagavad Gita", "moral values"],
+        "starters": ["Firstly, ...", "This means that", "Secondly, ...", "This means that"]
+      },
+      "debate": {
+        "statement": "It is better to worship at the Mandir than to worship at home.",
+        "agree": [
+          "At the Mandir Hindus can stand in front of the murtis and perform puja properly.",
+          "Worshipping with other people makes a Hindu feel part of one big community."
+        ],
+        "disagree": [
+          "Hindus can pray at a shrine at home every day without travelling anywhere.",
+          "Hindus believe Brahman is in everything, so a building cannot make a prayer more real."
+        ],
+        "how_to_win": "Give one reason for each side, then say which reason you think is stronger and why."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Name three religious artefacts."},
+        {"tag": "LAST UNIT", "q": "What is the difference between fact and opinion?"},
+        {"tag": "LAST LESSON", "q": "What is the main symbol of Hinduism?"},
+        {"tag": "LAST LESSON", "q": "Name the main symbol of Judaism."},
+        {"tag": "THIS LESSON", "q": "What is puja?"},
+        {"tag": "THIS LESSON", "q": "Why do Hindus take their shoes off?"}
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Belief in the afterlife",
+      "icon": "moon",
+      "big_question": "What do Hindus believe happens after death?",
+      "aims": [
+        "DESCRIBE — what Hindus mean by atman and samsara",
+        "DISCUSS — how belief in rebirth changes how you live",
+        "EXPLAIN — one Hindu teaching about life and death"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "What do you believe happens when you die?",
+          "What is another view that people hold?",
+          "Why do people disagree about life after death?"
+        ]
+      },
+      "keywords": ["Atman", "Samsara", "Moksha", "Reincarnation"],
+      "learn": {
+        "caption": "The cycle of life, death and rebirth",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": ["Atman", "Samsara", "Moksha", "Reincarnation", "How your last life affects the next"]
+      },
+      "source": {
+        "quote": "Humans are stuck in a cycle of death and rebirth called samsara. The goal for atmans is to join Brahman and stop living. The next incarnation depends on how the previous life was lived.",
+        "attrib": "— Unit 2 lesson slides, on Hindu belief after death",
+        "task": "Underline what samsara means. Then write one sentence explaining moksha in your own words."
+      },
+      "stretch": {
+        "question": "Explain one Hindu teaching about life and death.",
+        "wordbank": ["reincarnation", "moksha", "atman", "samsara", "good actions"],
+        "starters": ["Firstly, ...", "This means that", "Secondly, ...", "This means that"]
+      },
+      "debate": {
+        "statement": "I would like to live multiple lives.",
+        "agree": [
+          "Living many lives would give you more chances to put right the mistakes you made before.",
+          "You could watch the world change and find out what life is like as somebody else."
+        ],
+        "disagree": [
+          "One life feels precious because you know it will end, so you use your time well.",
+          "If you cannot remember your old lives, living again is not really you living again."
+        ],
+        "how_to_win": "Say what you would do with an extra life, then answer the strongest point on the other side."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Name three religious symbols."},
+        {"tag": "LAST UNIT", "q": "What is a belief?"},
+        {"tag": "LAST LESSON", "q": "What is the Hindu place of worship called?"},
+        {"tag": "LAST LESSON", "q": "What is a murti?"},
+        {"tag": "THIS LESSON", "q": "Define samsara."},
+        {"tag": "THIS LESSON", "q": "What is moksha?"}
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Hinduism and nature",
+      "icon": "droplet",
+      "big_question": "What do Hindus believe about nature and how should we protect it?",
+      "aims": [
+        "DESCRIBE — what Hindus mean by the environment",
+        "DISCUSS — how karma affects the way Hindus treat nature",
+        "EXPLAIN — two Hindu teachings about the environment"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Define karma in one sentence.",
+          "Define moksha in one sentence.",
+          "Name one way that people harm the natural world."
+        ]
+      },
+      "keywords": ["Karma", "Selfless", "Environment", "Brahman"],
+      "learn": {
+        "caption": "Karma, nature and looking after the Earth",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": ["Environment", "Brahman", "Karma", "Selfless acts", "Selfish acts"]
+      },
+      "source": {
+        "quote": "Do not harm the environment; do not harm the water and the flora; the earth is my mother; I am her son; may the waters remain fresh. Do not harm the water.",
+        "attrib": "— Unit 2 lesson slides, quoting the Vedas",
+        "task": "Summarise this teaching in one sentence. Then give two ways a Hindu could follow it."
+      },
+      "stretch": {
+        "question": "Explain two Hindu teachings about the environment.",
+        "wordbank": ["good karma", "bad karma", "selfless", "selfish", "reincarnation"],
+        "starters": ["Firstly, ...", "This means that", "Secondly, ...", "This means that"]
+      },
+      "debate": {
+        "statement": "Religion is the best reason to look after the planet.",
+        "agree": [
+          "Hindus believe harming nature brings bad karma and a worse rebirth, so they take care.",
+          "The Vedas call the earth a mother, and people look after a mother without being paid."
+        ],
+        "disagree": [
+          "You do not need a religion to see that pollution is damaging everybody's home.",
+          "Scientists warn us about the climate, and that reason works for believers and non-believers."
+        ],
+        "how_to_win": "Use the Vedas quote or karma as your evidence, then say what a non-religious person would answer."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Why are religious artefacts important?"},
+        {"tag": "LAST UNIT", "q": "Name two of the Big Six religions."},
+        {"tag": "LAST LESSON", "q": "Define atman."},
+        {"tag": "LAST LESSON", "q": "What is the cycle of death and rebirth?"},
+        {"tag": "THIS LESSON", "q": "Define karma."},
+        {"tag": "THIS LESSON", "q": "Give one example of a selfless action."}
+      ]
+    },
+    {
+      "n": 6,
+      "title": "Summative assessment",
+      "icon": "target",
+      "big_question": "What have you learned about Hindu beliefs about the world?",
+      "aims": [
+        "DESCRIBE — key facts about Hindu beliefs",
+        "DISCUSS — which topics you still need to revise",
+        "EXPLAIN — Hindu belief about nature and our role in it"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Which Hindu word means the soul, and which means the cycle of rebirth?",
+          "Which topic in this unit do you find hardest, and why?",
+          "Write down three key words you must not forget in the test."
+        ]
+      },
+      "keywords": ["Trimurti", "Brahman", "Moksha", "Mandir"],
+      "learn": {
+        "caption": "The topics your summative test will cover",
+        "col1": "Topic",
+        "col2": "What I must remember",
+        "rows": [
+          "Diwali and the story of Rama and Sita",
+          "Symbols of the Big Six religions",
+          "The Mandir, murti, puja and Vedas",
+          "Atman, samsara, moksha, reincarnation",
+          "Karma, nature and the Trimurti"
+        ]
+      },
+      "source": {
+        "quote": "Firstly, one God from the Trimurti is Shiva. This means that Shiva's role is the destroyer, and he is also in charge of life and death.",
+        "attrib": "— Unit 2 slides, model answer on the Trimurti",
+        "task": "Write the second half of this answer about Vishnu, using Secondly and This means that."
+      },
+      "stretch": {
+        "question": "Explain two reasons the Mandir is important for Hindus.",
+        "wordbank": ["place of worship", "deities", "pray", "meditate", "aarti"],
+        "starters": ["Firstly, ...", "This means that", "Secondly, ...", "This means that"]
+      },
+      "debate": {
+        "statement": "A test is the best way to show what you have learned.",
+        "agree": [
+          "A test makes you revise everything, so you find out which topics you have forgotten.",
+          "Everybody answers the same questions, so a test is a fair way to compare work."
+        ],
+        "disagree": [
+          "A poster like the Alien Project shows understanding better than short written answers.",
+          "Some people panic in tests and end up scoring below what they really know."
+        ],
+        "how_to_win": "Compare the test with the Alien Project, then say which one showed your learning best."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What are the three views about God in the UK?"},
+        {"tag": "LAST UNIT", "q": "What is a religious symbol?"},
+        {"tag": "LAST LESSON", "q": "Define karma."},
+        {"tag": "LAST LESSON", "q": "What do the Vedas teach about nature?"},
+        {"tag": "THIS LESSON", "q": "What is the Trimurti?"},
+        {"tag": "THIS LESSON", "q": "Name the three gods of the Trimurti."}
+      ]
+    }
+  ]
+}

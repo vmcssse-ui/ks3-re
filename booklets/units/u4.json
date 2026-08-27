@@ -1,0 +1,460 @@
+{
+  "unit": 4,
+  "name": "Sikhism",
+  "icon": "compass",
+  "big_question": "What did Guru Nanak teach, and how do Sikhs live it out today?",
+  "glossary": [
+    {"w": "Guru Nanak", "d": "the first Guru, born 1469, who founded the Sikh faith in Punjab"},
+    {"w": "Equality", "d": "everyone being treated fairly and equally"},
+    {"w": "Sewa", "d": "selfless service to the community"},
+    {"w": "Guru Gobind Singh", "d": "the tenth Guru, who created the Khalsa and the 5Ks"},
+    {"w": "Vaisakhi", "d": "the Sikh festival celebrating the creation of the Khalsa"},
+    {"w": "Khalsa", "d": "a group committed Sikhs join; the word Khalsa means pure"},
+    {"w": "The 5Ks", "d": "the five artefacts of faith worn by all baptised Sikhs"},
+    {"w": "Gurdwara", "d": "the Sikh place of worship"},
+    {"w": "Guru Granth Sahib", "d": "the Sikh holy book"},
+    {"w": "Langar", "d": "the free kitchen where Sikhs and all people share food together"},
+    {"w": "Waheguru", "d": "the Sikh word for God; it means wondrous enlightener"},
+    {"w": "Atman", "d": "the belief that refers to the soul; Sikhs also call it the atma"},
+    {"w": "Samsara", "d": "the cycle of death and rebirth that the soul is locked in"},
+    {"w": "Karma", "d": "cause and effect: what a person does shapes their future"},
+    {"w": "Mukti", "d": "freedom from the cycle of death and rebirth"},
+    {"w": "Stewardship", "d": "looking after the world for future generations"}
+  ],
+  "lessons": [
+    {
+      "n": 1,
+      "title": "Guru Nanak",
+      "icon": "sunrise",
+      "big_question": "How did Guru Nanak's teachings change the world?",
+      "aims": [
+        "DESCRIBE — who Guru Nanak was and when he lived",
+        "DISCUSS — why Guru Nanak taught that all people are equal",
+        "EXPLAIN — two lessons that Guru Nanak taught"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "What does the word equal mean? Give an example from school.",
+          "Name one thing you already know about Sikhism.",
+          "Why might a new religion need a first teacher?"
+        ]
+      },
+      "keywords": ["Guru Nanak", "Sewa", "Khalsa", "Equality"],
+      "learn": {
+        "caption": "Guru Nanak's life and his main teachings",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Born in Punjab in 1469",
+          "Rejected the Sacred Thread Ceremony",
+          "One God, responsible for all",
+          "All people are equal",
+          "Nine more Gurus followed him"
+        ]
+      },
+      "source": {
+        "quote": "The Sikh faith started as Guru Nanak realised that people were losing sight of God in their lives because of greed and superstition. He set out a list of new rules.",
+        "attrib": "— Unit 4 lesson slides, on Guru Nanak",
+        "task": "Underline why people were losing sight of God. Then write Guru Nanak's answer in your own words."
+      },
+      "stretch": {
+        "question": "Explain two lessons that Guru Nanak taught.",
+        "wordbank": ["Equality", "Religion", "One God", "Teachings", "Sewa"],
+        "starters": ["Firstly,", "This means that", "Secondly,", "This means that"]
+      },
+      "debate": {
+        "statement": "Guru Nanak's teaching about equality is his most important teaching.",
+        "agree": [
+          "He said there is one God for all, so every person must be equal in God's eyes.",
+          "He rejected the caste system, so people treated as low-born were finally welcomed in."
+        ],
+        "disagree": [
+          "Teaching that there is one God matters more, because equality grows out of that belief.",
+          "Sewa, or selfless service, matters more because it changes what Sikhs do every day."
+        ],
+        "how_to_win": "Use one fact about Guru Nanak's life, then say what changed in the world because of it."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "How many sights did the Buddha see?"},
+        {"tag": "LAST UNIT", "q": "What is the overall aim of Buddhism?"},
+        {"tag": "LAST UNIT", "q": "Where do Buddhists go to worship?"},
+        {"tag": "LAST UNIT", "q": "What is Wesak?"},
+        {"tag": "THIS LESSON", "q": "Who founded Sikhism?"},
+        {"tag": "THIS LESSON", "q": "What is sewa?"}
+      ]
+    },
+    {
+      "n": 2,
+      "title": "The Five Ks",
+      "icon": "shield",
+      "big_question": "What are the 5Ks? Why are they important today?",
+      "aims": [
+        "DESCRIBE — the 5Ks worn by baptised Sikhs",
+        "DISCUSS — why the 5Ks still matter to Sikhs today",
+        "EXPLAIN — how the Khalsa began at Vaisakhi in 1699"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "List as many religious rules or laws as you can.",
+          "Why do some religions ask people to wear special items?",
+          "Who founded Sikhism, and what did he teach about people?"
+        ]
+      },
+      "keywords": ["Khalsa", "Vaisakhi", "The 5Ks", "Guru Gobind Singh"],
+      "learn": {
+        "caption": "The 5Ks: five artefacts of faith and what they mean",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Kesh - uncut hair, kept in a turban",
+          "Kangha - a small wooden comb",
+          "Kara - a steel bangle worn on the arm",
+          "Kachera - short cotton trousers",
+          "Kirpan - a small warrior's sword"
+        ]
+      },
+      "source": {
+        "quote": "The 5Ks are items of faith which display and show the wearer's conviction in God and are a constant reminder of their love for Him.",
+        "attrib": "— Unit 4 lesson slides, on the 5Ks",
+        "task": "Highlight the two jobs the 5Ks do. Then pick one K and say what it reminds a Sikh to do."
+      },
+      "stretch": {
+        "question": "Why do you think the 5Ks are important to Sikhs?",
+        "wordbank": ["Khalsa", "Vaisakhi", "faith", "reminder", "baptised"],
+        "starters": ["Firstly,", "This means that", "Secondly,", "This means that"]
+      },
+      "debate": {
+        "statement": "Wearing the 5Ks is the best way to show you belong to a religion.",
+        "agree": [
+          "The 5Ks are worn all day, so a Sikh is reminded of God every hour, not just in worship.",
+          "Guru Gobind Singh gave the 5Ks to the Khalsa, so wearing them links Sikhs back to 1699."
+        ],
+        "disagree": [
+          "How you treat other people shows your faith far better than anything you wear.",
+          "Sewa, selfless service, actually helps people, while a comb or a bangle only reminds you."
+        ],
+        "how_to_win": "Name one of the 5Ks, say what it symbolises, then judge if a symbol can change behaviour."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What is Nirvana?"},
+        {"tag": "LAST UNIT", "q": "Who was Siddhartha Gautama?"},
+        {"tag": "LAST LESSON", "q": "Who founded Sikhism?"},
+        {"tag": "LAST LESSON", "q": "What did Guru Nanak teach about people?"},
+        {"tag": "THIS LESSON", "q": "Why do Sikhs wear the 5Ks?"},
+        {"tag": "THIS LESSON", "q": "Which K reminds Sikhs to defend the weak?"}
+      ]
+    },
+    {
+      "n": 3,
+      "title": "The Gurdwara",
+      "icon": "home",
+      "big_question": "Why is the Gurdwara important to Sikhs?",
+      "aims": [
+        "DESCRIBE — what happens inside a gurdwara",
+        "DISCUSS — why everyone sits on the floor for langar",
+        "EXPLAIN — two ways a gurdwara is important to Sikhs"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Why do different religions have their own places of worship?",
+          "What might you gain from visiting a gurdwara instead of praying at home?",
+          "Name two of the 5Ks and say what each one reminds a Sikh to do."
+        ]
+      },
+      "keywords": ["Gurdwara", "Langar", "Guru Granth Sahib", "Equality"],
+      "learn": {
+        "caption": "Inside the gurdwara: worship, holy book and langar",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Gurdwara - the Sikh place of worship",
+          "Guru Granth Sahib - the Sikh holy book",
+          "Langar - free food for everyone",
+          "Everyone sits on the floor to eat",
+          "Sikhs worship, learn and meet here"
+        ]
+      },
+      "source": {
+        "quote": "The Langar provides free food for everyone. It doesn't matter what religion you are - everyone is welcome. This food is offered free of charge.",
+        "attrib": "— Unit 4 lesson slides, on the langar",
+        "task": "Underline who is welcome at langar. Then explain why Sikhs all sit on the floor to eat."
+      },
+      "stretch": {
+        "question": "Explain two ways a Gurdwara is important to Sikhs.",
+        "wordbank": ["Langar", "community", "spiritually", "God", "worship"],
+        "starters": ["Firstly,", "This means that", "Secondly,", "This means that"]
+      },
+      "debate": {
+        "statement": "Sharing free food does more good than praying together.",
+        "agree": [
+          "Langar feeds anyone who is hungry, of any religion, so it helps people in a real way.",
+          "Sitting on the floor together shows nobody is above anyone else, and that builds equality."
+        ],
+        "disagree": [
+          "Reading the Guru Granth Sahib teaches Sikhs how to live, which shapes everything else.",
+          "Worship brings Sikhs closer to God, and that is the main reason a gurdwara exists."
+        ],
+        "how_to_win": "Give one thing that happens in a gurdwara, then say clearly who it helps and how."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Where do Buddhists go to worship?"},
+        {"tag": "LAST UNIT", "q": "What does the Middle Way teach Buddhists?"},
+        {"tag": "LAST LESSON", "q": "What does Kesh mean?"},
+        {"tag": "LAST LESSON", "q": "Which 5K reminds Sikhs to behave well?"},
+        {"tag": "THIS LESSON", "q": "What is langar?"},
+        {"tag": "THIS LESSON", "q": "Why do Sikhs sit on the floor at langar?"}
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Formative assessment",
+      "icon": "edit-3",
+      "big_question": "How much of the Sikhism unit can you explain on your own?",
+      "aims": [
+        "DESCRIBE — the key words of Sikhism studied so far",
+        "DISCUSS — which topics you still need to revise",
+        "EXPLAIN — two ways a gurdwara is important to Sikhs"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Who founded Sikhism, and in which year was he born?",
+          "Name three of the 5Ks and say what each one means.",
+          "What is langar, and who is welcome to eat there?"
+        ]
+      },
+      "keywords": ["Sewa", "Khalsa", "Gurdwara", "Guru Granth Sahib"],
+      "learn": {
+        "caption": "Topics the formative assessment covers",
+        "col1": "Topic",
+        "col2": "What I still need to revise",
+        "rows": [
+          "Guru Nanak: his life and teachings",
+          "The 10 Gurus and what they did",
+          "The Khalsa, Vaisakhi and the 5Ks",
+          "Gurdwara, langar and the holy book",
+          "Key words: sewa, karma, mukti, atman"
+        ]
+      },
+      "source": {
+        "quote": "One way the Gurdwara is important to Sikhs is that they can have meals together and improve their idea of community.",
+        "attrib": "— Unit 4 formative model answer",
+        "task": "Copy this point. Then add a develop sentence that begins with This means that."
+      },
+      "stretch": {
+        "question": "Explain two ways a Gurdwara is important to Sikhs.",
+        "wordbank": ["Langar", "community", "spiritually", "Waheguru", "worship"],
+        "starters": ["Firstly,", "This means that", "Secondly,", "This means that"]
+      },
+      "debate": {
+        "statement": "Tests are the best way to find out what you have really learned.",
+        "agree": [
+          "A test shows exactly which key words you can explain without any help from a book.",
+          "Sitting a test now means you can fix your mistakes before the summative assessment."
+        ],
+        "disagree": [
+          "You can revise hard and still freeze in a test, so it may not show what you know.",
+          "Explaining Sikhism out loud to a partner can prove your learning just as well."
+        ],
+        "how_to_win": "Say what a test does well, what it misses, then give your own view with a reason."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What is Wesak?"},
+        {"tag": "LAST UNIT", "q": "Name one Buddhist teaching about nature."},
+        {"tag": "LAST LESSON", "q": "What is a gurdwara?"},
+        {"tag": "LAST LESSON", "q": "What is the Sikh holy book called?"},
+        {"tag": "THIS LESSON", "q": "What does sewa mean?"},
+        {"tag": "THIS LESSON", "q": "What does the word Khalsa mean?"}
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Belief in the afterlife",
+      "icon": "moon",
+      "big_question": "What do Sikhs believe happens after death?",
+      "aims": [
+        "DESCRIBE — what Sikhs believe about Waheguru and the atma",
+        "DISCUSS — how karma affects the way Sikhs live",
+        "EXPLAIN — two Sikh teachings about life after death"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "If you could share a feast with any famous person, who would you pick?",
+          "What do you think happens to a person after they die?",
+          "What is a gurdwara, and what happens in the langar?"
+        ]
+      },
+      "keywords": ["Waheguru", "Samsara", "Mukti", "Karma"],
+      "learn": {
+        "caption": "Sikh beliefs about God, the soul and rebirth",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Waheguru - the Sikh name for God",
+          "Atma - the soul, given to all beings",
+          "Samsara - the cycle of death and rebirth",
+          "Mukti - freedom from that cycle",
+          "Gurmukh good karma, manmukh bad karma"
+        ]
+      },
+      "source": {
+        "quote": "Sikhs have many words to describe God. The name most widely used for God by Sikhs is Waheguru, which means wondrous enlightener.",
+        "attrib": "— Unit 4 lesson slides, on Waheguru",
+        "task": "Underline what Waheguru means. Then write why Sikhs keep God in their minds all day."
+      },
+      "stretch": {
+        "question": "Explain two Sikh teachings about life after death.",
+        "wordbank": ["Gurmukh", "manmukh", "samsara", "atma", "mukti"],
+        "starters": ["Firstly,", "This means that", "Secondly,", "This means that"]
+      },
+      "debate": {
+        "statement": "Believing in rebirth makes people behave better in this life.",
+        "agree": [
+          "If your karma decides your next life, you have a strong reason to act well every day.",
+          "Sikhs try to live as gurmukh, full of good karma, so the belief shapes daily choices."
+        ],
+        "disagree": [
+          "Many people behave well without believing in rebirth, simply because it is kind.",
+          "Someone might do good deeds only to help themselves, which is not really being good."
+        ],
+        "how_to_win": "Use the words karma and mukti, then say whether a belief can really change behaviour."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What is Nirvana?"},
+        {"tag": "LAST UNIT", "q": "What does the Middle Way teach Buddhists?"},
+        {"tag": "LAST LESSON", "q": "Which key word means selfless service?"},
+        {"tag": "LAST LESSON", "q": "How many Gurus are there?"},
+        {"tag": "THIS LESSON", "q": "What is the Sikh name for God?"},
+        {"tag": "THIS LESSON", "q": "What does gurmukh mean?"}
+      ]
+    },
+    {
+      "n": 6,
+      "title": "Sikhism and nature",
+      "icon": "wind",
+      "big_question": "What responsibility do Sikhs have to protect the world?",
+      "aims": [
+        "DESCRIBE — what stewardship means for Sikhs",
+        "DISCUSS — why Sikhism has no creation story",
+        "EXPLAIN — two reasons Sikhs must look after the world"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "How many problems in the environment can you name?",
+          "Whose job is it to look after the planet? Explain your answer.",
+          "What is mukti, and what must Sikhs do to reach it?"
+        ]
+      },
+      "keywords": ["Stewardship", "Creation", "Harmony", "Guru Granth Sahib"],
+      "learn": {
+        "caption": "Sikh teaching on creation and caring for it",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Sikhism has no creation story",
+          "Nobody was there when creation happened",
+          "Stewardship - caring for the future",
+          "Harmony with people, animals, nature",
+          "Recycling, clean energy, local food"
+        ]
+      },
+      "source": {
+        "quote": "What was that time, and what was that moment? What was that day, and what was that date? What was that season, and what was that month, when the Universe was created?",
+        "attrib": "— Unit 4 slides, quoting the Guru Granth Sahib",
+        "task": "Guru Nanak asks four questions here. Explain in your own words why nobody can answer them."
+      },
+      "stretch": {
+        "question": "Explain two reasons why Sikhs must look after the world.",
+        "wordbank": ["Stewardship", "creation", "harmony", "Waheguru", "generations"],
+        "starters": ["Firstly,", "This means that", "Secondly,", "This means that"]
+      },
+      "debate": {
+        "statement": "Religious people should do more than others to protect the planet.",
+        "agree": [
+          "The Guru Granth Sahib tells Sikhs to think of future generations, so they have a duty.",
+          "Sikhs believe Waheguru created everything, so harming nature harms God's own creation."
+        ],
+        "disagree": [
+          "The planet belongs to everyone, so the duty to protect it is equal for all people.",
+          "Governments and big companies cause most of the damage, so they should do the most."
+        ],
+        "how_to_win": "Use the word stewardship, give one Sikh teaching, then say clearly what you think."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "How many Noble Truths are there?"},
+        {"tag": "LAST UNIT", "q": "Name one Buddhist belief about nature."},
+        {"tag": "LAST LESSON", "q": "What is gurmukh?"},
+        {"tag": "LAST LESSON", "q": "What does Waheguru mean?"},
+        {"tag": "THIS LESSON", "q": "What is stewardship?"},
+        {"tag": "THIS LESSON", "q": "Give one way Sikhs can help nature."}
+      ]
+    },
+    {
+      "n": 7,
+      "title": "Summative assessment",
+      "icon": "award",
+      "big_question": "Can you explain what Sikhs believe and why it matters?",
+      "aims": [
+        "DESCRIBE — the key words of the whole Sikhism unit",
+        "DISCUSS — which answers you can improve next time",
+        "EXPLAIN — two Sikh beliefs about the afterlife"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Write down three key words from this unit and their meanings.",
+          "What do Sikhs believe happens to the atma after death?",
+          "Why do Sikhs believe they must look after the world?"
+        ]
+      },
+      "keywords": ["Karma", "Mukti", "Stewardship", "Waheguru"],
+      "learn": {
+        "caption": "What the summative assessment covers",
+        "col1": "Task",
+        "col2": "What a good answer includes",
+        "rows": [
+          "Match 10 key words to their meanings",
+          "Two Sikh beliefs about the afterlife",
+          "Two Sikh beliefs about nature",
+          "Outline two of the 5Ks",
+          "A Point and a Develop in every answer"
+        ]
+      },
+      "source": {
+        "quote": "Firstly, human beings are stewards of God's creation. This means that we are meant to look after Waheguru's creation for the future.",
+        "attrib": "— Unit 4 summative model answer",
+        "task": "Circle the point and the explanation. Then write your own pair about Sikh belief in mukti."
+      },
+      "stretch": {
+        "question": "Explain two Sikh beliefs about nature.",
+        "wordbank": ["stewardship", "creation", "harmony", "sustained", "generations"],
+        "starters": ["Firstly,", "This means that", "Secondly,", "This means that"]
+      },
+      "debate": {
+        "statement": "Sikhism says more about how to live than about what happens after death.",
+        "agree": [
+          "Sewa, langar and the 5Ks are all about daily actions that any Sikh can see and do.",
+          "Sikhs are told to live as gurmukh now, because good karma is built in this life."
+        ],
+        "disagree": [
+          "Everything Sikhs do is aimed at mukti, so the afterlife is the real reason behind it.",
+          "Beliefs about samsara and karma are what explain why daily actions matter at all."
+        ],
+        "how_to_win": "Use one belief about life now and one about the afterlife, then say which is bigger."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Name the Buddhist place of worship."},
+        {"tag": "LAST UNIT", "q": "Who was Siddhartha Gautama?"},
+        {"tag": "LAST LESSON", "q": "What does stewardship mean?"},
+        {"tag": "LAST LESSON", "q": "Do Sikhs have a creation story?"},
+        {"tag": "THIS LESSON", "q": "What does mukti mean?"},
+        {"tag": "THIS LESSON", "q": "Which Guru created the Khalsa?"}
+      ]
+    }
+  ]
+}

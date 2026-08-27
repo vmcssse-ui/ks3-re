@@ -1,0 +1,495 @@
+{
+  "unit": 3,
+  "name": "Buddhism",
+  "icon": "compass",
+  "big_question": "How do the teachings of the Buddha help Buddhists escape suffering?",
+  "glossary": [
+    {"w": "Siddhartha Gautama", "d": "the founder of Buddhism"},
+    {"w": "Buddha", "d": "the Enlightened One"},
+    {"w": "Four Sights", "d": "the old man, sick man, dead man and holy man Siddhartha saw"},
+    {"w": "Meditation", "d": "deep concentration and reflection to develop awareness"},
+    {"w": "Four Noble Truths", "d": "the four main teachings of the Buddha about suffering"},
+    {"w": "Dukkha", "d": "the belief that life involves suffering"},
+    {"w": "Eightfold Path", "d": "the set of guidelines that ends suffering"},
+    {"w": "The Middle Way", "d": "to live with balance and moderation"},
+    {"w": "Wesak", "d": "the Buddhist festival that celebrates the birth of the Buddha"},
+    {"w": "Bathing of the Buddha", "d": "pouring water over a Buddha statue to purify heart and mind"},
+    {"w": "Vihara", "d": "a Buddhist temple"},
+    {"w": "Samsara", "d": "the cycle of life, death and rebirth"},
+    {"w": "Nirvana", "d": "the act of achieving enlightenment and escaping samsara"},
+    {"w": "Karma", "d": "the consequences in the future of your actions today"},
+    {"w": "Sentient beings", "d": "living beings, including humans and animals"},
+    {"w": "Materialism", "d": "the belief that physical matter is the only true reality"}
+  ],
+  "lessons": [
+    {
+      "n": 1,
+      "title": "Siddhartha Gautama",
+      "icon": "sunrise",
+      "big_question": "How did Siddhartha Gautama become the Buddha?",
+      "aims": [
+        "DESCRIBE — who Siddhartha Gautama was",
+        "DISCUSS — why the Four Sights changed his life",
+        "EXPLAIN — what the Buddha taught about suffering"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "What does monotheism mean?",
+          "What does polytheism mean? Which religion is polytheistic?",
+          "What is reincarnation? What is moksha?"
+        ]
+      },
+      "keywords": ["Siddhartha Gautama", "Buddha", "Meditation", "Four Sights"],
+      "learn": {
+        "caption": "The life of the Buddha, from prince to teacher",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Buddhism - over 480 million followers",
+          "Siddhartha Gautama - the founder",
+          "The Four Sights - what he saw at 29",
+          "Meditation - 46 days under the tree",
+          "Buddha - meaning the Enlightened One"
+        ]
+      },
+      "source": {
+        "quote": "He came across a holy fig tree and sat underneath it to meditate. He stayed there for 46 days, paying no attention to what was happening around him.",
+        "attrib": "— Unit 3 lesson slides, on becoming the Buddha",
+        "task": "Underline the words that show how hard Siddhartha worked. Why did he need to sit for so long?"
+      },
+      "stretch": {
+        "question": "Explain two things Siddhartha Gautama saw that changed his life.",
+        "wordbank": ["Four Sights", "old man", "sick man", "holy man", "suffering"],
+        "starters": [
+          "Firstly, one sight was",
+          "This means that",
+          "Secondly, another sight was",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "You have to give up everything you own to find the meaning of life",
+        "agree": [
+          "Siddhartha only found his answer after he left his palace, his riches and his family.",
+          "He taught that suffering comes because we always want more things."
+        ],
+        "disagree": [
+          "Siddhartha tried living with almost nothing with the monks and only became ill, not wiser.",
+          "He later taught balance and moderation, which does not mean giving up all you own."
+        ],
+        "how_to_win": "Use the story of the monks. Say what Siddhartha tried, what went wrong, and what he chose instead."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "Define monotheism"},
+        {"tag": "LAST UNIT", "q": "What is the meaning of samsara?"},
+        {"tag": "LAST UNIT", "q": "Define polytheism"},
+        {"tag": "LAST UNIT", "q": "What is the Trimurti?"},
+        {"tag": "THIS LESSON", "q": "What are the four noble truths?"},
+        {"tag": "THIS LESSON", "q": "Define Siddhartha Gautama"}
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Wesak",
+      "icon": "gift",
+      "big_question": "Why is Wesak the most important festival in Buddhism?",
+      "aims": [
+        "DESCRIBE — what happens at the festival of Wesak",
+        "DISCUSS — why religious festivals matter to believers",
+        "EXPLAIN — what the Bathing of the Buddha means"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Do you celebrate a religious festival? If so, how do you celebrate it?",
+          "How many religious festivals can you name?",
+          "Why do you think festivals bring people together?"
+        ]
+      },
+      "keywords": ["Wesak", "Religious festival", "Bathing of the Buddha", "Purify"],
+      "learn": {
+        "caption": "Wesak: the festival of the Buddha's birth",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Religious festivals - faith and unity",
+          "Wesak - celebrates the Buddha's birth",
+          "Bathing of the Buddha - water poured",
+          "Purify - to clean the heart and mind",
+          "Wearing white clothes"
+        ]
+      },
+      "source": {
+        "quote": "Religious festivals are a celebration of faith and togetherness. On these days, followers of a religion stand tall, united, and proud in their spirituality.",
+        "attrib": "— Unit 3 lesson slides, on religious festivals",
+        "task": "Pick out the three words that describe how believers feel. Which one matters most, and why?"
+      },
+      "stretch": {
+        "question": "Explain two ways Buddhists celebrate Wesak.",
+        "wordbank": ["Wesak", "Bathing", "statue", "purify", "white clothes"],
+        "starters": [
+          "Firstly, one way is",
+          "This means that",
+          "Secondly, another way is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Wesak is the most important festival in Buddhism",
+        "agree": [
+          "Wesak celebrates the birth of the Buddha, and without him there would be no Buddhism.",
+          "It is the one day when Buddhists everywhere stand together, united and proud."
+        ],
+        "disagree": [
+          "The Buddha taught that meditation matters, and Buddhists meditate every day of the year.",
+          "Buddhists can purify their heart and mind at any time, not only when they bathe a statue."
+        ],
+        "how_to_win": "Say what Wesak celebrates, then say what Buddhists do the rest of the year. Compare the two."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What is reincarnation?"},
+        {"tag": "LAST UNIT", "q": "Name one Hindu festival."},
+        {"tag": "LAST LESSON", "q": "Who founded Buddhism?"},
+        {"tag": "LAST LESSON", "q": "How long did the Buddha meditate for?"},
+        {"tag": "THIS LESSON", "q": "What is Wesak?"},
+        {"tag": "THIS LESSON", "q": "What is the Bathing of the Buddha?"}
+      ]
+    },
+    {
+      "n": 3,
+      "title": "The Vihara",
+      "icon": "home",
+      "big_question": "What is the Vihara and why is it important to Buddhists?",
+      "aims": [
+        "DESCRIBE — what a Vihara is",
+        "DISCUSS — if worship is better at home or a temple",
+        "EXPLAIN — why meditation is important to Buddhists"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Is it more important to pray at home or in a place of worship? Why?",
+          "Name one place of worship you have studied and one thing done there.",
+          "What might help a person concentrate when they worship?"
+        ]
+      },
+      "keywords": ["Vihara", "Meditation", "Mantra", "Puja"],
+      "learn": {
+        "caption": "Inside the Vihara: worship, study and community",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Vihara - a Buddhist temple",
+          "Worship at home or at the temple",
+          "Puja, chanting and reciting mantras",
+          "Meditation - controlling the mind",
+          "Study Buddhism and grow spiritually"
+        ]
+      },
+      "source": {
+        "quote": "Meditation is a central form of worship within Buddhism. It helps control the mind, which enables you to become more aware of yourself and those around you.",
+        "attrib": "— Unit 3 lesson slides, on worship in the Vihara",
+        "task": "Circle the two things meditation helps a Buddhist do. Why might that make worship easier?"
+      },
+      "stretch": {
+        "question": "Explain two ways a Vihara is important to Buddhists.",
+        "wordbank": ["Vihara", "worship", "meditation", "community", "study"],
+        "starters": [
+          "Firstly, the Vihara is important because",
+          "This means that",
+          "Secondly, the Vihara is important because",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Buddhists do not need a Vihara because they can worship at home",
+        "agree": [
+          "Buddhists can worship at home, so a temple is not needed to meditate or chant.",
+          "Meditation only needs a quiet mind, and a person can find that anywhere."
+        ],
+        "disagree": [
+          "The Vihara supports the members of the community in their spiritual growth.",
+          "It is the place where Buddhists can study the religion and learn from others."
+        ],
+        "how_to_win": "Give both reasons the Vihara matters, then say what a home cannot give a Buddhist."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What is a mandir?"},
+        {"tag": "LAST UNIT", "q": "What is samsara?"},
+        {"tag": "LAST LESSON", "q": "What is Wesak?"},
+        {"tag": "LAST LESSON", "q": "What is the Bathing of the Buddha?"},
+        {"tag": "THIS LESSON", "q": "What is a Vihara?"},
+        {"tag": "THIS LESSON", "q": "What is the purpose of meditation?"}
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Formative assessment",
+      "icon": "target",
+      "big_question": "How well do you know the Buddha, Wesak and the Vihara?",
+      "aims": [
+        "DESCRIBE — the key words from the first three lessons",
+        "DISCUSS — which answers you found hardest and why",
+        "EXPLAIN — two Buddhist teachings in full sentences"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Who founded Buddhism, and what does the word Buddha mean?",
+          "What are the Four Sights that Siddhartha saw?",
+          "Name two things Buddhists do inside a Vihara."
+        ]
+      },
+      "keywords": ["Siddhartha Gautama", "Wesak", "Vihara", "Four Noble Truths"],
+      "learn": {
+        "caption": "Topics the formative test covers",
+        "col1": "Topic",
+        "col2": "What I need to remember",
+        "rows": [
+          "Key words: monotheism, polytheism",
+          "Siddhartha Gautama and the Buddha",
+          "Karma and reincarnation",
+          "Wesak and the Bathing of the Buddha",
+          "Explain two Buddhist teachings"
+        ]
+      },
+      "source": {
+        "quote": "Firstly, one Buddhist teaching is the Bathing of the Buddha. This means that the Buddha is washed with water to purify people's hearts.",
+        "attrib": "— Unit 3 formative model answer",
+        "task": "Find the point and the develop sentence. Now write a second point about the noble truths."
+      },
+      "stretch": {
+        "question": "Explain two Buddhist teachings. (4 marks)",
+        "wordbank": ["Bathing", "purify", "noble truths", "teaching", "suffering"],
+        "starters": [
+          "Firstly, one Buddhist teaching is",
+          "This means that",
+          "Secondly, another teaching is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Tests are the best way to find out what you have learned",
+        "agree": [
+          "A test shows exactly which key words you know and which ones you still need to revise.",
+          "Writing an answer on your own proves you can remember without any help."
+        ],
+        "disagree": [
+          "A test only checks what you can recall on one day, not what you understand.",
+          "Explaining an idea to someone else can show your understanding better than a test can."
+        ],
+        "how_to_win": "Give one thing a test measures well and one thing it misses, then say which matters more."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What is karma?"},
+        {"tag": "LAST UNIT", "q": "What is the Trimurti?"},
+        {"tag": "LAST LESSON", "q": "What is a Vihara?"},
+        {"tag": "LAST LESSON", "q": "Can Buddhists worship at home?"},
+        {"tag": "THIS LESSON", "q": "Define monotheism"},
+        {"tag": "THIS LESSON", "q": "Define polytheism"}
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Belief in the afterlife",
+      "icon": "moon",
+      "big_question": "What do Buddhists believe happens after death?",
+      "aims": [
+        "DESCRIBE — what Buddhists believe about samsara",
+        "DISCUSS — why Buddhists want to reach Nirvana",
+        "EXPLAIN — two of the Four Noble Truths"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Money buys happiness. Do you agree or disagree? Why?",
+          "Name one thing you want. Would having it make you happy for ever?",
+          "What did Siddhartha say causes suffering?"
+        ]
+      },
+      "keywords": ["Samsara", "Nirvana", "Dukkha", "Four Noble Truths"],
+      "learn": {
+        "caption": "The Four Noble Truths and life after death",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Samsara - cycle of death and rebirth",
+          "Dukkha - life involves suffering",
+          "Samudaya - desire, greed and hatred",
+          "Nirodha - suffering can be ended",
+          "Magga - follow the Eightfold Path"
+        ]
+      },
+      "source": {
+        "quote": "Buddhists believe in life after death because the Buddha taught that human beings are each born an infinite number of times unless they achieve Nirvana.",
+        "attrib": "— Unit 3 lesson slides, on life after death",
+        "task": "Nirvana means escaping samsara. Explain in your own words why a Buddhist would want that."
+      },
+      "stretch": {
+        "question": "Explain two of the Four Noble Truths. (4 marks)",
+        "wordbank": ["Dukkha", "Samudaya", "Nirodha", "Magga", "suffering"],
+        "starters": [
+          "Firstly, one noble truth is",
+          "This means that",
+          "Secondly, another noble truth is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "It is better to live once than to be reborn again and again",
+        "agree": [
+          "Buddhists say samsara is a cycle to escape from, so being reborn is not a reward.",
+          "Every new life brings dukkha, which means more suffering each time you are born."
+        ],
+        "disagree": [
+          "Being born many times gives you more chances to end your desires and reach Nirvana.",
+          "Karma means your actions today shape your next life, so rebirth can be a fresh start."
+        ],
+        "how_to_win": "Say what samsara is, then say what Nirvana is. Judge which one a Buddhist would choose."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What is moksha?"},
+        {"tag": "LAST UNIT", "q": "Where do Hindus worship?"},
+        {"tag": "LAST LESSON", "q": "Define reincarnation"},
+        {"tag": "LAST LESSON", "q": "What does the word Buddha mean?"},
+        {"tag": "THIS LESSON", "q": "What is Nirvana?"},
+        {"tag": "THIS LESSON", "q": "Define Dukkha"}
+      ]
+    },
+    {
+      "n": 6,
+      "title": "Buddhism and nature",
+      "icon": "feather",
+      "big_question": "What responsibility do Buddhists have to protect the environment?",
+      "aims": [
+        "DESCRIBE — sentient and non-sentient beings",
+        "DISCUSS — whether materialism harms the planet",
+        "EXPLAIN — how the Middle Way guides Buddhists"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "We will not be alive to see the future, so why look after the environment?",
+          "Give one reason to agree and one reason to disagree.",
+          "Name two things people do that harm the environment."
+        ]
+      },
+      "keywords": ["Sentient beings", "Non-sentient beings", "Materialism", "The Middle Way"],
+      "learn": {
+        "caption": "Buddhists, nature and living with balance",
+        "col1": "Idea",
+        "col2": "What it means / example",
+        "rows": [
+          "Sentient beings - humans and animals",
+          "Non-sentient beings - objects, no life",
+          "Materialism - only matter is real",
+          "The Middle Way - balance, moderation",
+          "Care for all life, avoid causing harm"
+        ]
+      },
+      "source": {
+        "quote": "The Buddha did not teach specifically about climate change, but he taught that Buddhists should care for all living things and avoid causing harm.",
+        "attrib": "— Unit 3 lesson slides, on the Buddha's way of life",
+        "task": "The Buddha never mentioned climate change. Explain how his teaching still applies today."
+      },
+      "stretch": {
+        "question": "How does the Middle Way teach Buddhists to treat the environment?",
+        "wordbank": ["respect", "environment", "materialistic", "money", "desires"],
+        "starters": [
+          "Firstly, the Middle Way teaches",
+          "This means that",
+          "Secondly, it also teaches",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Buying the newest phone every year is wrong for a Buddhist",
+        "agree": [
+          "Buying things to impress others is materialism, and desire is what causes suffering.",
+          "Making new phones can destroy habitats, and Buddhists are taught not to harm nature."
+        ],
+        "disagree": [
+          "The Middle Way means balance, not going without, so owning a phone is not wrong.",
+          "It is the reason for buying that matters, not the object a Buddhist owns."
+        ],
+        "how_to_win": "Use the words materialism and Middle Way. Say when buying is greed and when it is balance."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What is a mandir?"},
+        {"tag": "LAST UNIT", "q": "Name one Hindu belief about nature."},
+        {"tag": "LAST LESSON", "q": "How many noble truths are there?"},
+        {"tag": "LAST LESSON", "q": "What is a way to get rid of suffering?"},
+        {"tag": "THIS LESSON", "q": "What is materialism?"},
+        {"tag": "THIS LESSON", "q": "Describe sentient beings"}
+      ]
+    },
+    {
+      "n": 7,
+      "title": "Summative assessment",
+      "icon": "award",
+      "big_question": "Can you explain what Buddhists believe and why it matters?",
+      "aims": [
+        "DESCRIBE — the key words from the whole unit",
+        "DISCUSS — which topic you need to revise most",
+        "EXPLAIN — two noble truths using point and develop"
+      ],
+      "bell": {
+        "instruction": "Answer in full sentences.",
+        "questions": [
+          "Write down every key word you can remember from this unit.",
+          "Which two topics do you feel least sure about? Why?",
+          "In three lines, explain the story of the Buddha."
+        ]
+      },
+      "keywords": ["Tripitaka", "The Middle Way", "Nirvana", "Samudaya"],
+      "learn": {
+        "caption": "Topics the summative test covers",
+        "col1": "Topic",
+        "col2": "What I need to remember",
+        "rows": [
+          "Key words: ten definitions to match",
+          "Tripitaka - the Buddhist holy book",
+          "Wesak: two ways Buddhists celebrate",
+          "The four noble truths: explain two",
+          "Nirvana: why Buddhists want to reach it"
+        ]
+      },
+      "source": {
+        "quote": "Firstly, there is Dukkha. This means that life involves suffering. Secondly, there is Nirodha. This means that suffering can be ended.",
+        "attrib": "— Unit 3 summative model answer",
+        "task": "Each point has a develop sentence. Add one more sentence to each to make it stronger."
+      },
+      "stretch": {
+        "question": "Explain two reasons why Buddhists want to reach Nirvana.",
+        "wordbank": ["Nirvana", "samsara", "suffering", "rebirth", "Dukkha"],
+        "starters": [
+          "Firstly, one reason is",
+          "This means that",
+          "Secondly, another reason is",
+          "This means that"
+        ]
+      },
+      "debate": {
+        "statement": "Buddhism is a religion even though it has no God",
+        "agree": [
+          "Buddhists have a holy book, festivals, temples and beliefs about life after death.",
+          "They follow the teachings of the Buddha as an example of how to live a good life."
+        ],
+        "disagree": [
+          "Buddhism is neither monotheistic nor polytheistic, so there is no God to worship.",
+          "It is based on the teachings of a man, which makes it more like a way of life."
+        ],
+        "how_to_win": "Say what other religions have that Buddhism has too, then say what it does not have."
+      },
+      "quickfire": [
+        {"tag": "LAST UNIT", "q": "What is the Trimurti?"},
+        {"tag": "LAST UNIT", "q": "What is reincarnation?"},
+        {"tag": "LAST LESSON", "q": "Describe non-sentient beings"},
+        {"tag": "LAST LESSON", "q": "Define the Middle Way"},
+        {"tag": "THIS LESSON", "q": "Define Tripitaka"},
+        {"tag": "THIS LESSON", "q": "What is Samudaya?"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,800 @@
+<title>Year 9 Weekly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400&family=Public+Sans:ital,wght@0,400..800;1,400&display=swap">
+<style>
+:root{
+  --paper:#FBF9FC; --card:#FFFFFF; --ink:#1A1520; --ink-2:#4C4256;
+  --ink-3:#786C84; --rule:#E4DCEA; --rule-2:#F0EAF3;
+  --plum:#3E1163; --plum-2:#6B4A85; --plum-wash:#F4EEF8; --on-plum:#FFFFFF;
+  --brass:#8A5C0B; --brass-wash:#FBF3E2;
+  --teal:#0B3D36; --teal-wash:#E7F0EE;
+  --shadow:0 1px 2px rgba(26,21,32,.05), 0 8px 24px -16px rgba(26,21,32,.28);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141019; --card:#1C1724; --ink:#EFE9F2; --ink-2:#B9AFC4;
+    --ink-3:#8A7F96; --rule:#312839; --rule-2:#241D2C;
+    --plum:#C6A4E2; --plum-2:#9E7FBC; --plum-wash:#241A31; --on-plum:#17101F;
+    --brass:#E2B45A; --brass-wash:#2A2113;
+    --teal:#7FC8B8; --teal-wash:#12241F;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141019; --card:#1C1724; --ink:#EFE9F2; --ink-2:#B9AFC4;
+  --ink-3:#8A7F96; --rule:#312839; --rule-2:#241D2C;
+  --plum:#C6A4E2; --plum-2:#9E7FBC; --plum-wash:#241A31; --on-plum:#17101F;
+  --brass:#E2B45A; --brass-wash:#2A2113;
+  --teal:#7FC8B8; --teal-wash:#12241F;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -18px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Newsreader,Georgia,"Times New Roman",serif; font-weight:600;
+  text-wrap:balance; margin:0; letter-spacing:-.01em}
+a{color:var(--plum)}
+.wrap{max-width:1140px; margin:0 auto; padding:0 24px}
+
+.mast{background:var(--plum); color:var(--on-plum); padding:52px 0 40px}
+.mast .eyebrow{font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+  font-weight:700; opacity:.72}
+.mast h1{font-size:clamp(36px,6vw,60px); line-height:1.02; margin:10px 0 0}
+.mast p{margin:14px 0 0; max-width:64ch; opacity:.88; font-size:17px}
+.mast .top{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px}
+.mast .top a{display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+  background:rgba(255,255,255,.14); color:var(--on-plum); border:1px solid rgba(255,255,255,.28);
+  border-radius:2px; padding:9px 14px; font-size:13.5px; font-weight:600}
+.mast .top a:hover{background:rgba(255,255,255,.24)}
+
+nav.jump{position:sticky; top:0; z-index:30; background:var(--paper);
+  border-bottom:1px solid var(--rule)}
+nav.jump .inner{display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding:10px 0}
+nav.jump ul{display:flex; gap:2px; list-style:none; margin:0; padding:0;
+  overflow-x:auto; flex:1 1 380px}
+nav.jump a{display:block; white-space:nowrap; padding:9px 12px; font-size:13px;
+  font-weight:600; color:var(--ink-2); text-decoration:none; border-bottom:2px solid transparent}
+nav.jump a:hover{color:var(--plum); border-bottom-color:var(--plum)}
+nav.jump a:focus-visible,button:focus-visible{outline:2px solid var(--plum); outline-offset:2px}
+.filters{display:flex; gap:6px}
+.filters button{all:unset; cursor:pointer; font-size:12px; font-weight:700;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3);
+  border:1px solid var(--rule); border-radius:2px; padding:6px 11px}
+.filters button[aria-pressed="true"]{background:var(--ink); color:var(--paper);
+  border-color:var(--ink)}
+
+.unit{margin:46px 0 0; padding-top:24px; border-top:3px solid var(--plum)}
+.unit .lab{font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  font-weight:700; color:var(--plum-2)}
+.unit h2{font-size:30px; margin:6px 0 0}
+.unit p.blurb{color:var(--ink-2); max-width:72ch; margin:8px 0 0; font-size:15px}
+.unitres{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+
+.week{background:var(--card); border:1px solid var(--rule); border-radius:3px;
+  box-shadow:var(--shadow); margin:14px 0; display:grid;
+  grid-template-columns:86px 1fr; overflow:hidden; scroll-margin-top:76px}
+@media(max-width:660px){.week{grid-template-columns:1fr}}
+.week .num{background:var(--plum-wash); border-right:1px solid var(--rule);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:2px; padding:16px 8px}
+@media(max-width:660px){.week .num{flex-direction:row; gap:10px; border-right:0;
+  border-bottom:1px solid var(--rule); justify-content:flex-start; padding:10px 16px}}
+.week .num b{font-family:Newsreader,Georgia,serif; font-size:30px; line-height:1;
+  font-variant-numeric:tabular-nums; color:var(--plum)}
+.week .num span{font-size:9.5px; letter-spacing:.14em; text-transform:uppercase;
+  font-weight:700; color:var(--plum-2)}
+.week .main{padding:16px 20px 18px}
+.week .head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+.week h3{font-size:20px}
+.week .note{color:var(--ink-2); font-size:14px; margin:8px 0 0; max-width:74ch}
+.res{display:flex; flex-wrap:wrap; gap:8px; margin-top:13px}
+
+.btn{display:inline-flex; align-items:center; gap:7px; text-decoration:none;
+  border:1px solid var(--rule); border-radius:2px; padding:8px 12px;
+  font-size:13px; font-weight:600; color:var(--ink-2); background:var(--card)}
+.btn:hover{border-color:var(--plum); color:var(--plum); background:var(--plum-wash)}
+.btn i{font-style:normal; font-size:11px; color:var(--ink-3)}
+.btn:hover i{color:var(--plum)}
+.btn.ghost{border-style:dashed}
+
+.chip{font-size:10px; letter-spacing:.13em; text-transform:uppercase; font-weight:700;
+  padding:4px 9px; border-radius:2px; white-space:nowrap}
+.k-lesson{background:var(--rule-2); color:var(--ink-3)}
+.k-form{background:var(--brass-wash); color:var(--brass)}
+.k-summ{background:var(--ink); color:var(--paper)}
+.k-rev{background:var(--teal-wash); color:var(--teal)}
+.k-exam{background:var(--plum); color:var(--on-plum)}
+.k-dit{background:var(--plum-wash); color:var(--plum)}
+
+.anchor{margin-left:auto; display:inline-flex; gap:6px; align-items:center}
+.anchor a, .anchor button{all:unset; cursor:pointer; font-size:11px; font-weight:700;
+  letter-spacing:.08em; color:var(--ink-3); font-variant-numeric:tabular-nums;
+  border:1px solid var(--rule); border-radius:2px; padding:4px 8px}
+.anchor a:hover, .anchor button:hover{color:var(--plum); border-color:var(--plum)}
+
+.notice{background:var(--brass-wash); border-left:3px solid var(--brass);
+  padding:14px 18px; margin:26px 0 0; font-size:14.5px; color:var(--ink-2);
+  border-radius:0 2px 2px 0}
+footer.note{margin:60px 0 80px; padding-top:24px; border-top:1px solid var(--rule);
+  color:var(--ink-3); font-size:13.5px; max-width:76ch}
+footer.note b{color:var(--ink-2)}
+.hidden{display:none !important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="eyebrow">Harlington School · Religious Studies · Year 9</div>
+    <h1>Year 9, week by week</h1>
+    <p>Every lesson of the year in order, with its deck, worksheets and papers
+       one click away. Decks open in PowerPoint Online — you need to be signed
+       in to your school account.</p>
+    <div class="top">
+      <a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/Y9%20Student%20Companion.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Student Companion (Word)</span></a>
+      <a class="btn" href="https://claude.ai/code/artifact/1f4463ac-d0e5-4d2d-8ad9-4765191b821c" target="_blank" rel="noopener"><i>◧</i><span>Student Companion (web)</span></a>
+      <a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/RESOURCES/YEAR%209%20LEARNING%20JOURNEY.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Learning Journey</span></a>
+      <a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2F" target="_blank" rel="noopener"><i>❐</i><span>All Year 9 files</span></a>
+    </div>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Units and filters">
+  <div class="wrap inner">
+    <ul><li><a href="#u1">1. Humanism and Society</a></li><li><a href="#u2">2. Christianity and Society</a></li><li><a href="#u3">3. Humanism and the Law</a></li><li><a href="#u4">4. Islam and the Law</a></li><li><a href="#u5">5. Islam and Forgiveness</a></li><li><a href="#eoy">6. End of Year Test</a></li></ul>
+    <div class="filters" role="group" aria-label="Filter weeks">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="lesson" aria-pressed="false">Lessons</button>
+      <button type="button" data-filter="assess" aria-pressed="false">Assessments</button>
+      <button type="button" data-filter="rev" aria-pressed="false">Revision</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="notice"><b>Every week has its own link.</b> Click <b>#w12</b> on any
+    week to jump to it, or <b>copy link</b> to send that week to a class — the
+    address ends <code>year9.html#w12</code>.</div>
+  
+<section class="unit" id="u1">
+  <div class="lab">Unit 1 · Weeks 1–8 · 8 lessons</div>
+  <h2>Humanism and Society</h2>
+  <p class="blurb">Marriage as a civil right, sexual relationships, family planning and equality — Humanist and Christian views side by side.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/Y9_Unit1_Humanism_and_Society_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2F1.%20HUMANISM%20AND%20SOCIETY" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/RESOURCES/Y9%201%20-%20Humanism%20and%20Society%20(1).pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit cover (Publisher)</span></a></div>
+</section>
+<article class="week" id="w1" data-unit="u1" data-kind="lesson">
+  <div class="num"><b>1</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Marriage — Civil Rights</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w1" title="Link to week 1">#w1</a>
+        <button type="button" data-copy="w1">copy link</button>
+      </span>
+    </div>
+    <p class="note">First lesson of the year — the expectations deck runs before the content.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(1)%20MARRIAGE%20-%20CIVIL%20RIGHTS/(1)%20MARRIAGE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(1)%20MARRIAGE%20-%20CIVIL%20RIGHTS/(1)%20EXPECTATIONS%20PPT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Expectations deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w2" data-unit="u1" data-kind="lesson">
+  <div class="num"><b>2</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Sexual Relationships</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w2" title="Link to week 2">#w2</a>
+        <button type="button" data-copy="w2">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(2)%20SEXUAL%20RELATIONSHIPS/(2)%20SEXUAL%20RELATIONSHIPS%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(2)%20SEXUAL%20RELATIONSHIPS/(2)%20BELL%20WORK%20-%20CROSSWORD%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work — crossword</span></a></div>
+  </div>
+</article>
+<article class="week" id="w3" data-unit="u1" data-kind="lesson">
+  <div class="num"><b>3</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Family Planning</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w3" title="Link to week 3">#w3</a>
+        <button type="button" data-copy="w3">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(3)%20FAMILY%20PLANNING/(3)%20FAMILY%20PLANNING%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(3)%20FAMILY%20PLANNING/(3)%20WORKSHEET%20-%20ARTIFICAL%20CONTRACEPTION%20STATISTICS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — contraception statistics</span></a></div>
+  </div>
+</article>
+<article class="week" id="w4" data-unit="u1" data-kind="formative">
+  <div class="num"><b>4</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Formative assessment</h3>
+      <span class="chip k-form">Formative</span>
+      <span class="anchor">
+        <a href="#w4" title="Link to week 4">#w4</a>
+        <button type="button" data-copy="w4">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(3A)%20FORMATIVE/(3A)%20FORMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Formative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(3A)%20FORMATIVE/(3A)%20DIT%20-%20FORMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>DIT sheet</span></a></div>
+  </div>
+</article>
+<article class="week" id="w5" data-unit="u1" data-kind="lesson">
+  <div class="num"><b>5</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Equality</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w5" title="Link to week 5">#w5</a>
+        <button type="button" data-copy="w5">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(4)%20EQUALITY/(4)%20EQUALITY%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w6" data-unit="u1" data-kind="lesson">
+  <div class="num"><b>6</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Marriage and the Sacred + D type</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w6" title="Link to week 6">#w6</a>
+        <button type="button" data-copy="w6">copy link</button>
+      </span>
+    </div>
+    <p class="note">The D-type structure deck is the one to reuse before every 12-mark question.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(5)%20MARRIAGE%20AND%20THE%20SACRED%20%2B%20D%20TYPE/(5)%20MARRIAGE%20AND%20THE%20SACRED%20%2B%20D%20TYPE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(5)%20MARRIAGE%20AND%20THE%20SACRED%20%2B%20D%20TYPE/(5)%20D%20TYPE%20STRUCTURE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>D-type structure deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w7" data-unit="u1" data-kind="lesson">
+  <div class="num"><b>7</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Sexual Relationships in Christianity</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w7" title="Link to week 7">#w7</a>
+        <button type="button" data-copy="w7">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(6)%20SEXUAL%20RELATIONSHIPS%20IN%20CHRISTIANITY/(6)%20SEXUAL%20RELATIONSHIPS%20IN%20CHRISTIANITY%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(6)%20SEXUAL%20RELATIONSHIPS%20IN%20CHRISTIANITY/(6)%20SEXUAL%20RELATIONSHIPS%20INFORMATION%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Information sheet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(6)%20SEXUAL%20RELATIONSHIPS%20IN%20CHRISTIANITY/(6)%20WORKSHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet</span></a></div>
+  </div>
+</article>
+<article class="week" id="w8" data-unit="u1" data-kind="summative">
+  <div class="num"><b>8</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Summative + families lesson</h3>
+      <span class="chip k-summ">Summative</span>
+      <span class="anchor">
+        <a href="#w8" title="Link to week 8">#w8</a>
+        <button type="button" data-copy="w8">copy link</button>
+      </span>
+    </div>
+    <p class="note">The summative paper for this unit is not in the folder — only the lesson deck that runs it.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(7)%20SUMMATIVE%20%2B%20FAMILIES%20LESSON%20HW/(7)%20SUMMATIVE%20%2B%20FAMILIES%20LESSON%20HW%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<section class="unit" id="u2">
+  <div class="lab">Unit 2 · Weeks 9–15 · 7 lessons</div>
+  <h2>Christianity and Society</h2>
+  <p class="blurb">Assistance for families, divorce and remarriage, equality at home, and gender prejudice and discrimination.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/Y9_Unit2_Christianity_and_Society_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2F2.%20CHRISTIANITY%20AND%20SOCIETY" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/(1)%20BELL%20WORK%20-%20DEFINITIONS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work — definitions</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/(2)%20BELL%20WORK%20-%20WORDSEARCH%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work — wordsearch</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/Y9%20b-type.pptx?web=1" target="_blank" rel="noopener"><i>▤</i><span>b-type method deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/New%20Unit%20-%20Focus%20sheet.pptx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Focus sheet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/CHRISTIANITY%20AND%20SOCIETY%20FEEDBACK%20SHEET%20ASH%20ONLY.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Feedback sheet (staff)</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/Y9%201%20-%20Christianity%20and%20Society%20(1).pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet (Publisher)</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/Y9%201%20-%20Cover.pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Cover (Publisher)</span></a></div>
+</section>
+<article class="week" id="w9" data-unit="u2" data-kind="lesson">
+  <div class="num"><b>9</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Assistance for Families</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w9" title="Link to week 9">#w9</a>
+        <button type="button" data-copy="w9">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(1)%20ASSISTANCE%20FOR%20FAMILIES/(1)%20ASSISTANCE%20FOR%20FAMILIES%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w10" data-unit="u2" data-kind="lesson">
+  <div class="num"><b>10</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Family Planning</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w10" title="Link to week 10">#w10</a>
+        <button type="button" data-copy="w10">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(2)%20FAMILY%20PLANNING/(2)%20FAMILY%20PLANNING%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w11" data-unit="u2" data-kind="formative">
+  <div class="num"><b>11</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Formative assessment</h3>
+      <span class="chip k-form">Formative</span>
+      <span class="anchor">
+        <a href="#w11" title="Link to week 11">#w11</a>
+        <button type="button" data-copy="w11">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(2A)%20FORMATIVE/(2A)%20FORMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Formative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(2A)%20FORMATIVE/(2A)%20DIT%20-%20FORMATIVE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(2A)%20FORMATIVE/(2A)%20HW%20-%20FORMATIVE%20-%20HUMAN%20RIGHTS%20POSTER%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Homework — human rights poster</span></a></div>
+  </div>
+</article>
+<article class="week" id="w12" data-unit="u2" data-kind="lesson">
+  <div class="num"><b>12</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Divorce and Remarriage</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w12" title="Link to week 12">#w12</a>
+        <button type="button" data-copy="w12">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(3)%20DIVORCE%20AND%20REMARRIAGE/(3)%20DIVORCE%20AND%20REMARRIAGE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w13" data-unit="u2" data-kind="lesson">
+  <div class="num"><b>13</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Equality of Men and Women in the Home</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w13" title="Link to week 13">#w13</a>
+        <button type="button" data-copy="w13">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(4)%20EQUALITY%20OF%20MEN%20AND%20WOMEN%20IN%20THE%20HOME/(4)%20EQUALITY%20OF%20MEN%20AND%20WOMEN%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(4)%20EQUALITY%20OF%20MEN%20AND%20WOMEN%20IN%20THE%20HOME/(4)%20WORKSHEET%20-%20EQUALITY%20AT%20HOME%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — equality at home</span></a></div>
+  </div>
+</article>
+<article class="week" id="w14" data-unit="u2" data-kind="lesson">
+  <div class="num"><b>14</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Gender Prejudice and Discrimination</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w14" title="Link to week 14">#w14</a>
+        <button type="button" data-copy="w14">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(5)%20GENDER%20PREJUDICE%20AND%20DISCRIMINATION/(5)%20GENDER%20PREJUDICE%20AND%20DISCRIMINATION%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w15" data-unit="u2" data-kind="summative">
+  <div class="num"><b>15</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Summative 1 and 2 + justice lesson</h3>
+      <span class="chip k-summ">Summative</span>
+      <span class="anchor">
+        <a href="#w15" title="Link to week 15">#w15</a>
+        <button type="button" data-copy="w15">copy link</button>
+      </span>
+    </div>
+    <p class="note">Two papers here — these are Summative Assessments 1 and 2 in the Student Companion.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(6)%20SUMMATIVE%20%2B%20JUSTICE%20LESSON%20HW/(6)%20SUMMATIVE%20-%201%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Summative paper 1</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(6)%20SUMMATIVE%20%2B%20JUSTICE%20LESSON%20HW/(6)%20SUMMATIVE%20-%202%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Summative paper 2</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(6)%20SUMMATIVE%20%2B%20JUSTICE%20LESSON%20HW/(6)%20DIT%20-%20SUMMATIVE%201%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck — summative 1</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(6)%20SUMMATIVE%20%2B%20JUSTICE%20LESSON%20HW/(6)%20DIT%20-%20SUMMATIVE%202%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck — summative 2</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(6)%20SUMMATIVE%20%2B%20JUSTICE%20LESSON%20HW/(6)%20JUSTICE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Justice lesson deck</span></a></div>
+  </div>
+</article>
+<section class="unit" id="u3">
+  <div class="lab">Unit 3 · Weeks 16–22 · 7 lessons</div>
+  <h2>Humanism and the Law</h2>
+  <p class="blurb">Crime, human rights, attitudes to punishment, restorative justice, and moral and natural evil.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/Y9_Unit3_Humanism_and_the_Law_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2F3.%20HUMANISM%20AND%20THE%20LAW" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/RESOURCES/Key%20words.pptx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Key words deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/RESOURCES/D-type%20practice.pptx?web=1" target="_blank" rel="noopener"><i>▤</i><span>D-type practice</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/RESOURCES/Yr%209%20Humanism%20and%20the%20Law%20D%20type.pptx?web=1" target="_blank" rel="noopener"><i>▤</i><span>D-type — Humanism and the Law</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/RESOURCES/Y9%202%20-%20Humanism%20and%20Law.pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet (Publisher)</span></a></div>
+</section>
+<article class="week" id="w16" data-unit="u3" data-kind="lesson">
+  <div class="num"><b>16</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Crime</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w16" title="Link to week 16">#w16</a>
+        <button type="button" data-copy="w16">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(1)%20CRIME/(1)%20CRIME%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(1)%20CRIME/(6)%20JUSTICE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Justice deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(1)%20CRIME/(1)%20BELL%20WORK%20-%20DEFINITIONS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work — definitions</span></a></div>
+  </div>
+</article>
+<article class="week" id="w17" data-unit="u3" data-kind="lesson">
+  <div class="num"><b>17</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Attitudes to Human Rights</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w17" title="Link to week 17">#w17</a>
+        <button type="button" data-copy="w17">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(2)%20ATTITUDES%20TO%20HUMAN%20RIGHTS/(2)%20HUMAN%20RIGHTS%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(2)%20ATTITUDES%20TO%20HUMAN%20RIGHTS/(2)%20WORKSHEET%20-%20HUMAN%20RIGHTS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — human rights</span></a></div>
+  </div>
+</article>
+<article class="week" id="w18" data-unit="u3" data-kind="lesson">
+  <div class="num"><b>18</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Attitudes to Punishment</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w18" title="Link to week 18">#w18</a>
+        <button type="button" data-copy="w18">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(3)%20ATTITUDES%20TO%20PUNISHMENT/(3)%20ATTITUDES%20TO%20PUNISHMENT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w19" data-unit="u3" data-kind="formative">
+  <div class="num"><b>19</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Formative assessment</h3>
+      <span class="chip k-form">Formative</span>
+      <span class="anchor">
+        <a href="#w19" title="Link to week 19">#w19</a>
+        <button type="button" data-copy="w19">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(3A)%20FORMATIVE/(3A)%20FORMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Formative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(3A)%20FORMATIVE/(3A)%20DIT%20-%20FORMATIVE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w20" data-unit="u3" data-kind="lesson">
+  <div class="num"><b>20</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Restorative Justice</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w20" title="Link to week 20">#w20</a>
+        <button type="button" data-copy="w20">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(4)%20RESTORATATIVE%20JUSTICE/(4)%20RESTORATATIVE%20JUSTICE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(4)%20RESTORATATIVE%20JUSTICE/(4)%20BELL%20WORK%20-%20DEFINITIONS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work — definitions</span></a></div>
+  </div>
+</article>
+<article class="week" id="w21" data-unit="u3" data-kind="lesson">
+  <div class="num"><b>21</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Moral and Natural Evil</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w21" title="Link to week 21">#w21</a>
+        <button type="button" data-copy="w21">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(5)%20MORAL%20AND%20NATURAL%20EVIL/(5)%20MORAL%20AND%20NATURAL%20EVIL%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w22" data-unit="u3" data-kind="summative">
+  <div class="num"><b>22</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Summative assessment</h3>
+      <span class="chip k-summ">Summative</span>
+      <span class="anchor">
+        <a href="#w22" title="Link to week 22">#w22</a>
+        <button type="button" data-copy="w22">copy link</button>
+      </span>
+    </div>
+    <p class="note">This is Summative Assessment 3 in the Student Companion.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(6)%20SUMMATIVE/(6)%20SUMMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Summative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(6)%20SUMMATIVE/(6)%20SUMMATIVE%20%2B%20HW%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck + homework</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(6)%20SUMMATIVE/DIT%20-%20SUMMATIVE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a></div>
+  </div>
+</article>
+<section class="unit" id="u4">
+  <div class="lab">Unit 4 · Weeks 23–29 · 7 lessons</div>
+  <h2>Islam and the Law</h2>
+  <p class="blurb">Islam and justice, Islam and crime, the Qur&#x27;an and the hadd, and the aims of punishment.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/Y9_Unit4_Islam_and_the_Law_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2F4.%20ISLAM%20AND%20THE%20LAW" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/RESOURCES/Y9%204%20-%20Islam%20and%20Law.pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet (Publisher)</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/RESOURCES/Easter%20task.pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Easter task (Publisher)</span></a></div>
+</section>
+<article class="week" id="w23" data-unit="u4" data-kind="lesson">
+  <div class="num"><b>23</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Islam and Justice</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w23" title="Link to week 23">#w23</a>
+        <button type="button" data-copy="w23">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(1)%20ISLAM%20AND%20JUSTICE/(1)%20ISLAM%20AND%20JUSTICE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(1)%20ISLAM%20AND%20JUSTICE/(1)%20BELL%20WORK%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work</span></a></div>
+  </div>
+</article>
+<article class="week" id="w24" data-unit="u4" data-kind="lesson">
+  <div class="num"><b>24</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Islam and Crime</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w24" title="Link to week 24">#w24</a>
+        <button type="button" data-copy="w24">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(2)%20ISLAM%20AND%20CRIME/(2)%20ISLAM%20AND%20CRIME%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w25" data-unit="u4" data-kind="lesson">
+  <div class="num"><b>25</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>The Qur&#x27;an and the Hadd</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w25" title="Link to week 25">#w25</a>
+        <button type="button" data-copy="w25">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(3)%20THE%20QURAN%20AND%20THE%20HADD/(3)%20THE%20QURAN%20AND%20THE%20HADD%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w26" data-unit="u4" data-kind="lesson">
+  <div class="num"><b>26</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Attitudes to Punishment</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w26" title="Link to week 26">#w26</a>
+        <button type="button" data-copy="w26">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(4)%20ATTITUDES%20TO%20PUNISHMENT/(4)%20ATTITUDES%20TO%20PUNISHMENT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w27" data-unit="u4" data-kind="formative">
+  <div class="num"><b>27</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Formative assessment</h3>
+      <span class="chip k-form">Formative</span>
+      <span class="anchor">
+        <a href="#w27" title="Link to week 27">#w27</a>
+        <button type="button" data-copy="w27">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(4A)%20FORMATIVE/(4A)%20FORMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Formative paper</span></a></div>
+  </div>
+</article>
+<article class="week" id="w28" data-unit="u4" data-kind="lesson">
+  <div class="num"><b>28</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Aims of Punishment</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w28" title="Link to week 28">#w28</a>
+        <button type="button" data-copy="w28">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(5)%20AIMS%20OF%20PUNISHMENT/(5)%20AIMS%20OF%20PUNISHMENT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(5)%20AIMS%20OF%20PUNISHMENT/(5)%20BELL%20WORK%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work</span></a></div>
+  </div>
+</article>
+<article class="week" id="w29" data-unit="u4" data-kind="summative">
+  <div class="num"><b>29</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Summative assessment</h3>
+      <span class="chip k-summ">Summative</span>
+      <span class="anchor">
+        <a href="#w29" title="Link to week 29">#w29</a>
+        <button type="button" data-copy="w29">copy link</button>
+      </span>
+    </div>
+    <p class="note">This is the Unit Assessment — Islam and Law in the Student Companion.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(6)%20SUMMATIVE/(6)%20SUMMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Summative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(6)%20SUMMATIVE/Year%209%20-%20Summative%20Questions.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Summative questions</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(6)%20SUMMATIVE/(6)%20SUMMATIVE%20%2B%20HW%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck + homework</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(6)%20SUMMATIVE/YR%209%20DIT.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a></div>
+  </div>
+</article>
+<section class="unit" id="u5">
+  <div class="lab">Unit 5 · Weeks 30–33 · 4 lessons</div>
+  <h2>Islam and Forgiveness</h2>
+  <p class="blurb">Treatment of criminals, capital punishment, forgiveness, and the question of God.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/5.%20ISLAM%20AND%20FORGIVENESS/Y9_Unit5_Islam_and_Forgiveness_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2F5.%20ISLAM%20AND%20FORGIVENESS" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a></div>
+</section>
+<article class="week" id="w30" data-unit="u5" data-kind="lesson">
+  <div class="num"><b>30</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Treatment of Criminals</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w30" title="Link to week 30">#w30</a>
+        <button type="button" data-copy="w30">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/5.%20ISLAM%20AND%20FORGIVENESS/(1)%20TREATMENT%20OF%20CRIMINALS/(1)%20TREATMENT%20OF%20CRIMINALS%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w31" data-unit="u5" data-kind="lesson">
+  <div class="num"><b>31</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Capital Punishment</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w31" title="Link to week 31">#w31</a>
+        <button type="button" data-copy="w31">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/5.%20ISLAM%20AND%20FORGIVENESS/(2)%20CAPITAL%20PUNISHMENT/(2)%20CAPITAL%20PUNISHMENT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w32" data-unit="u5" data-kind="lesson">
+  <div class="num"><b>32</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>Forgiveness</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w32" title="Link to week 32">#w32</a>
+        <button type="button" data-copy="w32">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/5.%20ISLAM%20AND%20FORGIVENESS/(3)%20FORGIVENESS/(3)%20FORGIVENESS%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w33" data-unit="u5" data-kind="lesson">
+  <div class="num"><b>33</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>The Question of God</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="anchor">
+        <a href="#w33" title="Link to week 33">#w33</a>
+        <button type="button" data-copy="w33">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/5.%20ISLAM%20AND%20FORGIVENESS/(4)%20THE%20QUESTION%20OF%20GOD/(4)%20THE%20QUESTION%20OF%20GOD%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<section class="unit" id="eoy">
+  <div class="lab">Unit 6 · Weeks 34–37 · 4 lessons</div>
+  <h2>End of Year Test</h2>
+  <p class="blurb">Two High 5 revision lessons, the definition sheets, the paper itself and the DIT that follows it.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2FEND%20OF%20YEAR%20TEST" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a></div>
+</section>
+<article class="week" id="w34" data-unit="eoy" data-kind="revision">
+  <div class="num"><b>34</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>High 5 — Marriage and the Family</h3>
+      <span class="chip k-rev">Revision</span>
+      <span class="anchor">
+        <a href="#w34" title="Link to week 34">#w34</a>
+        <button type="button" data-copy="w34">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/END%20OF%20YEAR%20TEST/HIGH%205%20-%20MARRIAGE%20AND%20THE%20FAMILY%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Revision deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/END%20OF%20YEAR%20TEST/MARRIAGE%20AND%20FAMILY%20DEFINITION%20SHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Definition sheet</span></a></div>
+  </div>
+</article>
+<article class="week" id="w35" data-unit="eoy" data-kind="revision">
+  <div class="num"><b>35</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>High 5 — Crime and Punishment</h3>
+      <span class="chip k-rev">Revision</span>
+      <span class="anchor">
+        <a href="#w35" title="Link to week 35">#w35</a>
+        <button type="button" data-copy="w35">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/END%20OF%20YEAR%20TEST/HIGH%205%20-%20CRIME%20AND%20PUNISHMENT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Revision deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/END%20OF%20YEAR%20TEST/CRIME%20AND%20PUNISHMENT%20DEFINITION%20SHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Definition sheet</span></a></div>
+  </div>
+</article>
+<article class="week" id="w36" data-unit="eoy" data-kind="exam">
+  <div class="num"><b>36</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>End of Year Test</h3>
+      <span class="chip k-exam">Exam</span>
+      <span class="anchor">
+        <a href="#w36" title="Link to week 36">#w36</a>
+        <button type="button" data-copy="w36">copy link</button>
+      </span>
+    </div>
+    <p class="note">Two sections: relationships, then Islam and law. The Companion treats them as two separate reviews.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/END%20OF%20YEAR%20TEST/YEAR%209%20-%20EOY%20TEST.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>The paper</span></a></div>
+  </div>
+</article>
+<article class="week" id="w37" data-unit="eoy" data-kind="dit">
+  <div class="num"><b>37</b><span>Week</span></div>
+  <div class="main">
+    <div class="head">
+      <h3>End of Year DIT</h3>
+      <span class="chip k-dit">DIT</span>
+      <span class="anchor">
+        <a href="#w37" title="Link to week 37">#w37</a>
+        <button type="button" data-copy="w37">copy link</button>
+      </span>
+    </div>
+    
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/END%20OF%20YEAR%20TEST/DIT%20-%20End%20of%20Year%20Exam.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a></div>
+  </div>
+</article>
+  <footer class="note">
+    <p><b>Where the files live.</b> Every button points at the RE SharePoint,
+      <code>Year 11 / Philosophy / KS3 Ai / KS3 / YEAR 9</code>. Move or rename
+      that folder and the links break together — rebuild the page rather than
+      editing it by hand.</p>
+    <p>Unit 6, Question of God, is not on this page: its two lesson folders
+      hold no decks yet. Week 33 keeps the Question of God lesson that sits in
+      Unit 5.</p>
+  </footer>
+</main>
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.filters button');
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){
+      var want = b.dataset.filter;
+      buttons.forEach(function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+      document.querySelectorAll('.week').forEach(function(w){
+        var k = w.dataset.kind;
+        var show = want === 'all'
+          || (want === 'assess' && (k==='formative'||k==='summative'||k==='exam'||k==='dit'))
+          || (want === 'lesson' && k==='lesson')
+          || (want === 'rev' && k==='revision');
+        w.classList.toggle('hidden', !show);
+      });
+      document.querySelectorAll('.unit').forEach(function(u){
+        var id = u.id, any = false;
+        document.querySelectorAll('.week[data-unit="'+id+'"]').forEach(function(w){
+          if(!w.classList.contains('hidden')) any = true;
+        });
+        u.classList.toggle('hidden', !any);
+      });
+    });
+  });
+  document.querySelectorAll('button[data-copy]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var url = location.origin + location.pathname + '#' + b.dataset.copy;
+      var done = function(){ var t=b.textContent; b.textContent='copied';
+        setTimeout(function(){ b.textContent=t; }, 1400); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(url).then(done, done);
+      } else {
+        var ta=document.createElement('textarea'); ta.value=url; document.body.appendChild(ta);
+        ta.select(); try{document.execCommand('copy');}catch(e){} ta.remove(); done();
+      }
+    });
+  });
+})();
+</script>

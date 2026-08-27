@@ -75,17 +75,56 @@ nav.jump a:focus-visible,button:focus-visible{outline:2px solid var(--plum); out
 
 .week{background:var(--card); border:1px solid var(--rule); border-radius:3px;
   box-shadow:var(--shadow); margin:14px 0; display:grid;
-  grid-template-columns:86px 1fr; overflow:hidden; scroll-margin-top:76px}
+  grid-template-columns:104px 1fr; overflow:hidden; scroll-margin-top:76px}
 @media(max-width:660px){.week{grid-template-columns:1fr}}
 .week .num{background:var(--plum-wash); border-right:1px solid var(--rule);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap:2px; padding:16px 8px}
+  gap:1px; padding:16px 8px}
 @media(max-width:660px){.week .num{flex-direction:row; gap:10px; border-right:0;
-  border-bottom:1px solid var(--rule); justify-content:flex-start; padding:10px 16px}}
+  border-bottom:1px solid var(--rule); justify-content:flex-start; padding:10px 16px;
+  align-items:baseline}}
 .week .num b{font-family:Newsreader,Georgia,serif; font-size:30px; line-height:1;
   font-variant-numeric:tabular-nums; color:var(--plum)}
 .week .num span{font-size:9.5px; letter-spacing:.14em; text-transform:uppercase;
   font-weight:700; color:var(--plum-2)}
+.week .num em{font-style:normal; font-size:11px; font-weight:700; color:var(--ink-3);
+  font-variant-numeric:tabular-nums; margin-top:3px; white-space:nowrap}
+.week .when{font-size:12px; font-weight:600; color:var(--ink-3);
+  font-variant-numeric:tabular-nums; white-space:nowrap}
+.week.now{border-color:var(--plum); box-shadow:0 0 0 2px var(--plum-wash), var(--shadow)}
+.week.now .num{background:var(--plum)}
+.week.now .num b, .week.now .num span, .week.now .num em{color:var(--on-plum)}
+.week.now .head h3::after{content:"this week"; margin-left:10px; font-family:"Public Sans",sans-serif;
+  font-size:10px; letter-spacing:.13em; text-transform:uppercase; font-weight:700;
+  color:var(--plum); vertical-align:middle}
+
+.gap{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+  margin:16px 0; padding:11px 18px; border-radius:3px}
+.gap b{font-size:12px; letter-spacing:.1em; text-transform:uppercase}
+.gap span{font-size:13px; font-variant-numeric:tabular-nums}
+.gap.break{background:var(--rule-2); color:var(--ink-3)}
+.gap.break b{color:var(--ink-2)}
+.gap.term{background:var(--plum); color:var(--on-plum)}
+.gap.term b{color:var(--on-plum)}
+.gap.term span{opacity:.85}
+
+.cal{margin:28px 0 0}
+.cal .lab{font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  font-weight:700; color:var(--ink-3); margin-bottom:2px}
+.termnote{font-size:13px; color:var(--ink-3); margin:12px 0 0; max-width:82ch}
+.terms{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:22px 0 0}
+@media(max-width:760px){.terms{grid-template-columns:1fr}}
+.term-card{border:1px solid var(--rule); border-radius:3px; padding:14px 16px;
+  background:var(--card)}
+.term-card b{display:block; font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--plum); margin-bottom:6px}
+.term-card span{display:block; font-size:13.5px; color:var(--ink-2);
+  font-variant-numeric:tabular-nums}
+.term-card span+span{color:var(--ink-3); font-size:12.5px; margin-top:3px}
+.nowbtn{all:unset; cursor:pointer; font-size:12px; font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--on-plum); background:var(--plum);
+  border-radius:2px; padding:7px 12px; white-space:nowrap}
+.nowbtn:hover{opacity:.88}
 .week .main{padding:16px 20px 18px}
 .week .head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
 .week h3{font-size:20px}
@@ -153,6 +192,7 @@ footer.note b{color:var(--ink-2)}
       <button type="button" data-filter="assess" aria-pressed="false">Assessments</button>
       <button type="button" data-filter="rev" aria-pressed="false">Revision</button>
     </div>
+    <button type="button" id="jumpnow" class="nowbtn">This week</button>
   </div>
 </nav>
 
@@ -160,6 +200,11 @@ footer.note b{color:var(--ink-2)}
   <div class="notice"><b>Every week has its own link.</b> Click <b>#w12</b> on any
     week to jump to it, or <b>copy link</b> to send that week to a class — the
     address ends <code>year9.html#w12</code>.</div>
+  <section class="cal">
+    <div class="lab">Term dates 2026–27</div>
+    <div class="terms"><div class="term-card"><b>Autumn term</b><span>7 Sep 2026 – 18 Dec 2026</span><span>Weeks 1–13</span></div><div class="term-card"><b>Spring term</b><span>4 Jan 2027 – 25 Mar 2027</span><span>Weeks 14–24</span></div><div class="term-card"><b>Summer term</b><span>12 Apr 2027 – 22 Jul 2027</span><span>Weeks 25–38</span></div></div>
+    <p class="termnote">Week 1 is the week beginning Monday 7 September 2026 — the 3rd and 4th of September fall before it. The year holds 38 teaching weeks and this scheme has 37 lessons, which leaves 1 spare at the end for catch-up.</p>
+  </section>
   
 <section class="unit" id="u1">
   <div class="lab">Unit 1 · Weeks 1–8 · 8 lessons</div>
@@ -167,12 +212,14 @@ footer.note b{color:var(--ink-2)}
   <p class="blurb">Marriage as a civil right, sexual relationships, family planning and equality — Humanist and Christian views side by side.</p>
   <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/Y9_Unit1_Humanism_and_Society_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2F1.%20HUMANISM%20AND%20SOCIETY" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/RESOURCES/Y9%201%20-%20Humanism%20and%20Society%20(1).pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit cover (Publisher)</span></a></div>
 </section>
-<article class="week" id="w1" data-unit="u1" data-kind="lesson">
-  <div class="num"><b>1</b><span>Week</span></div>
+<article class="week" id="w1" data-unit="u1" data-kind="lesson"
+         data-start="2026-09-07" data-end="2026-09-11">
+  <div class="num"><span>Week</span><b>1</b><em>7 Sep</em></div>
   <div class="main">
     <div class="head">
       <h3>Marriage — Civil Rights</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">7–11 September</span>
       <span class="anchor">
         <a href="#w1" title="Link to week 1">#w1</a>
         <button type="button" data-copy="w1">copy link</button>
@@ -182,12 +229,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(1)%20MARRIAGE%20-%20CIVIL%20RIGHTS/(1)%20MARRIAGE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(1)%20MARRIAGE%20-%20CIVIL%20RIGHTS/(1)%20EXPECTATIONS%20PPT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Expectations deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w2" data-unit="u1" data-kind="lesson">
-  <div class="num"><b>2</b><span>Week</span></div>
+<article class="week" id="w2" data-unit="u1" data-kind="lesson"
+         data-start="2026-09-14" data-end="2026-09-18">
+  <div class="num"><span>Week</span><b>2</b><em>14 Sep</em></div>
   <div class="main">
     <div class="head">
       <h3>Sexual Relationships</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">14–18 September</span>
       <span class="anchor">
         <a href="#w2" title="Link to week 2">#w2</a>
         <button type="button" data-copy="w2">copy link</button>
@@ -197,12 +246,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(2)%20SEXUAL%20RELATIONSHIPS/(2)%20SEXUAL%20RELATIONSHIPS%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(2)%20SEXUAL%20RELATIONSHIPS/(2)%20BELL%20WORK%20-%20CROSSWORD%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work — crossword</span></a></div>
   </div>
 </article>
-<article class="week" id="w3" data-unit="u1" data-kind="lesson">
-  <div class="num"><b>3</b><span>Week</span></div>
+<article class="week" id="w3" data-unit="u1" data-kind="lesson"
+         data-start="2026-09-21" data-end="2026-09-25">
+  <div class="num"><span>Week</span><b>3</b><em>21 Sep</em></div>
   <div class="main">
     <div class="head">
       <h3>Family Planning</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">21–25 September</span>
       <span class="anchor">
         <a href="#w3" title="Link to week 3">#w3</a>
         <button type="button" data-copy="w3">copy link</button>
@@ -212,12 +263,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(3)%20FAMILY%20PLANNING/(3)%20FAMILY%20PLANNING%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(3)%20FAMILY%20PLANNING/(3)%20WORKSHEET%20-%20ARTIFICAL%20CONTRACEPTION%20STATISTICS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — contraception statistics</span></a></div>
   </div>
 </article>
-<article class="week" id="w4" data-unit="u1" data-kind="formative">
-  <div class="num"><b>4</b><span>Week</span></div>
+<article class="week" id="w4" data-unit="u1" data-kind="formative"
+         data-start="2026-09-28" data-end="2026-10-02">
+  <div class="num"><span>Week</span><b>4</b><em>28 Sep</em></div>
   <div class="main">
     <div class="head">
       <h3>Formative assessment</h3>
       <span class="chip k-form">Formative</span>
+      <span class="when">28 Sep – 2 Oct</span>
       <span class="anchor">
         <a href="#w4" title="Link to week 4">#w4</a>
         <button type="button" data-copy="w4">copy link</button>
@@ -227,12 +280,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(3A)%20FORMATIVE/(3A)%20FORMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Formative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(3A)%20FORMATIVE/(3A)%20DIT%20-%20FORMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>DIT sheet</span></a></div>
   </div>
 </article>
-<article class="week" id="w5" data-unit="u1" data-kind="lesson">
-  <div class="num"><b>5</b><span>Week</span></div>
+<article class="week" id="w5" data-unit="u1" data-kind="lesson"
+         data-start="2026-10-05" data-end="2026-10-09">
+  <div class="num"><span>Week</span><b>5</b><em>5 Oct</em></div>
   <div class="main">
     <div class="head">
       <h3>Equality</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">5–9 October</span>
       <span class="anchor">
         <a href="#w5" title="Link to week 5">#w5</a>
         <button type="button" data-copy="w5">copy link</button>
@@ -242,12 +297,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(4)%20EQUALITY/(4)%20EQUALITY%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w6" data-unit="u1" data-kind="lesson">
-  <div class="num"><b>6</b><span>Week</span></div>
+<article class="week" id="w6" data-unit="u1" data-kind="lesson"
+         data-start="2026-10-12" data-end="2026-10-16">
+  <div class="num"><span>Week</span><b>6</b><em>12 Oct</em></div>
   <div class="main">
     <div class="head">
       <h3>Marriage and the Sacred + D type</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">12–16 October</span>
       <span class="anchor">
         <a href="#w6" title="Link to week 6">#w6</a>
         <button type="button" data-copy="w6">copy link</button>
@@ -257,12 +314,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(5)%20MARRIAGE%20AND%20THE%20SACRED%20%2B%20D%20TYPE/(5)%20MARRIAGE%20AND%20THE%20SACRED%20%2B%20D%20TYPE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(5)%20MARRIAGE%20AND%20THE%20SACRED%20%2B%20D%20TYPE/(5)%20D%20TYPE%20STRUCTURE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>D-type structure deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w7" data-unit="u1" data-kind="lesson">
-  <div class="num"><b>7</b><span>Week</span></div>
+<article class="week" id="w7" data-unit="u1" data-kind="lesson"
+         data-start="2026-10-19" data-end="2026-10-23">
+  <div class="num"><span>Week</span><b>7</b><em>19 Oct</em></div>
   <div class="main">
     <div class="head">
       <h3>Sexual Relationships in Christianity</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">19–23 October</span>
       <span class="anchor">
         <a href="#w7" title="Link to week 7">#w7</a>
         <button type="button" data-copy="w7">copy link</button>
@@ -271,13 +330,15 @@ footer.note b{color:var(--ink-2)}
     <p class="summary">Denominations disagree. Catholics tie sex to a sacramental marriage open to life; the Church of England accepts contraception and, for many members, faithful same-sex relationships; Quakers judge by love and faithfulness.</p>
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(6)%20SEXUAL%20RELATIONSHIPS%20IN%20CHRISTIANITY/(6)%20SEXUAL%20RELATIONSHIPS%20IN%20CHRISTIANITY%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(6)%20SEXUAL%20RELATIONSHIPS%20IN%20CHRISTIANITY/(6)%20SEXUAL%20RELATIONSHIPS%20INFORMATION%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Information sheet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/1.%20HUMANISM%20AND%20SOCIETY/(6)%20SEXUAL%20RELATIONSHIPS%20IN%20CHRISTIANITY/(6)%20WORKSHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet</span></a></div>
   </div>
-</article>
-<article class="week" id="w8" data-unit="u1" data-kind="summative">
-  <div class="num"><b>8</b><span>Week</span></div>
+</article><div class="gap break"><b>Half term</b><span>26 Oct – 6 Nov  ·  two weeks</span></div>
+<article class="week" id="w8" data-unit="u1" data-kind="summative"
+         data-start="2026-11-09" data-end="2026-11-13">
+  <div class="num"><span>Week</span><b>8</b><em>9 Nov</em></div>
   <div class="main">
     <div class="head">
       <h3>Summative + families lesson</h3>
       <span class="chip k-summ">Summative</span>
+      <span class="when">9–13 November</span>
       <span class="anchor">
         <a href="#w8" title="Link to week 8">#w8</a>
         <button type="button" data-copy="w8">copy link</button>
@@ -293,12 +354,14 @@ footer.note b{color:var(--ink-2)}
   <p class="blurb">Assistance for families, divorce and remarriage, equality at home, and gender prejudice and discrimination.</p>
   <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/Y9_Unit2_Christianity_and_Society_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2F2.%20CHRISTIANITY%20AND%20SOCIETY" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/(1)%20BELL%20WORK%20-%20DEFINITIONS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work — definitions</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/(2)%20BELL%20WORK%20-%20WORDSEARCH%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work — wordsearch</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/Y9%20b-type.pptx?web=1" target="_blank" rel="noopener"><i>▤</i><span>b-type method deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/New%20Unit%20-%20Focus%20sheet.pptx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Focus sheet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/CHRISTIANITY%20AND%20SOCIETY%20FEEDBACK%20SHEET%20ASH%20ONLY.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Feedback sheet (staff)</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/Y9%201%20-%20Christianity%20and%20Society%20(1).pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet (Publisher)</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/RESOURCES/Y9%201%20-%20Cover.pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Cover (Publisher)</span></a></div>
 </section>
-<article class="week" id="w9" data-unit="u2" data-kind="lesson">
-  <div class="num"><b>9</b><span>Week</span></div>
+<article class="week" id="w9" data-unit="u2" data-kind="lesson"
+         data-start="2026-11-16" data-end="2026-11-20">
+  <div class="num"><span>Week</span><b>9</b><em>16 Nov</em></div>
   <div class="main">
     <div class="head">
       <h3>Assistance for Families</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">16–20 November</span>
       <span class="anchor">
         <a href="#w9" title="Link to week 9">#w9</a>
         <button type="button" data-copy="w9">copy link</button>
@@ -308,12 +371,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(1)%20ASSISTANCE%20FOR%20FAMILIES/(1)%20ASSISTANCE%20FOR%20FAMILIES%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w10" data-unit="u2" data-kind="lesson">
-  <div class="num"><b>10</b><span>Week</span></div>
+<article class="week" id="w10" data-unit="u2" data-kind="lesson"
+         data-start="2026-11-23" data-end="2026-11-27">
+  <div class="num"><span>Week</span><b>10</b><em>23 Nov</em></div>
   <div class="main">
     <div class="head">
       <h3>Family Planning</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">23–27 November</span>
       <span class="anchor">
         <a href="#w10" title="Link to week 10">#w10</a>
         <button type="button" data-copy="w10">copy link</button>
@@ -323,12 +388,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(2)%20FAMILY%20PLANNING/(2)%20FAMILY%20PLANNING%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w11" data-unit="u2" data-kind="formative">
-  <div class="num"><b>11</b><span>Week</span></div>
+<article class="week" id="w11" data-unit="u2" data-kind="formative"
+         data-start="2026-11-30" data-end="2026-12-04">
+  <div class="num"><span>Week</span><b>11</b><em>30 Nov</em></div>
   <div class="main">
     <div class="head">
       <h3>Formative assessment</h3>
       <span class="chip k-form">Formative</span>
+      <span class="when">30 Nov – 4 Dec</span>
       <span class="anchor">
         <a href="#w11" title="Link to week 11">#w11</a>
         <button type="button" data-copy="w11">copy link</button>
@@ -338,12 +405,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(2A)%20FORMATIVE/(2A)%20FORMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Formative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(2A)%20FORMATIVE/(2A)%20DIT%20-%20FORMATIVE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(2A)%20FORMATIVE/(2A)%20HW%20-%20FORMATIVE%20-%20HUMAN%20RIGHTS%20POSTER%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Homework — human rights poster</span></a></div>
   </div>
 </article>
-<article class="week" id="w12" data-unit="u2" data-kind="lesson">
-  <div class="num"><b>12</b><span>Week</span></div>
+<article class="week" id="w12" data-unit="u2" data-kind="lesson"
+         data-start="2026-12-07" data-end="2026-12-11">
+  <div class="num"><span>Week</span><b>12</b><em>7 Dec</em></div>
   <div class="main">
     <div class="head">
       <h3>Divorce and Remarriage</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">7–11 December</span>
       <span class="anchor">
         <a href="#w12" title="Link to week 12">#w12</a>
         <button type="button" data-copy="w12">copy link</button>
@@ -353,12 +422,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(3)%20DIVORCE%20AND%20REMARRIAGE/(3)%20DIVORCE%20AND%20REMARRIAGE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w13" data-unit="u2" data-kind="lesson">
-  <div class="num"><b>13</b><span>Week</span></div>
+<article class="week" id="w13" data-unit="u2" data-kind="lesson"
+         data-start="2026-12-14" data-end="2026-12-18">
+  <div class="num"><span>Week</span><b>13</b><em>14 Dec</em></div>
   <div class="main">
     <div class="head">
       <h3>Equality of Men and Women in the Home</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">14–18 December</span>
       <span class="anchor">
         <a href="#w13" title="Link to week 13">#w13</a>
         <button type="button" data-copy="w13">copy link</button>
@@ -367,13 +438,15 @@ footer.note b{color:var(--ink-2)}
     <p class="summary">Ephesians has been read as giving the husband headship and the wife a subordinate role. Most Christians today, and Humanists, argue instead for equal partnership — shared money, shared parenting, shared decisions.</p>
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(4)%20EQUALITY%20OF%20MEN%20AND%20WOMEN%20IN%20THE%20HOME/(4)%20EQUALITY%20OF%20MEN%20AND%20WOMEN%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(4)%20EQUALITY%20OF%20MEN%20AND%20WOMEN%20IN%20THE%20HOME/(4)%20WORKSHEET%20-%20EQUALITY%20AT%20HOME%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — equality at home</span></a></div>
   </div>
-</article>
-<article class="week" id="w14" data-unit="u2" data-kind="lesson">
-  <div class="num"><b>14</b><span>Week</span></div>
+</article><div class="gap break"><b>Christmas holiday</b><span>21 Dec – 1 Jan</span></div><div class="gap term"><b>Spring term begins</b><span>Monday 4 Jan 2027</span></div>
+<article class="week" id="w14" data-unit="u2" data-kind="lesson"
+         data-start="2027-01-04" data-end="2027-01-08">
+  <div class="num"><span>Week</span><b>14</b><em>4 Jan</em></div>
   <div class="main">
     <div class="head">
       <h3>Gender Prejudice and Discrimination</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">4–8 January</span>
       <span class="anchor">
         <a href="#w14" title="Link to week 14">#w14</a>
         <button type="button" data-copy="w14">copy link</button>
@@ -383,12 +456,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/2.%20CHRISTIANITY%20AND%20SOCIETY/(5)%20GENDER%20PREJUDICE%20AND%20DISCRIMINATION/(5)%20GENDER%20PREJUDICE%20AND%20DISCRIMINATION%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w15" data-unit="u2" data-kind="summative">
-  <div class="num"><b>15</b><span>Week</span></div>
+<article class="week" id="w15" data-unit="u2" data-kind="summative"
+         data-start="2027-01-11" data-end="2027-01-15">
+  <div class="num"><span>Week</span><b>15</b><em>11 Jan</em></div>
   <div class="main">
     <div class="head">
       <h3>Summative 1 and 2 + justice lesson</h3>
       <span class="chip k-summ">Summative</span>
+      <span class="when">11–15 January</span>
       <span class="anchor">
         <a href="#w15" title="Link to week 15">#w15</a>
         <button type="button" data-copy="w15">copy link</button>
@@ -404,12 +479,14 @@ footer.note b{color:var(--ink-2)}
   <p class="blurb">Crime, human rights, attitudes to punishment, restorative justice, and moral and natural evil.</p>
   <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/Y9_Unit3_Humanism_and_the_Law_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2F3.%20HUMANISM%20AND%20THE%20LAW" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/RESOURCES/Key%20words.pptx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Key words deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/RESOURCES/D-type%20practice.pptx?web=1" target="_blank" rel="noopener"><i>▤</i><span>D-type practice</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/RESOURCES/Yr%209%20Humanism%20and%20the%20Law%20D%20type.pptx?web=1" target="_blank" rel="noopener"><i>▤</i><span>D-type — Humanism and the Law</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/RESOURCES/Y9%202%20-%20Humanism%20and%20Law.pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet (Publisher)</span></a></div>
 </section>
-<article class="week" id="w16" data-unit="u3" data-kind="lesson">
-  <div class="num"><b>16</b><span>Week</span></div>
+<article class="week" id="w16" data-unit="u3" data-kind="lesson"
+         data-start="2027-01-18" data-end="2027-01-22">
+  <div class="num"><span>Week</span><b>16</b><em>18 Jan</em></div>
   <div class="main">
     <div class="head">
       <h3>Crime</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">18–22 January</span>
       <span class="anchor">
         <a href="#w16" title="Link to week 16">#w16</a>
         <button type="button" data-copy="w16">copy link</button>
@@ -419,12 +496,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(1)%20CRIME/(1)%20CRIME%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(1)%20CRIME/(6)%20JUSTICE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Justice deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(1)%20CRIME/(1)%20BELL%20WORK%20-%20DEFINITIONS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work — definitions</span></a></div>
   </div>
 </article>
-<article class="week" id="w17" data-unit="u3" data-kind="lesson">
-  <div class="num"><b>17</b><span>Week</span></div>
+<article class="week" id="w17" data-unit="u3" data-kind="lesson"
+         data-start="2027-01-25" data-end="2027-01-29">
+  <div class="num"><span>Week</span><b>17</b><em>25 Jan</em></div>
   <div class="main">
     <div class="head">
       <h3>Attitudes to Human Rights</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">25–29 January</span>
       <span class="anchor">
         <a href="#w17" title="Link to week 17">#w17</a>
         <button type="button" data-copy="w17">copy link</button>
@@ -434,12 +513,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(2)%20ATTITUDES%20TO%20HUMAN%20RIGHTS/(2)%20HUMAN%20RIGHTS%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(2)%20ATTITUDES%20TO%20HUMAN%20RIGHTS/(2)%20WORKSHEET%20-%20HUMAN%20RIGHTS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — human rights</span></a></div>
   </div>
 </article>
-<article class="week" id="w18" data-unit="u3" data-kind="lesson">
-  <div class="num"><b>18</b><span>Week</span></div>
+<article class="week" id="w18" data-unit="u3" data-kind="lesson"
+         data-start="2027-02-01" data-end="2027-02-05">
+  <div class="num"><span>Week</span><b>18</b><em>1 Feb</em></div>
   <div class="main">
     <div class="head">
       <h3>Attitudes to Punishment</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">1–5 February</span>
       <span class="anchor">
         <a href="#w18" title="Link to week 18">#w18</a>
         <button type="button" data-copy="w18">copy link</button>
@@ -449,12 +530,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(3)%20ATTITUDES%20TO%20PUNISHMENT/(3)%20ATTITUDES%20TO%20PUNISHMENT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w19" data-unit="u3" data-kind="formative">
-  <div class="num"><b>19</b><span>Week</span></div>
+<article class="week" id="w19" data-unit="u3" data-kind="formative"
+         data-start="2027-02-08" data-end="2027-02-12">
+  <div class="num"><span>Week</span><b>19</b><em>8 Feb</em></div>
   <div class="main">
     <div class="head">
       <h3>Formative assessment</h3>
       <span class="chip k-form">Formative</span>
+      <span class="when">8–12 February</span>
       <span class="anchor">
         <a href="#w19" title="Link to week 19">#w19</a>
         <button type="button" data-copy="w19">copy link</button>
@@ -463,13 +546,15 @@ footer.note b{color:var(--ink-2)}
     <p class="summary">Checkpoint on crime, human rights and attitudes to punishment. Paper first, then the DIT deck in the same lesson.</p>
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(3A)%20FORMATIVE/(3A)%20FORMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Formative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(3A)%20FORMATIVE/(3A)%20DIT%20-%20FORMATIVE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a></div>
   </div>
-</article>
-<article class="week" id="w20" data-unit="u3" data-kind="lesson">
-  <div class="num"><b>20</b><span>Week</span></div>
+</article><div class="gap break"><b>Half term</b><span>15–19 February</span></div>
+<article class="week" id="w20" data-unit="u3" data-kind="lesson"
+         data-start="2027-02-22" data-end="2027-02-26">
+  <div class="num"><span>Week</span><b>20</b><em>22 Feb</em></div>
   <div class="main">
     <div class="head">
       <h3>Restorative Justice</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">22–26 February</span>
       <span class="anchor">
         <a href="#w20" title="Link to week 20">#w20</a>
         <button type="button" data-copy="w20">copy link</button>
@@ -479,12 +564,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(4)%20RESTORATATIVE%20JUSTICE/(4)%20RESTORATATIVE%20JUSTICE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(4)%20RESTORATATIVE%20JUSTICE/(4)%20BELL%20WORK%20-%20DEFINITIONS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work — definitions</span></a></div>
   </div>
 </article>
-<article class="week" id="w21" data-unit="u3" data-kind="lesson">
-  <div class="num"><b>21</b><span>Week</span></div>
+<article class="week" id="w21" data-unit="u3" data-kind="lesson"
+         data-start="2027-03-01" data-end="2027-03-05">
+  <div class="num"><span>Week</span><b>21</b><em>1 Mar</em></div>
   <div class="main">
     <div class="head">
       <h3>Moral and Natural Evil</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">1–5 March</span>
       <span class="anchor">
         <a href="#w21" title="Link to week 21">#w21</a>
         <button type="button" data-copy="w21">copy link</button>
@@ -494,12 +581,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/3.%20HUMANISM%20AND%20THE%20LAW/(5)%20MORAL%20AND%20NATURAL%20EVIL/(5)%20MORAL%20AND%20NATURAL%20EVIL%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w22" data-unit="u3" data-kind="summative">
-  <div class="num"><b>22</b><span>Week</span></div>
+<article class="week" id="w22" data-unit="u3" data-kind="summative"
+         data-start="2027-03-08" data-end="2027-03-12">
+  <div class="num"><span>Week</span><b>22</b><em>8 Mar</em></div>
   <div class="main">
     <div class="head">
       <h3>Summative assessment</h3>
       <span class="chip k-summ">Summative</span>
+      <span class="when">8–12 March</span>
       <span class="anchor">
         <a href="#w22" title="Link to week 22">#w22</a>
         <button type="button" data-copy="w22">copy link</button>
@@ -515,12 +604,14 @@ footer.note b{color:var(--ink-2)}
   <p class="blurb">Islam and justice, Islam and crime, the Qur&#x27;an and the hadd, and the aims of punishment.</p>
   <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/Y9_Unit4_Islam_and_the_Law_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2F4.%20ISLAM%20AND%20THE%20LAW" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/RESOURCES/Y9%204%20-%20Islam%20and%20Law.pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet (Publisher)</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/RESOURCES/Easter%20task.pub?web=1" target="_blank" rel="noopener"><i>▤</i><span>Easter task (Publisher)</span></a></div>
 </section>
-<article class="week" id="w23" data-unit="u4" data-kind="lesson">
-  <div class="num"><b>23</b><span>Week</span></div>
+<article class="week" id="w23" data-unit="u4" data-kind="lesson"
+         data-start="2027-03-15" data-end="2027-03-19">
+  <div class="num"><span>Week</span><b>23</b><em>15 Mar</em></div>
   <div class="main">
     <div class="head">
       <h3>Islam and Justice</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">15–19 March</span>
       <span class="anchor">
         <a href="#w23" title="Link to week 23">#w23</a>
         <button type="button" data-copy="w23">copy link</button>
@@ -530,12 +621,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(1)%20ISLAM%20AND%20JUSTICE/(1)%20ISLAM%20AND%20JUSTICE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(1)%20ISLAM%20AND%20JUSTICE/(1)%20BELL%20WORK%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work</span></a></div>
   </div>
 </article>
-<article class="week" id="w24" data-unit="u4" data-kind="lesson">
-  <div class="num"><b>24</b><span>Week</span></div>
+<article class="week" id="w24" data-unit="u4" data-kind="lesson"
+         data-start="2027-03-22" data-end="2027-03-25">
+  <div class="num"><span>Week</span><b>24</b><em>22 Mar</em></div>
   <div class="main">
     <div class="head">
       <h3>Islam and Crime</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">22–25 March</span>
       <span class="anchor">
         <a href="#w24" title="Link to week 24">#w24</a>
         <button type="button" data-copy="w24">copy link</button>
@@ -544,13 +637,15 @@ footer.note b{color:var(--ink-2)}
     <p class="summary">What Islam counts as crime and why — offences against God, against other people and against property — with the harm done to the whole ummah kept in view.</p>
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(2)%20ISLAM%20AND%20CRIME/(2)%20ISLAM%20AND%20CRIME%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
-</article>
-<article class="week" id="w25" data-unit="u4" data-kind="lesson">
-  <div class="num"><b>25</b><span>Week</span></div>
+</article><div class="gap break"><b>Easter holiday</b><span>26 Mar – 9 Apr</span></div><div class="gap term"><b>Summer term begins</b><span>Monday 12 Apr 2027</span></div>
+<article class="week" id="w25" data-unit="u4" data-kind="lesson"
+         data-start="2027-04-12" data-end="2027-04-16">
+  <div class="num"><span>Week</span><b>25</b><em>12 Apr</em></div>
   <div class="main">
     <div class="head">
       <h3>The Qur&#x27;an and the Hadd</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">12–16 April</span>
       <span class="anchor">
         <a href="#w25" title="Link to week 25">#w25</a>
         <button type="button" data-copy="w25">copy link</button>
@@ -560,12 +655,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(3)%20THE%20QURAN%20AND%20THE%20HADD/(3)%20THE%20QURAN%20AND%20THE%20HADD%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w26" data-unit="u4" data-kind="lesson">
-  <div class="num"><b>26</b><span>Week</span></div>
+<article class="week" id="w26" data-unit="u4" data-kind="lesson"
+         data-start="2027-04-19" data-end="2027-04-23">
+  <div class="num"><span>Week</span><b>26</b><em>19 Apr</em></div>
   <div class="main">
     <div class="head">
       <h3>Attitudes to Punishment</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">19–23 April</span>
       <span class="anchor">
         <a href="#w26" title="Link to week 26">#w26</a>
         <button type="button" data-copy="w26">copy link</button>
@@ -575,12 +672,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(4)%20ATTITUDES%20TO%20PUNISHMENT/(4)%20ATTITUDES%20TO%20PUNISHMENT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w27" data-unit="u4" data-kind="formative">
-  <div class="num"><b>27</b><span>Week</span></div>
+<article class="week" id="w27" data-unit="u4" data-kind="formative"
+         data-start="2027-04-26" data-end="2027-04-30">
+  <div class="num"><span>Week</span><b>27</b><em>26 Apr</em></div>
   <div class="main">
     <div class="head">
       <h3>Formative assessment</h3>
       <span class="chip k-form">Formative</span>
+      <span class="when">26–30 April</span>
       <span class="anchor">
         <a href="#w27" title="Link to week 27">#w27</a>
         <button type="button" data-copy="w27">copy link</button>
@@ -590,12 +689,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(4A)%20FORMATIVE/(4A)%20FORMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Formative paper</span></a></div>
   </div>
 </article>
-<article class="week" id="w28" data-unit="u4" data-kind="lesson">
-  <div class="num"><b>28</b><span>Week</span></div>
+<article class="week" id="w28" data-unit="u4" data-kind="lesson"
+         data-start="2027-05-03" data-end="2027-05-07">
+  <div class="num"><span>Week</span><b>28</b><em>3 May</em></div>
   <div class="main">
     <div class="head">
       <h3>Aims of Punishment</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">3–7 May</span>
       <span class="anchor">
         <a href="#w28" title="Link to week 28">#w28</a>
         <button type="button" data-copy="w28">copy link</button>
@@ -605,12 +706,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(5)%20AIMS%20OF%20PUNISHMENT/(5)%20AIMS%20OF%20PUNISHMENT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/4.%20ISLAM%20AND%20THE%20LAW/(5)%20AIMS%20OF%20PUNISHMENT/(5)%20BELL%20WORK%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work</span></a></div>
   </div>
 </article>
-<article class="week" id="w29" data-unit="u4" data-kind="summative">
-  <div class="num"><b>29</b><span>Week</span></div>
+<article class="week" id="w29" data-unit="u4" data-kind="summative"
+         data-start="2027-05-10" data-end="2027-05-14">
+  <div class="num"><span>Week</span><b>29</b><em>10 May</em></div>
   <div class="main">
     <div class="head">
       <h3>Summative assessment</h3>
       <span class="chip k-summ">Summative</span>
+      <span class="when">10–14 May</span>
       <span class="anchor">
         <a href="#w29" title="Link to week 29">#w29</a>
         <button type="button" data-copy="w29">copy link</button>
@@ -626,12 +729,14 @@ footer.note b{color:var(--ink-2)}
   <p class="blurb">Treatment of criminals, capital punishment, forgiveness, and the question of God.</p>
   <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/5.%20ISLAM%20AND%20FORGIVENESS/Y9_Unit5_Islam_and_Forgiveness_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2F5.%20ISLAM%20AND%20FORGIVENESS" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a></div>
 </section>
-<article class="week" id="w30" data-unit="u5" data-kind="lesson">
-  <div class="num"><b>30</b><span>Week</span></div>
+<article class="week" id="w30" data-unit="u5" data-kind="lesson"
+         data-start="2027-05-17" data-end="2027-05-21">
+  <div class="num"><span>Week</span><b>30</b><em>17 May</em></div>
   <div class="main">
     <div class="head">
       <h3>Treatment of Criminals</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">17–21 May</span>
       <span class="anchor">
         <a href="#w30" title="Link to week 30">#w30</a>
         <button type="button" data-copy="w30">copy link</button>
@@ -641,12 +746,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/5.%20ISLAM%20AND%20FORGIVENESS/(1)%20TREATMENT%20OF%20CRIMINALS/(1)%20TREATMENT%20OF%20CRIMINALS%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w31" data-unit="u5" data-kind="lesson">
-  <div class="num"><b>31</b><span>Week</span></div>
+<article class="week" id="w31" data-unit="u5" data-kind="lesson"
+         data-start="2027-05-24" data-end="2027-05-28">
+  <div class="num"><span>Week</span><b>31</b><em>24 May</em></div>
   <div class="main">
     <div class="head">
       <h3>Capital Punishment</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">24–28 May</span>
       <span class="anchor">
         <a href="#w31" title="Link to week 31">#w31</a>
         <button type="button" data-copy="w31">copy link</button>
@@ -655,13 +762,15 @@ footer.note b{color:var(--ink-2)}
     <p class="summary">The Qur&#x27;an permits the death penalty for murder, but praises those who forgive instead. Set that against wrongful convictions, the sanctity of life, and the evidence on whether it deters.</p>
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/5.%20ISLAM%20AND%20FORGIVENESS/(2)%20CAPITAL%20PUNISHMENT/(2)%20CAPITAL%20PUNISHMENT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
-</article>
-<article class="week" id="w32" data-unit="u5" data-kind="lesson">
-  <div class="num"><b>32</b><span>Week</span></div>
+</article><div class="gap break"><b>Half term</b><span>31 May – 4 Jun</span></div>
+<article class="week" id="w32" data-unit="u5" data-kind="lesson"
+         data-start="2027-06-07" data-end="2027-06-11">
+  <div class="num"><span>Week</span><b>32</b><em>7 Jun</em></div>
   <div class="main">
     <div class="head">
       <h3>Forgiveness</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">7–11 June</span>
       <span class="anchor">
         <a href="#w32" title="Link to week 32">#w32</a>
         <button type="button" data-copy="w32">copy link</button>
@@ -671,12 +780,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/5.%20ISLAM%20AND%20FORGIVENESS/(3)%20FORGIVENESS/(3)%20FORGIVENESS%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
   </div>
 </article>
-<article class="week" id="w33" data-unit="u5" data-kind="lesson">
-  <div class="num"><b>33</b><span>Week</span></div>
+<article class="week" id="w33" data-unit="u5" data-kind="lesson"
+         data-start="2027-06-14" data-end="2027-06-18">
+  <div class="num"><span>Week</span><b>33</b><em>14 Jun</em></div>
   <div class="main">
     <div class="head">
       <h3>The Question of God</h3>
       <span class="chip k-lesson">Lesson</span>
+      <span class="when">14–18 June</span>
       <span class="anchor">
         <a href="#w33" title="Link to week 33">#w33</a>
         <button type="button" data-copy="w33">copy link</button>
@@ -692,12 +803,14 @@ footer.note b{color:var(--ink-2)}
   <p class="blurb">Two High 5 revision lessons, the definition sheets, the paper itself and the DIT that follows it.</p>
   <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%209%2FEND%20OF%20YEAR%20TEST" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a></div>
 </section>
-<article class="week" id="w34" data-unit="eoy" data-kind="revision">
-  <div class="num"><b>34</b><span>Week</span></div>
+<article class="week" id="w34" data-unit="eoy" data-kind="revision"
+         data-start="2027-06-21" data-end="2027-06-25">
+  <div class="num"><span>Week</span><b>34</b><em>21 Jun</em></div>
   <div class="main">
     <div class="head">
       <h3>High 5 — Marriage and the Family</h3>
       <span class="chip k-rev">Revision</span>
+      <span class="when">21–25 June</span>
       <span class="anchor">
         <a href="#w34" title="Link to week 34">#w34</a>
         <button type="button" data-copy="w34">copy link</button>
@@ -707,12 +820,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/END%20OF%20YEAR%20TEST/HIGH%205%20-%20MARRIAGE%20AND%20THE%20FAMILY%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Revision deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/END%20OF%20YEAR%20TEST/MARRIAGE%20AND%20FAMILY%20DEFINITION%20SHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Definition sheet</span></a></div>
   </div>
 </article>
-<article class="week" id="w35" data-unit="eoy" data-kind="revision">
-  <div class="num"><b>35</b><span>Week</span></div>
+<article class="week" id="w35" data-unit="eoy" data-kind="revision"
+         data-start="2027-06-28" data-end="2027-07-02">
+  <div class="num"><span>Week</span><b>35</b><em>28 Jun</em></div>
   <div class="main">
     <div class="head">
       <h3>High 5 — Crime and Punishment</h3>
       <span class="chip k-rev">Revision</span>
+      <span class="when">28 Jun – 2 Jul</span>
       <span class="anchor">
         <a href="#w35" title="Link to week 35">#w35</a>
         <button type="button" data-copy="w35">copy link</button>
@@ -722,12 +837,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/END%20OF%20YEAR%20TEST/HIGH%205%20-%20CRIME%20AND%20PUNISHMENT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Revision deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/END%20OF%20YEAR%20TEST/CRIME%20AND%20PUNISHMENT%20DEFINITION%20SHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Definition sheet</span></a></div>
   </div>
 </article>
-<article class="week" id="w36" data-unit="eoy" data-kind="exam">
-  <div class="num"><b>36</b><span>Week</span></div>
+<article class="week" id="w36" data-unit="eoy" data-kind="exam"
+         data-start="2027-07-05" data-end="2027-07-09">
+  <div class="num"><span>Week</span><b>36</b><em>5 Jul</em></div>
   <div class="main">
     <div class="head">
       <h3>End of Year Test</h3>
       <span class="chip k-exam">Exam</span>
+      <span class="when">5–9 July</span>
       <span class="anchor">
         <a href="#w36" title="Link to week 36">#w36</a>
         <button type="button" data-copy="w36">copy link</button>
@@ -737,12 +854,14 @@ footer.note b{color:var(--ink-2)}
     <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%209/END%20OF%20YEAR%20TEST/YEAR%209%20-%20EOY%20TEST.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>The paper</span></a></div>
   </div>
 </article>
-<article class="week" id="w37" data-unit="eoy" data-kind="dit">
-  <div class="num"><b>37</b><span>Week</span></div>
+<article class="week" id="w37" data-unit="eoy" data-kind="dit"
+         data-start="2027-07-12" data-end="2027-07-16">
+  <div class="num"><span>Week</span><b>37</b><em>12 Jul</em></div>
   <div class="main">
     <div class="head">
       <h3>End of Year DIT</h3>
       <span class="chip k-dit">DIT</span>
+      <span class="when">12–16 July</span>
       <span class="anchor">
         <a href="#w37" title="Link to week 37">#w37</a>
         <button type="button" data-copy="w37">copy link</button>
@@ -764,6 +883,29 @@ footer.note b{color:var(--ink-2)}
 </main>
 <script>
 (function(){
+  // Mark the current teaching week, and offer a jump to it.
+  var today = new Date(); today.setHours(12,0,0,0);
+  var weeks = [].slice.call(document.querySelectorAll('.week[data-start]'));
+  var current = null, next = null;
+  weeks.forEach(function(w){
+    var a = new Date(w.dataset.start + 'T00:00:00');
+    var b = new Date(w.dataset.end + 'T23:59:59');
+    if (today >= a && today <= b) current = w;
+    if (!next && today < a) next = w;
+  });
+  var target = current || next;
+  if (current) current.classList.add('now');
+  var btn = document.getElementById('jumpnow');
+  if (btn && target) {
+    btn.textContent = current ? 'This week' : 'Next lesson';
+    btn.addEventListener('click', function(){
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+      history.replaceState(null, '', '#' + target.id);
+    });
+  } else if (btn) {
+    btn.remove();
+  }
+
   var buttons = document.querySelectorAll('.filters button');
   buttons.forEach(function(b){
     b.addEventListener('click', function(){

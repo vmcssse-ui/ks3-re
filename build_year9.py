@@ -26,6 +26,51 @@ def sp(rel, folder=False):
     return f"{SP_BASE}{path}?web=1"
 
 
+
+# --------------------------------------------------------------- calendar
+# Harlington School term dates 2026-27. Teaching weeks run from Monday
+# 7 September 2026; the 3rd and 4th of September are the settling-in days
+# before week 1.
+from datetime import date, timedelta
+
+TERMS = [
+    ("Autumn term", date(2026, 9, 7),  date(2026, 12, 18)),
+    ("Spring term", date(2027, 1, 4),  date(2027, 3, 25)),
+    ("Summer term", date(2027, 4, 12), date(2027, 7, 22)),
+]
+BREAKS = [
+    ("Half term", date(2026, 10, 26), date(2026, 11, 6), "two weeks"),
+    ("Christmas holiday", date(2026, 12, 21), date(2027, 1, 1), ""),
+    ("Half term", date(2027, 2, 15), date(2027, 2, 19), ""),
+    ("Easter holiday", date(2027, 3, 26), date(2027, 4, 9), ""),
+    ("Half term", date(2027, 5, 31), date(2027, 6, 4), ""),
+]
+CLOSED = [(b[1], b[2]) for b in BREAKS]
+
+
+def teaching_weeks():
+    out = []
+    for name, start, end in TERMS:
+        m = start
+        while m <= end:
+            if not any(a <= m <= b for a, b in CLOSED):
+                out.append((m, min(m + timedelta(days=4), end), name))
+            m += timedelta(days=7)
+    return out
+
+
+WEEK_DATES = teaching_weeks()
+
+
+def dm(d):
+    return f"{d.day} {d.strftime('%b')}"
+
+
+def daterange(a, b):
+    if a.month == b.month:
+        return f"{a.day}\u2013{b.day} {b.strftime('%B')}"
+    return f"{dm(a)} \u2013 {dm(b)}"
+
 # --------------------------------------------------------------- the units
 U1 = "1. HUMANISM AND SOCIETY"
 U2 = "2. CHRISTIANITY AND SOCIETY"
@@ -443,17 +488,56 @@ nav.jump a:focus-visible,button:focus-visible{outline:2px solid var(--plum); out
 
 .week{background:var(--card); border:1px solid var(--rule); border-radius:3px;
   box-shadow:var(--shadow); margin:14px 0; display:grid;
-  grid-template-columns:86px 1fr; overflow:hidden; scroll-margin-top:76px}
+  grid-template-columns:104px 1fr; overflow:hidden; scroll-margin-top:76px}
 @media(max-width:660px){.week{grid-template-columns:1fr}}
 .week .num{background:var(--plum-wash); border-right:1px solid var(--rule);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap:2px; padding:16px 8px}
+  gap:1px; padding:16px 8px}
 @media(max-width:660px){.week .num{flex-direction:row; gap:10px; border-right:0;
-  border-bottom:1px solid var(--rule); justify-content:flex-start; padding:10px 16px}}
+  border-bottom:1px solid var(--rule); justify-content:flex-start; padding:10px 16px;
+  align-items:baseline}}
 .week .num b{font-family:Newsreader,Georgia,serif; font-size:30px; line-height:1;
   font-variant-numeric:tabular-nums; color:var(--plum)}
 .week .num span{font-size:9.5px; letter-spacing:.14em; text-transform:uppercase;
   font-weight:700; color:var(--plum-2)}
+.week .num em{font-style:normal; font-size:11px; font-weight:700; color:var(--ink-3);
+  font-variant-numeric:tabular-nums; margin-top:3px; white-space:nowrap}
+.week .when{font-size:12px; font-weight:600; color:var(--ink-3);
+  font-variant-numeric:tabular-nums; white-space:nowrap}
+.week.now{border-color:var(--plum); box-shadow:0 0 0 2px var(--plum-wash), var(--shadow)}
+.week.now .num{background:var(--plum)}
+.week.now .num b, .week.now .num span, .week.now .num em{color:var(--on-plum)}
+.week.now .head h3::after{content:"this week"; margin-left:10px; font-family:"Public Sans",sans-serif;
+  font-size:10px; letter-spacing:.13em; text-transform:uppercase; font-weight:700;
+  color:var(--plum); vertical-align:middle}
+
+.gap{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+  margin:16px 0; padding:11px 18px; border-radius:3px}
+.gap b{font-size:12px; letter-spacing:.1em; text-transform:uppercase}
+.gap span{font-size:13px; font-variant-numeric:tabular-nums}
+.gap.break{background:var(--rule-2); color:var(--ink-3)}
+.gap.break b{color:var(--ink-2)}
+.gap.term{background:var(--plum); color:var(--on-plum)}
+.gap.term b{color:var(--on-plum)}
+.gap.term span{opacity:.85}
+
+.cal{margin:28px 0 0}
+.cal .lab{font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  font-weight:700; color:var(--ink-3); margin-bottom:2px}
+.termnote{font-size:13px; color:var(--ink-3); margin:12px 0 0; max-width:82ch}
+.terms{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:22px 0 0}
+@media(max-width:760px){.terms{grid-template-columns:1fr}}
+.term-card{border:1px solid var(--rule); border-radius:3px; padding:14px 16px;
+  background:var(--card)}
+.term-card b{display:block; font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--plum); margin-bottom:6px}
+.term-card span{display:block; font-size:13.5px; color:var(--ink-2);
+  font-variant-numeric:tabular-nums}
+.term-card span+span{color:var(--ink-3); font-size:12.5px; margin-top:3px}
+.nowbtn{all:unset; cursor:pointer; font-size:12px; font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--on-plum); background:var(--plum);
+  border-radius:2px; padding:7px 12px; white-space:nowrap}
+.nowbtn:hover{opacity:.88}
 .week .main{padding:16px 20px 18px}
 .week .head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
 .week h3{font-size:20px}
@@ -498,6 +582,29 @@ footer.note b{color:var(--ink-2)}
 
 JS = """
 (function(){
+  // Mark the current teaching week, and offer a jump to it.
+  var today = new Date(); today.setHours(12,0,0,0);
+  var weeks = [].slice.call(document.querySelectorAll('.week[data-start]'));
+  var current = null, next = null;
+  weeks.forEach(function(w){
+    var a = new Date(w.dataset.start + 'T00:00:00');
+    var b = new Date(w.dataset.end + 'T23:59:59');
+    if (today >= a && today <= b) current = w;
+    if (!next && today < a) next = w;
+  });
+  var target = current || next;
+  if (current) current.classList.add('now');
+  var btn = document.getElementById('jumpnow');
+  if (btn && target) {
+    btn.textContent = current ? 'This week' : 'Next lesson';
+    btn.addEventListener('click', function(){
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+      history.replaceState(null, '', '#' + target.id);
+    });
+  } else if (btn) {
+    btn.remove();
+  }
+
   var buttons = document.querySelectorAll('.filters button');
   buttons.forEach(function(b){
     b.addEventListener('click', function(){
@@ -537,6 +644,28 @@ JS = """
 """
 
 
+
+def gap_after(n):
+    """Break and term markers that fall after lesson week n."""
+    if n > len(WEEK_DATES):
+        return ""
+    end = WEEK_DATES[n - 1][1]
+    if n >= len(WEEK_DATES):
+        return ""
+    nxt, _ne, nterm = WEEK_DATES[n]
+    out = []
+    for name, b0, b1, extra in BREAKS:
+        if end < b0 and b1 < nxt:
+            tail = f"  \u00b7  {extra}" if extra else ""
+            out.append(
+                f'<div class="gap break"><b>{E(name)}</b>'
+                f'<span>{E(daterange(b0, b1))}{tail}</span></div>')
+    if nterm != WEEK_DATES[n - 1][2]:
+        out.append(
+            f'<div class="gap term"><b>{E(nterm)} begins</b>'
+            f'<span>Monday {E(dm(nxt))} {nxt.year}</span></div>')
+    return "".join(out)
+
 def btn(label, url, icon="", ghost=False):
     i = f'<i>{E(icon)}</i>' if icon else ""
     cls = "btn ghost" if ghost else "btn"
@@ -567,18 +696,21 @@ def render():
   <div class="unitres">{''.join(ur)}</div>
 </section>""")
         for w in weeks:
+            wstart, wend, wterm = WEEK_DATES[w["n"] - 1]
             klabel, kcls = KINDS[w["kind"]]
             res = "".join(btn(lab, sp(rel), ICON.get(t, "")) for lab, t, rel in w["res"])
             summ = SUMMARIES.get(w["n"], "")
             summ = f'<p class="summary">{E(summ)}</p>' if summ else ""
             note = f'<p class="note"><b>Note</b> {E(w["note"])}</p>' if w["note"] else ""
             body.append(f"""
-<article class="week" id="w{w['n']}" data-unit="{u['key']}" data-kind="{w['kind']}">
-  <div class="num"><b>{w['n']}</b><span>Week</span></div>
+<article class="week" id="w{w['n']}" data-unit="{u['key']}" data-kind="{w['kind']}"
+         data-start="{wstart.isoformat()}" data-end="{wend.isoformat()}">
+  <div class="num"><span>Week</span><b>{w['n']}</b><em>{E(dm(wstart))}</em></div>
   <div class="main">
     <div class="head">
       <h3>{E(w['title'])}</h3>
       <span class="chip {kcls}">{E(klabel)}</span>
+      <span class="when">{E(daterange(wstart, wend))}</span>
       <span class="anchor">
         <a href="#w{w['n']}" title="Link to week {w['n']}">#w{w['n']}</a>
         <button type="button" data-copy="w{w['n']}">copy link</button>
@@ -588,6 +720,23 @@ def render():
     <div class="res">{res}</div>
   </div>
 </article>""")
+            body.append(gap_after(w["n"]))
+
+    tspan = {}
+    for tname, _ts, _te in TERMS:
+        ws = [j + 1 for j, (_m, _e, t) in enumerate(WEEK_DATES) if t == tname]
+        tspan[tname] = (ws[0], ws[-1])
+    termcards = "".join(
+        f'<div class="term-card"><b>{E(tname)}</b>'
+        f'<span>{E(dm(ts))} {ts.year} \u2013 {E(dm(te))} {te.year}</span>'
+        f'<span>Weeks {tspan[tname][0]}\u2013{tspan[tname][1]}</span></div>'
+        for tname, ts, te in TERMS)
+    spare = len(WEEK_DATES) - len(WEEKS)
+    termnote = (
+        "Week 1 is the week beginning Monday 7 September 2026 — the 3rd and 4th "
+        f"of September fall before it. The year holds {len(WEEK_DATES)} teaching "
+        f"weeks and this scheme has {len(WEEKS)} lessons, which leaves "
+        f"{spare} spare at the end for catch-up.")
 
     doc = f"""<title>Year 9 Weekly</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -620,6 +769,7 @@ def render():
       <button type="button" data-filter="assess" aria-pressed="false">Assessments</button>
       <button type="button" data-filter="rev" aria-pressed="false">Revision</button>
     </div>
+    <button type="button" id="jumpnow" class="nowbtn">This week</button>
   </div>
 </nav>
 
@@ -627,6 +777,11 @@ def render():
   <div class="notice"><b>Every week has its own link.</b> Click <b>#w12</b> on any
     week to jump to it, or <b>copy link</b> to send that week to a class — the
     address ends <code>year9.html#w12</code>.</div>
+  <section class="cal">
+    <div class="lab">Term dates 2026–27</div>
+    <div class="terms">{termcards}</div>
+    <p class="termnote">{termnote}</p>
+  </section>
   {''.join(body)}
   <footer class="note">
     <p><b>Where the files live.</b> Every button points at the RE SharePoint,

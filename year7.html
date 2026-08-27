@@ -1,0 +1,973 @@
+<title>Year 7 Weekly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400&family=Public+Sans:ital,wght@0,400..800;1,400&display=swap">
+<style>
+:root{
+  --paper:#FDFAF7; --card:#FFFFFF; --ink:#1F1611; --ink-2:#57463B;
+  --ink-3:#867467; --rule:#EBDFD5; --rule-2:#F5EDE6;
+  --orng:#C2410C; --orng-2:#8A3208; --orng-wash:#FFF1E8; --on-orng:#FFFFFF;
+  --brass:#8A5C0B; --brass-wash:#FBF3E2;
+  --teal:#0B3D36; --teal-wash:#E7F0EE;
+  --shadow:0 1px 2px rgba(31,22,17,.05), 0 8px 24px -16px rgba(31,22,17,.28);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#171210; --card:#221A16; --ink:#F4ECE5; --ink-2:#C6B5A8;
+    --ink-3:#96857A; --rule:#3A2C23; --rule-2:#2A2019;
+    --orng:#FDA96A; --orng-2:#D98A4E; --orng-wash:#2E1B0E; --on-orng:#2B1206;
+    --brass:#E2B45A; --brass-wash:#2A2113;
+    --teal:#7FC8B8; --teal-wash:#12241F;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#171210; --card:#221A16; --ink:#F4ECE5; --ink-2:#C6B5A8;
+  --ink-3:#96857A; --rule:#3A2C23; --rule-2:#2A2019;
+  --orng:#FDA96A; --orng-2:#D98A4E; --orng-wash:#2E1B0E; --on-orng:#2B1206;
+  --brass:#E2B45A; --brass-wash:#2A2113;
+  --teal:#7FC8B8; --teal-wash:#12241F;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -18px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Newsreader,Georgia,"Times New Roman",serif; font-weight:600;
+  text-wrap:balance; margin:0; letter-spacing:-.01em}
+a{color:var(--orng)}
+.wrap{max-width:1140px; margin:0 auto; padding:0 24px}
+
+.mast{background:var(--orng); color:var(--on-orng); padding:52px 0 40px}
+.mast .eyebrow{font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+  font-weight:700; opacity:.72}
+.mast h1{font-size:clamp(36px,6vw,60px); line-height:1.02; margin:10px 0 0}
+.mast p{margin:14px 0 0; max-width:64ch; opacity:.88; font-size:17px}
+.mast .top{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px}
+.mast .top a{display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+  background:rgba(255,255,255,.14); color:var(--on-orng); border:1px solid rgba(255,255,255,.28);
+  border-radius:2px; padding:9px 14px; font-size:13.5px; font-weight:600}
+.mast .top a:hover{background:rgba(255,255,255,.24)}
+
+nav.jump{position:sticky; top:0; z-index:30; background:var(--paper);
+  border-bottom:1px solid var(--rule)}
+nav.jump .inner{display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding:10px 0}
+nav.jump ul{display:flex; gap:2px; list-style:none; margin:0; padding:0;
+  flex-wrap:wrap; flex:1 1 380px}
+nav.jump a{display:block; white-space:nowrap; padding:9px 12px; font-size:13px;
+  font-weight:600; color:var(--ink-2); text-decoration:none; border-bottom:2px solid transparent}
+nav.jump a:hover{color:var(--orng); border-bottom-color:var(--orng)}
+nav.jump a:focus-visible,button:focus-visible{outline:2px solid var(--orng); outline-offset:2px}
+.filters{display:flex; gap:6px}
+.filters button{all:unset; cursor:pointer; font-size:12px; font-weight:700;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3);
+  border:1px solid var(--rule); border-radius:2px; padding:6px 11px}
+.filters button[aria-pressed="true"]{background:var(--ink); color:var(--paper);
+  border-color:var(--ink)}
+
+.unit{margin:46px 0 0; padding-top:24px; border-top:3px solid var(--orng)}
+.unit .lab{font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  font-weight:700; color:var(--orng-2)}
+.unit h2{font-size:30px; margin:6px 0 0}
+.unit p.blurb{color:var(--ink-2); max-width:72ch; margin:8px 0 0; font-size:15px}
+.unitres{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+
+.week{background:var(--card); border:1px solid var(--rule); border-radius:3px;
+  box-shadow:var(--shadow); margin:14px 0; display:grid;
+  grid-template-columns:104px 1fr; overflow:hidden; scroll-margin-top:76px}
+@media(max-width:660px){.week{grid-template-columns:1fr}}
+.week .num{background:var(--orng-wash); border-right:1px solid var(--rule);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:1px; padding:16px 8px}
+@media(max-width:660px){.week .num{flex-direction:row; gap:10px; border-right:0;
+  border-bottom:1px solid var(--rule); justify-content:flex-start; padding:10px 16px;
+  align-items:baseline}}
+.week .num b{font-family:Newsreader,Georgia,serif; font-size:30px; line-height:1;
+  font-variant-numeric:tabular-nums; color:var(--orng)}
+.week .num span{font-size:9.5px; letter-spacing:.14em; text-transform:uppercase;
+  font-weight:700; color:var(--orng-2)}
+.week .num em{font-style:normal; font-size:11px; font-weight:700; color:var(--ink-3);
+  font-variant-numeric:tabular-nums; margin-top:3px; white-space:nowrap}
+.week .when{font-size:12px; font-weight:600; color:var(--ink-3);
+  font-variant-numeric:tabular-nums; white-space:nowrap}
+.week.now{border-color:var(--orng); box-shadow:0 0 0 2px var(--orng-wash), var(--shadow)}
+.week.now .num{background:var(--orng)}
+.week.now .num b, .week.now .num span, .week.now .num em{color:var(--on-orng)}
+.week.now .head h3::after{content:"this week"; margin-left:10px; font-family:"Public Sans",sans-serif;
+  font-size:10px; letter-spacing:.13em; text-transform:uppercase; font-weight:700;
+  color:var(--orng); vertical-align:middle}
+
+.gap{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+  margin:16px 0; padding:11px 18px; border-radius:3px}
+.gap b{font-size:12px; letter-spacing:.1em; text-transform:uppercase}
+.gap span{font-size:13px; font-variant-numeric:tabular-nums}
+.gap.break{background:var(--rule-2); color:var(--ink-3)}
+.gap.break b{color:var(--ink-2)}
+.gap.term{background:var(--orng); color:var(--on-orng)}
+.gap.term b{color:var(--on-orng)}
+.gap.term span{opacity:.85}
+
+.cal{margin:28px 0 0}
+.cal .lab{font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  font-weight:700; color:var(--ink-3); margin-bottom:2px}
+.termnote{font-size:13px; color:var(--ink-3); margin:12px 0 0; max-width:82ch}
+.terms{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:22px 0 0}
+@media(max-width:760px){.terms{grid-template-columns:1fr}}
+.term-card{border:1px solid var(--rule); border-radius:3px; padding:14px 16px;
+  background:var(--card)}
+.term-card b{display:block; font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--orng); margin-bottom:6px}
+.term-card span{display:block; font-size:13.5px; color:var(--ink-2);
+  font-variant-numeric:tabular-nums}
+.term-card span+span{color:var(--ink-3); font-size:12.5px; margin-top:3px}
+.nowbtn{all:unset; cursor:pointer; font-size:12px; font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--on-orng); background:var(--orng);
+  border-radius:2px; padding:7px 12px; white-space:nowrap}
+.nowbtn:hover{opacity:.88}
+.week .main{padding:16px 20px 18px}
+.week .head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+.week h3{font-size:20px}
+.week .summary{color:var(--ink-2); font-size:15px; margin:9px 0 0; max-width:76ch}
+.week .note{color:var(--ink-3); font-size:13.5px; margin:7px 0 0; max-width:76ch}
+.week .note b{color:var(--brass); font-size:10px; letter-spacing:.12em;
+  text-transform:uppercase; margin-right:6px}
+.res{display:flex; flex-wrap:wrap; gap:8px; margin-top:13px}
+
+.btn{display:inline-flex; align-items:center; gap:7px; text-decoration:none;
+  border:1px solid var(--rule); border-radius:2px; padding:8px 12px;
+  font-size:13px; font-weight:600; color:var(--ink-2); background:var(--card)}
+.btn:hover{border-color:var(--orng); color:var(--orng); background:var(--orng-wash)}
+.btn i{font-style:normal; font-size:11px; color:var(--ink-3)}
+.btn:hover i{color:var(--orng)}
+.btn.ghost{border-style:dashed}
+
+.chip{font-size:10px; letter-spacing:.13em; text-transform:uppercase; font-weight:700;
+  padding:4px 9px; border-radius:2px; white-space:nowrap}
+.k-lesson{background:var(--rule-2); color:var(--ink-3)}
+.k-form{background:var(--brass-wash); color:var(--brass)}
+.k-summ{background:var(--ink); color:var(--paper)}
+.k-rev{background:var(--teal-wash); color:var(--teal)}
+.k-exam{background:var(--orng); color:var(--on-orng)}
+.k-dit{background:var(--orng-wash); color:var(--orng)}
+
+.anchor{margin-left:auto; display:inline-flex; gap:6px; align-items:center}
+.anchor a, .anchor button{all:unset; cursor:pointer; font-size:11px; font-weight:700;
+  letter-spacing:.08em; color:var(--ink-3); font-variant-numeric:tabular-nums;
+  border:1px solid var(--rule); border-radius:2px; padding:4px 8px}
+.anchor a:hover, .anchor button:hover{color:var(--orng); border-color:var(--orng)}
+
+.notice{background:var(--brass-wash); border-left:3px solid var(--brass);
+  padding:14px 18px; margin:26px 0 0; font-size:14.5px; color:var(--ink-2);
+  border-radius:0 2px 2px 0}
+footer.note{margin:60px 0 80px; padding-top:24px; border-top:1px solid var(--rule);
+  color:var(--ink-3); font-size:13.5px; max-width:76ch}
+footer.note b{color:var(--ink-2)}
+.hidden{display:none !important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="eyebrow">Harlington School · Religious Education · Year 7</div>
+    <h1>Year 7, week by week</h1>
+    <p>Every lesson of the year in order, with its deck, worksheets and papers
+       one click away. Decks open in PowerPoint Online — you need to be signed
+       in to your school account.</p>
+    <div class="top">
+      <a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/RESOURCES/YEAR%207%20LEARNING%20JOURNEY.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Learning Journey</span></a>
+      <a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/RESOURCES/EXPECTATIONS%20PPT.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Expectations deck</span></a>
+      <a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2F" target="_blank" rel="noopener"><i>❐</i><span>All Year 7 files</span></a>
+    </div>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Units and filters">
+  <div class="wrap inner">
+    <ul><li><a href="#u1">1. Beliefs</a></li><li><a href="#u2">2. Hinduism</a></li><li><a href="#u3">3. Buddhism</a></li><li><a href="#u4">4. Sikhism</a></li><li><a href="#u5">5. Heroes of Faith</a></li><li><a href="#u6">6. Film and Faith</a></li><li><a href="#eoy">7. EOY exam</a></li><li><a href="#eq">8. Equality Week</a></li></ul>
+    <div class="filters" role="group" aria-label="Filter weeks">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="lesson" aria-pressed="false">Lessons</button>
+      <button type="button" data-filter="assess" aria-pressed="false">Assessments</button>
+      <button type="button" data-filter="rev" aria-pressed="false">Revision</button>
+    </div>
+    <button type="button" id="jumpnow" class="nowbtn">This week</button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="notice"><b>Every week has its own link.</b> Click <b>#w12</b> on any
+    week to jump to it, or <b>copy link</b> to send that week to a class — the
+    address ends <code>year7.html#w12</code>.</div>
+  <section class="cal">
+    <div class="lab">Term dates 2026–27</div>
+    <div class="terms"><div class="term-card"><b>Autumn term</b><span>7 Sep 2026 – 18 Dec 2026</span><span>Weeks 1–13</span></div><div class="term-card"><b>Spring term</b><span>4 Jan 2027 – 25 Mar 2027</span><span>Weeks 14–24</span></div><div class="term-card"><b>Summer term</b><span>12 Apr 2027 – 22 Jul 2027</span><span>Weeks 25–38</span></div></div>
+    <p class="termnote">Week 1 is the week beginning Monday 7 September 2026 — the Year 7 induction day on 2 September and the first two days of term fall before it. The year holds 38 teaching weeks and this scheme has 38 lessons, one per week with none spare.</p>
+  </section>
+  
+<section class="unit" id="u1">
+  <div class="lab">Unit 1 · Weeks 1–8 · 8 lessons</div>
+  <h2>Beliefs</h2>
+  <p class="blurb">What RE is and why we study it, then belief against fact and opinion, the question of God, and the artefacts and symbols believers use to show what they hold true.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/RESOURCES/Y7_Unit1_Beliefs_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2F1.%20BELIEFS" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/RESOURCES/UNIT%201%20-%20NEW%20COVER%20SHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit cover sheet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2F1.%20BELIEFS%2FRESOURCES%2FASH%20-%20LESSON%20PLANS" target="_blank" rel="noopener"><i>❐</i><span>Lesson plans folder</span></a></div>
+</section>
+<article class="week" id="w1" data-unit="u1" data-kind="lesson"
+         data-start="2026-09-07" data-end="2026-09-11">
+  <div class="num"><span>Week</span><b>1</b><em>7 Sep</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Why study RE?</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">7–11 September</span>
+      <span class="anchor">
+        <a href="#w1" title="Link to week 1">#w1</a>
+        <button type="button" data-copy="w1">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The first RE lesson of secondary school: what Religious Education is, and why it is worth studying when 7 of the world&#x27;s 8 billion people hold a religious belief. Sets the expectations students will work to all year.</p><p class="note"><b>Note</b> First RE lesson of Year 7 — seating plan, expectations and the Learning Journey are all set up here.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(1)%20WHY%20STUDY%20RE/(1)%20WHY%20STUDY%20RE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(1)%20WHY%20STUDY%20RE/(1)%20EXPECTATIONS%20PPT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Expectations deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/RESOURCES/ASH%20-%20LESSON%20PLANS/(1)%20LESSON%20PLAN%20-%20WHY%20STUDY%20RE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<article class="week" id="w2" data-unit="u1" data-kind="formative"
+         data-start="2026-09-14" data-end="2026-09-18">
+  <div class="num"><span>Week</span><b>2</b><em>14 Sep</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Baseline test</h3>
+      <span class="chip k-form">Formative</span>
+      <span class="when">14–18 September</span>
+      <span class="anchor">
+        <a href="#w2" title="Link to week 2">#w2</a>
+        <button type="button" data-copy="w2">copy link</button>
+      </span>
+    </div>
+    <p class="summary">A baseline test taken before any teaching, so progress across Year 7 can be measured against it. Covers holy books, places of worship, founders and the words theism, atheism and polytheism, followed by the DIT lesson.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(1A)%20BASELINE%20TEST/(1A)%20-%20NEW%20BASELINE%20TEST%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Baseline test</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(1A)%20BASELINE%20TEST/(1A)%20DIT%20-%20BASELINE%20TEST%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(1A)%20BASELINE%20TEST/(1A)%20OLD%20BASELINE%20TEST%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Older baseline test</span></a></div>
+  </div>
+</article>
+<article class="week" id="w3" data-unit="u1" data-kind="lesson"
+         data-start="2026-09-21" data-end="2026-09-25">
+  <div class="num"><span>Week</span><b>3</b><em>21 Sep</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>What is a belief?</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">21–25 September</span>
+      <span class="anchor">
+        <a href="#w3" title="Link to week 3">#w3</a>
+        <button type="button" data-copy="w3">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The distinction the whole unit rests on: a belief is accepted as true, a fact can be proven, an opinion says how someone feels. Students sort statements into the three and learn why people can hold different beliefs honestly.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(2)%20WHAT%20IS%20A%20BELIEF/(2)%20WHAT%20IS%20A%20BELIEF%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(2)%20WHAT%20IS%20A%20BELIEF/(2)%20WORKSHEET%20-%20BELIEF%2C%20FACT%2C%20OPINION%20STATEMENTS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — belief, fact, opinion</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/RESOURCES/ASH%20-%20LESSON%20PLANS/(2)%20LESSON%20PLAN%20-%20WHAT%20IS%20A%20BELIEF%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<article class="week" id="w4" data-unit="u1" data-kind="lesson"
+         data-start="2026-09-28" data-end="2026-10-02">
+  <div class="num"><span>Week</span><b>4</b><em>28 Sep</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Is seeing believing?</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">28 Sep – 2 Oct</span>
+      <span class="anchor">
+        <a href="#w4" title="Link to week 4">#w4</a>
+        <button type="button" data-copy="w4">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Optical illusions open the question of whether the eye can be trusted, then the lesson turns to theism, atheism and agnosticism, and to the ways belief is shown in practice — Christian prayer and Jummah prayer.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(3)%20IS%20SEEING%20BELIEVING/(3)%20IS%20SEEING%20BELIEVING%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/RESOURCES/ASH%20-%20LESSON%20PLANS/(3)%20LESSON%20PLAN%20-%20IS%20SEEING%20BELIEVING%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<article class="week" id="w5" data-unit="u1" data-kind="lesson"
+         data-start="2026-10-05" data-end="2026-10-09">
+  <div class="num"><span>Week</span><b>5</b><em>5 Oct</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Is there a God?</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">5–9 October</span>
+      <span class="anchor">
+        <a href="#w5" title="Link to week 5">#w5</a>
+        <button type="button" data-copy="w5">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Do people have good reasons for believing in God, or for not believing? Students weigh evidence, meet the theist, the atheist and the agnostic as three positions rather than three camps, and argue their own view.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(4)%20IS%20THERE%20A%20GOD/(4)%20IS%20THERE%20A%20GOD%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(4)%20IS%20THERE%20A%20GOD/(4)%20WORKSHEET%20-%20RELIGIOUS%20EVIDENCE%20STATEMENT%20SHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — religious evidence</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(4)%20IS%20THERE%20A%20GOD/(4)%20WORKSHEET%20-%20RELIGIOUS%20EVIDENCE%20INFORMATION%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Information — religious evidence</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/RESOURCES/ASH%20-%20LESSON%20PLANS/(4)%20LESSON%20PLAN%20-%20IS%20THERE%20A%20GOD%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<article class="week" id="w6" data-unit="u1" data-kind="lesson"
+         data-start="2026-10-12" data-end="2026-10-16">
+  <div class="num"><span>Week</span><b>6</b><em>12 Oct</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Religious artefacts</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">12–16 October</span>
+      <span class="anchor">
+        <a href="#w6" title="Link to week 6">#w6</a>
+        <button type="button" data-copy="w6">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Objects that carry belief: rosary beads, the crucifix, the prayer mat and the compass that points towards Mecca. Students handle the artefacts, then explain what each one tells you about the believer who uses it.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(5)%20RELIGIOUS%20ARTEFACTS/(5)%20RELIGIOUS%20ARTEFACTS%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(5)%20RELIGIOUS%20ARTEFACTS/(5)%20WORKSHEET%20-%20RELIGIOUS%20ARTEFACT%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — artefacts</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(5)%20RELIGIOUS%20ARTEFACTS/(5)%20WORKSHEET%20-%20RELIGIOUS%20ARTEFACT%20INFORMATION%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Information — artefacts</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/RESOURCES/ASH%20-%20LESSON%20PLANS/(5)%20LESSON%20PLAN%20-%20RELIGIOUS%20ARTEFACTS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<article class="week" id="w7" data-unit="u1" data-kind="lesson"
+         data-start="2026-10-19" data-end="2026-10-23">
+  <div class="num"><span>Week</span><b>7</b><em>19 Oct</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Religious symbols</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">19–23 October</span>
+      <span class="anchor">
+        <a href="#w7" title="Link to week 7">#w7</a>
+        <button type="button" data-copy="w7">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The cross, Aum, the Dharma Wheel, the Star of David and the crescent moon and star. Students learn to read a symbol as a compressed belief — and to see why a sign and a symbol are not the same thing.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(6)%20RELIGIOUS%20SYMBOLS/(6)%20RELIGIOUS%20SYMBOLS%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(6)%20RELIGIOUS%20SYMBOLS/(6)%20WORKSHEET%20-%20RELIGIOUS%20SYMBOLS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — symbols</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(6)%20RELIGIOUS%20SYMBOLS/(6)%20INFORMATION%20SHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Information sheet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/RESOURCES/ASH%20-%20LESSON%20PLANS/(6)%20LESSON%20PLAN%20-%20RELIGIOUS%20SYMBOLS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article><div class="gap break"><b>Half term</b><span>26 Oct – 6 Nov  ·  two weeks</span></div>
+<article class="week" id="w8" data-unit="u1" data-kind="summative"
+         data-start="2026-11-09" data-end="2026-11-13">
+  <div class="num"><span>Week</span><b>8</b><em>9 Nov</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Summative assessment</h3>
+      <span class="chip k-summ">Summative</span>
+      <span class="when">9–13 November</span>
+      <span class="anchor">
+        <a href="#w8" title="Link to week 8">#w8</a>
+        <button type="button" data-copy="w8">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The unit assessment: belief, fact and opinion, the three positions on God, prayer, artefacts and symbols. Revision questions first, then the paper, then the DIT lesson that closes the gaps it finds.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(7)%20SUMMATIVE/(7)%20NEW%20SUMMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Summative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(7)%20SUMMATIVE/(7)%20REVISION%20QUESTIONS%20-%20BELIEFS.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Revision questions</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(7)%20SUMMATIVE/(7)%20SUMMATIVE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(7)%20SUMMATIVE/(7)%20DIT%20NEW%20-%20SUMMATIVE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/(7)%20SUMMATIVE/(7)%20OLD%20SUMMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Older summative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/1.%20BELIEFS/RESOURCES/ASH%20-%20LESSON%20PLANS/(7)%20SUMMATIVE%20-%20LESSON%20PLAN%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<section class="unit" id="u2">
+  <div class="lab">Unit 2 · Weeks 9–14 · 6 lessons</div>
+  <h2>Hinduism</h2>
+  <p class="blurb">Diwali and the story of Rama and Sita, inside the mandir, and Hindu beliefs about the soul, rebirth and caring for the natural world.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/RESOURCES/Y7_Unit2_Hinduism_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2F2.%20HINDUISM" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/RESOURCES/UNIT%202%20-%20COVER%20SHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit cover sheet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/RESOURCES/Y7%20-%20Hinduism%20booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Hinduism booklet (older)</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2F2.%20HINDUISM%2FRESOURCES%2FASH%20-%20LESSON%20PLANS" target="_blank" rel="noopener"><i>❐</i><span>Lesson plans folder</span></a></div>
+</section>
+<article class="week" id="w9" data-unit="u2" data-kind="lesson"
+         data-start="2026-11-16" data-end="2026-11-20">
+  <div class="num"><span>Week</span><b>9</b><em>16 Nov</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Diwali</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">16–20 November</span>
+      <span class="anchor">
+        <a href="#w9" title="Link to week 9">#w9</a>
+        <button type="button" data-copy="w9">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Diwali, the festival of lights, told through Rama and Sita&#x27;s return from exile and Hanuman&#x27;s part in it. Students learn why the divas are lit and what light defeating darkness means to a Hindu family.</p><p class="note"><b>Note</b> The unit&#x27;s introduction-to-Hinduism lesson is not on SharePoint, so the unit opens on Diwali. Brahman and the Trimurti are picked up in week 13.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(2)%20FESTIVALS%20-%20DIWALI/(2)%20DIWALI%20-%20ASH%20NEW.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w10" data-unit="u2" data-kind="formative"
+         data-start="2026-11-23" data-end="2026-11-27">
+  <div class="num"><span>Week</span><b>10</b><em>23 Nov</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>The Alien Project</h3>
+      <span class="chip k-form">Formative</span>
+      <span class="when">23–27 November</span>
+      <span class="anchor">
+        <a href="#w10" title="Link to week 10">#w10</a>
+        <button type="button" data-copy="w10">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The formative assessment for the unit: students design a poster explaining one of the Big Six religions to an alien — its founder, symbol, holy book, age, size and afterlife belief. Aum is taught properly here.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(2A)%20ALIEN%20PROJECT/Formative%20Assessment%20-%20Alien%20Project.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Formative assessment</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(2A)%20ALIEN%20PROJECT/(2A)%20ALIEN%20PROJECT%20NEW%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Project deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(2A)%20ALIEN%20PROJECT/(2A)%20ALIEN%20PROJECT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Older project deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w11" data-unit="u2" data-kind="lesson"
+         data-start="2026-11-30" data-end="2026-12-04">
+  <div class="num"><span>Week</span><b>11</b><em>30 Nov</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>The Mandir</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">30 Nov – 4 Dec</span>
+      <span class="anchor">
+        <a href="#w11" title="Link to week 11">#w11</a>
+        <button type="button" data-copy="w11">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Inside a Hindu place of worship. The mandir, the murti that houses the deity, the puja that is offered and the Vedas that are read — explored through a virtual tour and the accompanying information sheet.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(3)%20MANDIR/(3)%20MANDIR%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(3)%20MANDIR/(3)%20WORKSHEET%20-%20VIRTUAL%20MANDIR%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — virtual mandir</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(3)%20MANDIR/(3)%20NEW%20INFO%20SHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Information sheet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/RESOURCES/ASH%20-%20LESSON%20PLANS/(3)%20LESSON%20PLAN%20-%20MANDIR%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<article class="week" id="w12" data-unit="u2" data-kind="lesson"
+         data-start="2026-12-07" data-end="2026-12-11">
+  <div class="num"><span>Week</span><b>12</b><em>7 Dec</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Belief in the afterlife</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">7–11 December</span>
+      <span class="anchor">
+        <a href="#w12" title="Link to week 12">#w12</a>
+        <button type="button" data-copy="w12">copy link</button>
+      </span>
+    </div>
+    <p class="summary">What Hindus believe happens after death: the atman that never dies, samsara as the cycle of rebirth, and moksha as release from it. Students trace how the life you live shapes the life that follows.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(4)%20BELIEF%20IN%20THE%20AFTERLIFE/(4)%20BELIEF%20IN%20THE%20AFTERLIFE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/RESOURCES/ASH%20-%20LESSON%20PLANS/(4)%20LESSON%20PLAN%20-%20BELIEF%20IN%20THE%20AFTERLIFE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<article class="week" id="w13" data-unit="u2" data-kind="lesson"
+         data-start="2026-12-14" data-end="2026-12-18">
+  <div class="num"><span>Week</span><b>13</b><em>14 Dec</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Hinduism and nature</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">14–18 December</span>
+      <span class="anchor">
+        <a href="#w13" title="Link to week 13">#w13</a>
+        <button type="button" data-copy="w13">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Brahman is in everything, so harming the natural world harms the divine. Karma is introduced through selfless and selfish acts, and students argue what a Hindu should do about the environment today.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(5)%20HINDUISM%20AND%20NATURE/(5)%20HINDUISM%20AND%20NATURE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/RESOURCES/ASH%20-%20LESSON%20PLANS/(5)%20LESSON%20PLAN%20-%20HINDUISM%20AND%20NATURE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article><div class="gap break"><b>Christmas holiday</b><span>21 Dec – 1 Jan</span></div><div class="gap term"><b>Spring term begins</b><span>Monday 4 Jan 2027</span></div>
+<article class="week" id="w14" data-unit="u2" data-kind="summative"
+         data-start="2027-01-04" data-end="2027-01-08">
+  <div class="num"><span>Week</span><b>14</b><em>4 Jan</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Summative assessment</h3>
+      <span class="chip k-summ">Summative</span>
+      <span class="when">4–8 January</span>
+      <span class="anchor">
+        <a href="#w14" title="Link to week 14">#w14</a>
+        <button type="button" data-copy="w14">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The Hinduism assessment: Diwali, the symbols of the Big Six, the mandir and puja, atman and samsara and moksha, karma and the Trimurti. Two sets of revision questions, then the paper and the DIT.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(6)%20SUMMATIVE/(6)%20NEW%20SUMMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Summative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(6)%20SUMMATIVE/(6)%20REVISION%20QUESTIONS%20-%20HINDUISM.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Revision questions</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(6)%20SUMMATIVE/(6)%20REVISION%20QUESTIONS%202%20-%20HINDUISM.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Revision questions 2</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(6)%20SUMMATIVE/(6)%20SUMMATIVE%20%2B%20HW%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(6)%20SUMMATIVE/(6)%20DIT%20-%20SUMMATIVE%20TEST%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/(6)%20SUMMATIVE/(6)%20SUMMATIVE%20TEST%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Older summative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/2.%20HINDUISM/RESOURCES/ASH%20-%20LESSON%20PLANS/(6)%20LESSON%20PLAN%20-%20SUMMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<section class="unit" id="u3">
+  <div class="lab">Unit 3 · Weeks 15–21 · 7 lessons</div>
+  <h2>Buddhism</h2>
+  <p class="blurb">Siddhartha Gautama and the Four Sights, the festival of Wesak, worship in the vihara, and the Four Noble Truths that answer the problem of suffering.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/RESOURCES/Y7_Unit3_Buddhism_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2F3.%20BUDDHISM" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/RESOURCES/BUDDHISM%20-%20UNIT%203%20COVER%20SHEET.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit cover sheet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/RESOURCES/Y7%20-%20Buddhism%20booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Buddhism booklet (older)</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2F3.%20BUDDHISM%2FRESOURCES%2FASH%20-%20LESSON%20PLANS" target="_blank" rel="noopener"><i>❐</i><span>Lesson plans folder</span></a></div>
+</section>
+<article class="week" id="w15" data-unit="u3" data-kind="lesson"
+         data-start="2027-01-11" data-end="2027-01-15">
+  <div class="num"><span>Week</span><b>15</b><em>11 Jan</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Siddhartha Gautama</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">11–15 January</span>
+      <span class="anchor">
+        <a href="#w15" title="Link to week 15">#w15</a>
+        <button type="button" data-copy="w15">copy link</button>
+      </span>
+    </div>
+    <p class="summary">A prince who had never seen suffering leaves the palace at 29, sees the Four Sights, and meditates for 46 days under the Bodhi tree. How Siddhartha Gautama became the Buddha — the Enlightened One.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(1)%20SIDDHARTHA%20GAUTAMA/(1)%20SIDDHARTHA%20GAUTAMA%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(1)%20SIDDHARTHA%20GAUTAMA/(1)%20WORKSHEET%20-%20FILL%20IN%20THE%20GAPS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — fill in the gaps</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/RESOURCES/ASH%20-%20LESSON%20PLANS/(1)%20LESSON%20PLAN%20-%20SIDDHARTHA%20GAUTAMA%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<article class="week" id="w16" data-unit="u3" data-kind="lesson"
+         data-start="2027-01-18" data-end="2027-01-22">
+  <div class="num"><span>Week</span><b>16</b><em>18 Jan</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Wesak</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">18–22 January</span>
+      <span class="anchor">
+        <a href="#w16" title="Link to week 16">#w16</a>
+        <button type="button" data-copy="w16">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Wesak, the most important festival in Buddhism, celebrating the Buddha&#x27;s birth, enlightenment and death. Students learn the Bathing of the Buddha and what purifying the heart and mind is meant to achieve.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(2)%20FESTIVAL%20-%20WESAK/(2)%20FESTIVAL%20OF%20WESAK%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w17" data-unit="u3" data-kind="lesson"
+         data-start="2027-01-25" data-end="2027-01-29">
+  <div class="num"><span>Week</span><b>17</b><em>25 Jan</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>The Vihara</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">25–29 January</span>
+      <span class="anchor">
+        <a href="#w17" title="Link to week 17">#w17</a>
+        <button type="button" data-copy="w17">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The vihara as temple, school and community all at once. Puja, chanting and mantras, and meditation as the discipline of controlling the mind — taken through a virtual tour of the building.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(3)%20VIHARA/(3)%20VIHARA%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(3)%20VIHARA/(3)%20WORKSHEET%20-%20VIRTUAL%20VIHARA%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — virtual vihara</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(3)%20VIHARA/(3)%20WORKSHEET%20-%20VIRTUAL%20VIHARA%20INFORMATION%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Information — virtual vihara</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/RESOURCES/ASH%20-%20LESSON%20PLANS/(3)%20LESSON%20PLAN%20-%20VIHARA%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<article class="week" id="w18" data-unit="u3" data-kind="formative"
+         data-start="2027-02-01" data-end="2027-02-05">
+  <div class="num"><span>Week</span><b>18</b><em>1 Feb</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Formative assessment</h3>
+      <span class="chip k-form">Formative</span>
+      <span class="when">1–5 February</span>
+      <span class="anchor">
+        <a href="#w18" title="Link to week 18">#w18</a>
+        <button type="button" data-copy="w18">copy link</button>
+      </span>
+    </div>
+    <p class="summary">A short formative test halfway through the unit: the Buddha, Wesak and the vihara, plus karma and reincarnation carried over from Hinduism. The DIT models how to explain two Buddhist teachings.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(3A)%20FORMATIVE/(3A)%20NEW%20BUDDHISM%20FORMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Formative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(3A)%20FORMATIVE/(3A)%20DIT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(3A)%20FORMATIVE/(3A)%20FORMATIVE%20-%20BUDDHISM%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Older formative paper</span></a></div>
+  </div>
+</article>
+<article class="week" id="w19" data-unit="u3" data-kind="lesson"
+         data-start="2027-02-08" data-end="2027-02-12">
+  <div class="num"><span>Week</span><b>19</b><em>8 Feb</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Belief in the afterlife</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">8–12 February</span>
+      <span class="anchor">
+        <a href="#w19" title="Link to week 19">#w19</a>
+        <button type="button" data-copy="w19">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The Four Noble Truths — that life involves suffering, that desire causes it, that it can be ended, and that the Eightfold Path is the way — and what Buddhists mean by escaping samsara into nirvana.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(4)%20BELIEF%20IN%20THE%20AFTERLIFE/(4)%20BELIEF%20IN%20THE%20AFTERLIFE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(4)%20BELIEF%20IN%20THE%20AFTERLIFE/(4)%20WORKSHEET%20-%20EIGHTFOLD%20PATH%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — Eightfold Path</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/RESOURCES/ASH%20-%20LESSON%20PLANS/(4)%20LESSON%20PLAN%20-%20BELIEF%20IN%20THE%20AFTERLIFE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article><div class="gap break"><b>Half term</b><span>15–19 February</span></div>
+<article class="week" id="w20" data-unit="u3" data-kind="lesson"
+         data-start="2027-02-22" data-end="2027-02-26">
+  <div class="num"><span>Week</span><b>20</b><em>22 Feb</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Buddhism and nature</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">22–26 February</span>
+      <span class="anchor">
+        <a href="#w20" title="Link to week 20">#w20</a>
+        <button type="button" data-copy="w20">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Sentient and non-sentient beings, and why the distinction matters to a Buddhist deciding how to treat animals and the land. The Middle Way is applied to how much a person really needs to own.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(5)%20BUDDHISM%20AND%20NATURE/(5)%20BUDDHISM%20AND%20NATURE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/RESOURCES/ASH%20-%20LESSON%20PLANS/(5)%20LESSON%20PLAN%20-%20BUDDHISM%20AND%20NATURE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<article class="week" id="w21" data-unit="u3" data-kind="summative"
+         data-start="2027-03-01" data-end="2027-03-05">
+  <div class="num"><span>Week</span><b>21</b><em>1 Mar</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Summative assessment</h3>
+      <span class="chip k-summ">Summative</span>
+      <span class="when">1–5 March</span>
+      <span class="anchor">
+        <a href="#w21" title="Link to week 21">#w21</a>
+        <button type="button" data-copy="w21">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The Buddhism assessment: ten key words, the Tripitaka, two ways Wesak is celebrated, two of the Four Noble Truths, and why Buddhists want to reach nirvana. Revision, paper, then the DIT.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(6)%20SUMMATIVE/(6)%20NEW%20SUMMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Summative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(6)%20SUMMATIVE/(6)%20REVISION%20QUESTIONS%20-%20BUDDHISM.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Revision questions</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(6)%20SUMMATIVE/(6)%20SUMMATIVE%20%2B%20HW%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(6)%20SUMMATIVE/(6)%20DIT%20-%20SUMMATIVE%20BUDDHISM%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/(6)%20SUMMATIVE/(6)%20SUMMATIVE%20TEST%20-%20BUDDHISM.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Older summative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/3.%20BUDDHISM/RESOURCES/ASH%20-%20LESSON%20PLANS/(6)%20LESSON%20PLAN%20-%20SUMMATIVE%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<section class="unit" id="u4">
+  <div class="lab">Unit 4 · Weeks 22–28 · 7 lessons</div>
+  <h2>Sikhism</h2>
+  <p class="blurb">Guru Nanak and the teaching that all people are equal, the Five Ks, the gurdwara and its langar, and Sikh beliefs about the soul and stewardship.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/RESOURCES/Y7_Unit4_Sikhism_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2F4.%20SIKHISM" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/RESOURCES/SIKSHIM%20-%20UNIT%204%20COVER%20SHEET.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit cover sheet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/RESOURCES/Y7%20-%20Sikhism%20booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Sikhism booklet (older)</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2F4.%20SIKHISM%2FRESOURCES%2FASH%20-%20LESSON%20PLANS" target="_blank" rel="noopener"><i>❐</i><span>Lesson plans folder</span></a></div>
+</section>
+<article class="week" id="w22" data-unit="u4" data-kind="lesson"
+         data-start="2027-03-08" data-end="2027-03-12">
+  <div class="num"><span>Week</span><b>22</b><em>8 Mar</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Guru Nanak</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">8–12 March</span>
+      <span class="anchor">
+        <a href="#w22" title="Link to week 22">#w22</a>
+        <button type="button" data-copy="w22">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Born in the Punjab in 1469, Guru Nanak refused the Sacred Thread Ceremony and taught that there is one God and that all people are equal. Nine Gurus followed him, and homework covers all ten.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(1)%20GURU%20NANAK/(1)%20GURU%20NANAK%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(1)%20GURU%20NANAK/(1)%20BELL%20WORK%20-%20WORDSEARCH%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Bell work — wordsearch</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(1)%20GURU%20NANAK/(1)%20HW%20-%2010%20GURUS%20INFORMATION%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Homework — the 10 Gurus</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(1)%20GURU%20NANAK/(1)%20HW%20-%2010%20GURUS%20WORKSHEET%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Homework worksheet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/RESOURCES/ASH%20-%20LESSON%20PLANS/(1)%20LESSON%20PLAN%20-%20GURU%20NANAK%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Lesson plan</span></a></div>
+  </div>
+</article>
+<article class="week" id="w23" data-unit="u4" data-kind="lesson"
+         data-start="2027-03-15" data-end="2027-03-19">
+  <div class="num"><span>Week</span><b>23</b><em>15 Mar</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>The Five Ks</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">15–19 March</span>
+      <span class="anchor">
+        <a href="#w23" title="Link to week 23">#w23</a>
+        <button type="button" data-copy="w23">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Kesh, kangha, kara, kachera and kirpan — the five artefacts a baptised Sikh wears, what each one means, and how the Khalsa began at Vaisakhi in 1699 under Guru Gobind Singh.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(2)%205K&#x27;s/(2)%20THE%205K&#x27;S%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(2)%205K&#x27;s/(2)%20WORKSHEET%20-%20VAISAKHI%20AND%205K&#x27;S%20GAP%20FILL%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — Vaisakhi and the 5Ks</span></a></div>
+  </div>
+</article>
+<article class="week" id="w24" data-unit="u4" data-kind="lesson"
+         data-start="2027-03-22" data-end="2027-03-25">
+  <div class="num"><span>Week</span><b>24</b><em>22 Mar</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>The Gurdwara</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">22–25 March</span>
+      <span class="anchor">
+        <a href="#w24" title="Link to week 24">#w24</a>
+        <button type="button" data-copy="w24">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The gurdwara, the Guru Granth Sahib treated as a living Guru, and the langar where everyone sits on the same floor and eats the same free meal — equality made visible in a building.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(3)%20GURDWARA/(3)%20GURDWARA%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(3)%20GURDWARA/(3)%20WORKSHEET%20-%20VIRTUAL%20GURDWARA%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — virtual gurdwara</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(3)%20GURDWARA/(3)%20VIRTUAL%20GURDWARA%20-%20INFORMATION%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Information — virtual gurdwara</span></a></div>
+  </div>
+</article><div class="gap break"><b>Easter holiday</b><span>26 Mar – 9 Apr</span></div><div class="gap term"><b>Summer term begins</b><span>Monday 12 Apr 2027</span></div>
+<article class="week" id="w25" data-unit="u4" data-kind="formative"
+         data-start="2027-04-12" data-end="2027-04-16">
+  <div class="num"><span>Week</span><b>25</b><em>12 Apr</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Formative assessment</h3>
+      <span class="chip k-form">Formative</span>
+      <span class="when">12–16 April</span>
+      <span class="anchor">
+        <a href="#w25" title="Link to week 25">#w25</a>
+        <button type="button" data-copy="w25">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The formative test on the first half of the unit: Guru Nanak, the ten Gurus, the Khalsa and Vaisakhi, the 5Ks, the gurdwara and langar, and the words sewa, karma, mukti and atman.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(3A)%20FORMATIVE/(3)%20FORMATIVE%20-%20SIKHISM.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Formative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(3A)%20FORMATIVE/(3A)%20DIT%20-%20FORMATIVE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w26" data-unit="u4" data-kind="lesson"
+         data-start="2027-04-19" data-end="2027-04-23">
+  <div class="num"><span>Week</span><b>26</b><em>19 Apr</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Belief in the afterlife</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">19–23 April</span>
+      <span class="anchor">
+        <a href="#w26" title="Link to week 26">#w26</a>
+        <button type="button" data-copy="w26">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Waheguru, the atma given to every living being, samsara as the cycle of rebirth and mukti as release from it. Gurmukh and manmukh living explain how good and bad karma are earned.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(4)%20BELIEF%20IN%20THE%20AFTERLIFE/(4)%20BELIEF%20IN%20THE%20AFTERLIFE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w27" data-unit="u4" data-kind="lesson"
+         data-start="2027-04-26" data-end="2027-04-30">
+  <div class="num"><span>Week</span><b>27</b><em>26 Apr</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Sikhism and nature</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">26–30 April</span>
+      <span class="anchor">
+        <a href="#w27" title="Link to week 27">#w27</a>
+        <button type="button" data-copy="w27">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Sikhism has no creation story, so the teaching starts from stewardship: the world is held in trust for those who come after. Students turn that into practical action — recycling, clean energy, local food.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(5)%20SIKHISM%20AND%20NATURE/(5)%20SIKHISM%20AND%20NATURE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w28" data-unit="u4" data-kind="summative"
+         data-start="2027-05-03" data-end="2027-05-07">
+  <div class="num"><span>Week</span><b>28</b><em>3 May</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Summative assessment</h3>
+      <span class="chip k-summ">Summative</span>
+      <span class="when">3–7 May</span>
+      <span class="anchor">
+        <a href="#w28" title="Link to week 28">#w28</a>
+        <button type="button" data-copy="w28">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The Sikhism assessment: ten key words, two Sikh beliefs about the afterlife, two about nature, and an outline of two of the 5Ks. Students are held to a Point and a Develop in every answer.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(6)%20SUMMATIVE/(6)%20SUMMATIVE%20-%20SIKHISM%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Summative paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(6)%20SUMMATIVE/(6)%20REVISION%20QUESTIONS%20-%20SIKHISM.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Revision questions</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(6)%20SUMMATIVE/(6)%20SUMMATIVE%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/4.%20SIKHISM/(6)%20SUMMATIVE/(6)%20DIT%20-%20SUMMATIVE%20-%20SIKHISM%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a></div>
+  </div>
+</article>
+<section class="unit" id="u5">
+  <div class="lab">Unit 5 · Weeks 29–32 · 4 lessons</div>
+  <h2>Heroes of Faith</h2>
+  <p class="blurb">Four people whose beliefs made them act: Gandhi, Nelson Mandela, Martin Luther King and Malala Yousafzai.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/RESOURCES/Y7_Unit5_Heroes_of_Faith_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2F5.%20HEROES%20OF%20FAITH" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/RESOURCES/HEROES%20OF%20FAITH%20-%20COVER%20SHEET.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit cover sheet</span></a></div>
+</section>
+<article class="week" id="w29" data-unit="u5" data-kind="lesson"
+         data-start="2027-05-10" data-end="2027-05-14">
+  <div class="num"><span>Week</span><b>29</b><em>10 May</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Gandhi</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">10–14 May</span>
+      <span class="anchor">
+        <a href="#w29" title="Link to week 29">#w29</a>
+        <button type="button" data-copy="w29">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Gandhi in South Africa, the racism he met there, and ahimsa — the principle of harming no living thing. His ashram is used to ask what living your belief actually costs.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/(1)%20GANDHI/(1)%20GANDHI%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/(1)%20GANDHI/(1)%20WORKSHEET%20-%20GANDHI%20COMPREHENSION%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — comprehension</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/(1)%20GANDHI/(1)%20WORKSHEET%20-%20GANDHI%20MIND%20MAP%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — mind map</span></a></div>
+  </div>
+</article>
+<article class="week" id="w30" data-unit="u5" data-kind="lesson"
+         data-start="2027-05-17" data-end="2027-05-21">
+  <div class="num"><span>Week</span><b>30</b><em>17 May</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Nelson Mandela</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">17–21 May</span>
+      <span class="anchor">
+        <a href="#w30" title="Link to week 30">#w30</a>
+        <button type="button" data-copy="w30">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Apartheid meant &#x27;the state of being apart&#x27;, and in South Africa it was written into law. Mandela&#x27;s belief in equality, the 27 years in prison it cost him, and what he chose to do afterwards.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/(2)%20MANDELA/(2)%20MANDELA%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/(2)%20MANDELA/(2)%20WORKSHEET%20-%20HIS%20WALK%20TO%20FREEDOM%20QUESTIONS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — questions</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/(2)%20MANDELA/(2)%20WORKSHEET%20-%20HIS%20WALK%20TO%20FREEDOM%20INFORMATION%20-%20ASH.pdf?web=1" target="_blank" rel="noopener"><i>▤</i><span>Information (PDF)</span></a></div>
+  </div>
+</article>
+<article class="week" id="w31" data-unit="u5" data-kind="lesson"
+         data-start="2027-05-24" data-end="2027-05-28">
+  <div class="num"><span>Week</span><b>31</b><em>24 May</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Martin Luther King</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">24–28 May</span>
+      <span class="anchor">
+        <a href="#w31" title="Link to week 31">#w31</a>
+        <button type="button" data-copy="w31">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Segregation in America, where racism comes from, and Martin Luther King&#x27;s answer to it. The I Have a Dream speech is read against the Christian belief that all people are made in the image of God.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/(3)%20MLK/(3)%20MLK%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/(3)%20MLK/(3)%20WORKSHEET%20-%20GAP%20FILL%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — gap fill</span></a></div>
+  </div>
+</article><div class="gap break"><b>Half term</b><span>31 May – 4 Jun</span></div>
+<article class="week" id="w32" data-unit="u5" data-kind="lesson"
+         data-start="2027-06-07" data-end="2027-06-11">
+  <div class="num"><span>Week</span><b>32</b><em>7 Jun</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Malala Yousafzai</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">7–11 June</span>
+      <span class="anchor">
+        <a href="#w32" title="Link to week 32">#w32</a>
+        <button type="button" data-copy="w32">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Born in Mingora in 1997, banned from school in 2008, awarded the Nobel Peace Prize in 2014. Malala&#x27;s story is set against what Islam teaches about the education of men and women.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/(4)%20MALALA/(4)%20MALALA%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/(4)%20MALALA/(4)%20WORKSHEET%20-%20MALALA%20QUESTIONS%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Worksheet — questions</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/5.%20HEROES%20OF%20FAITH/(4)%20MALALA/(4)%20WORKSHEET%20-%20MALALA%20INFO%20-%20ASH.pdf?web=1" target="_blank" rel="noopener"><i>▤</i><span>Information (PDF)</span></a></div>
+  </div>
+</article>
+<section class="unit" id="u6">
+  <div class="lab">Unit 6 · Weeks 33–36 · 4 lessons</div>
+  <h2>Film and Faith</h2>
+  <p class="blurb">Reading religious meaning in film — symbol and sacrifice, prayer, temptation and resurrection — using the stories students already know.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/6.%20FILM%20AND%20FAITH/RESOURCES/Y7_Unit6_Film_and_Faith_Booklet.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit booklet</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2F6.%20FILM%20AND%20FAITH" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/6.%20FILM%20AND%20FAITH/RESOURCES/UNIT%206%20-%20FILM%20AND%20FAITH%20-%20COVER%20SHEET.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Unit cover sheet</span></a></div>
+</section>
+<article class="week" id="w33" data-unit="u6" data-kind="lesson"
+         data-start="2027-06-14" data-end="2027-06-18">
+  <div class="num"><span>Week</span><b>33</b><em>14 Jun</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Religious meaning in film</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">14–18 June</span>
+      <span class="anchor">
+        <a href="#w33" title="Link to week 33">#w33</a>
+        <button type="button" data-copy="w33">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Narnia read as Christian belief in disguise: a wrong choice, a price that has to be paid, a death in someone else&#x27;s place and a return from the dead. Students learn to read a story symbolically.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/6.%20FILM%20AND%20FAITH/(1)%20RELIGIOUS%20MEANINGS%20IN%20FILM%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w34" data-unit="u6" data-kind="lesson"
+         data-start="2027-06-21" data-end="2027-06-25">
+  <div class="num"><span>Week</span><b>34</b><em>21 Jun</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Prayer in films</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">21–25 June</span>
+      <span class="anchor">
+        <a href="#w34" title="Link to week 34">#w34</a>
+        <button type="button" data-copy="w34">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Three film prayers — a coach&#x27;s, a woman&#x27;s in the cathedral, a boy&#x27;s in an empty church — used to separate personal prayer from corporate prayer, and to ask what people actually pray for.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/6.%20FILM%20AND%20FAITH/(2)%20PRAYER%20IN%20FILMS%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w35" data-unit="u6" data-kind="lesson"
+         data-start="2027-06-28" data-end="2027-07-02">
+  <div class="num"><span>Week</span><b>35</b><em>28 Jun</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Temptation in movies</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">28 Jun – 2 Jul</span>
+      <span class="anchor">
+        <a href="#w35" title="Link to week 35">#w35</a>
+        <button type="button" data-copy="w35">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Temptation as wanting to do what you know is wrong. Adam and Eve are read as a story about choice and consequence, then the same shape is found in a children&#x27;s film students already know.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/6.%20FILM%20AND%20FAITH/(3)%20TEMPTATION%20IN%20MOVIES%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<article class="week" id="w36" data-unit="u6" data-kind="lesson"
+         data-start="2027-07-05" data-end="2027-07-09">
+  <div class="num"><span>Week</span><b>36</b><em>5 Jul</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Resurrection in movies</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">5–9 July</span>
+      <span class="anchor">
+        <a href="#w36" title="Link to week 36">#w36</a>
+        <button type="button" data-copy="w36">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Why so many heroes die and come back. Resurrection as a belief held by Jews, Christians and Muslims, set beside Harry Potter and Superman, and the question of what makes the religious version different.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/6.%20FILM%20AND%20FAITH/(4)%20RESURRECTION%20IN%20MOVIES%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Lesson deck</span></a></div>
+  </div>
+</article>
+<section class="unit" id="eoy">
+  <div class="lab">Unit 7 · Week 37 · 1 lesson</div>
+  <h2>End of Year Exam</h2>
+  <p class="blurb">Revision across all six units, the paper itself, and the DIT lesson that follows it.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2FEND%20OF%20YEAR%20EXAM" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a></div>
+</section>
+<article class="week" id="w37" data-unit="eoy" data-kind="exam"
+         data-start="2027-07-12" data-end="2027-07-16">
+  <div class="num"><span>Week</span><b>37</b><em>12 Jul</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>End of Year exam</h3>
+      <span class="chip k-exam">Exam</span>
+      <span class="when">12–16 July</span>
+      <span class="anchor">
+        <a href="#w37" title="Link to week 37">#w37</a>
+        <button type="button" data-copy="w37">copy link</button>
+      </span>
+    </div>
+    <p class="summary">The End of Year exam covering all six units, with the revision document to prepare and the DIT deck to run afterwards.</p><p class="note"><b>Note</b> Revise first, sit the paper, then run the DIT — the folder holds all three, so plan whether this needs one week or two.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/END%20OF%20YEAR%20EXAM/YR%207%20-%20EOY%20EXAM.docx?web=1" target="_blank" rel="noopener"><i>✎</i><span>Exam paper</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/END%20OF%20YEAR%20EXAM/EOY7%20REVISION%20-%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Revision</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/END%20OF%20YEAR%20EXAM/EOY%20DIT%20-%20ASH.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>DIT deck</span></a></div>
+  </div>
+</article>
+<section class="unit" id="eq">
+  <div class="lab">Unit 8 · Week 38 · 1 lesson</div>
+  <h2>Equality Week</h2>
+  <p class="blurb">The closing week of the year: Alan Turing, and the Prince of Egypt task.</p>
+  <div class="unitres"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Forms/AllItems.aspx?id=%2Fsites%2FHS_Subjects_RE%2FYear%2011%2FPhilosophy%2FKS3%20Ai%2FKS3%2FYEAR%207%2FEQUALITY%20WEEK%20%2B%20EOY" target="_blank" rel="noopener"><i>❐</i><span>Unit folder</span></a></div>
+</section>
+<article class="week" id="w38" data-unit="eq" data-kind="lesson"
+         data-start="2027-07-19" data-end="2027-07-22">
+  <div class="num"><span>Week</span><b>38</b><em>19 Jul</em></div>
+  <div class="main">
+    <div class="head">
+      <h3>Equality Week</h3>
+      <span class="chip k-lesson">Lesson</span>
+      <span class="when">19–22 July</span>
+      <span class="anchor">
+        <a href="#w38" title="Link to week 38">#w38</a>
+        <button type="button" data-copy="w38">copy link</button>
+      </span>
+    </div>
+    <p class="summary">Equality Week closes the year: Alan Turing&#x27;s story and what was done to him, alongside the Prince of Egypt task.</p>
+    <div class="res"><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/EQUALITY%20WEEK%20%2B%20EOY/ALAN%20TURING.pptx?web=1" target="_blank" rel="noopener"><i>▶</i><span>Alan Turing deck</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/EQUALITY%20WEEK%20%2B%20EOY/COMPLETE%20THE%20MISSING%20WORDS.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Complete the missing words</span></a><a class="btn" href="https://hs365.sharepoint.com/sites/HS_Subjects_RE/Year%2011/Philosophy/KS3%20Ai/KS3/YEAR%207/EQUALITY%20WEEK%20%2B%20EOY/PRINCE%20OF%20EGYPT%20ASH.docx?web=1" target="_blank" rel="noopener"><i>▤</i><span>Prince of Egypt task</span></a></div>
+  </div>
+</article>
+  <footer class="note">
+    <p><b>Where the files live.</b> Every button points at the RE SharePoint,
+      <code>Year 11 / Philosophy / KS3 Ai / KS3 / YEAR 7</code>. Move or rename
+      that folder and the links break together — rebuild the page rather than
+      editing it by hand.</p>
+    <p><b>Unit booklets</b> sit in each unit's own RESOURCES folder. There is no
+      Student Companion at Year 7 — the booklets carry the year on their own.</p>
+    <p><b>Gaps in the library.</b> Unit 2 has no introduction-to-Hinduism lesson,
+      so the unit opens on Diwali; Unit 5 and Unit 6 have no assessment folder.</p>
+  </footer>
+</main>
+<script>
+(function(){
+  // Mark the current teaching week, and offer a jump to it.
+  var today = new Date(); today.setHours(12,0,0,0);
+  var weeks = [].slice.call(document.querySelectorAll('.week[data-start]'));
+  var current = null, next = null;
+  weeks.forEach(function(w){
+    var a = new Date(w.dataset.start + 'T00:00:00');
+    var b = new Date(w.dataset.end + 'T23:59:59');
+    if (today >= a && today <= b) current = w;
+    if (!next && today < a) next = w;
+  });
+  var target = current || next;
+  if (current) current.classList.add('now');
+  var btn = document.getElementById('jumpnow');
+  if (btn && target) {
+    btn.textContent = current ? 'This week' : 'Next lesson';
+    btn.addEventListener('click', function(){
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+      history.replaceState(null, '', '#' + target.id);
+    });
+  } else if (btn) {
+    btn.remove();
+  }
+
+  var buttons = document.querySelectorAll('.filters button');
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){
+      var want = b.dataset.filter;
+      buttons.forEach(function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+      document.querySelectorAll('.week').forEach(function(w){
+        var k = w.dataset.kind;
+        var show = want === 'all'
+          || (want === 'assess' && (k==='formative'||k==='summative'||k==='exam'||k==='dit'))
+          || (want === 'lesson' && k==='lesson')
+          || (want === 'rev' && k==='revision');
+        w.classList.toggle('hidden', !show);
+      });
+      document.querySelectorAll('.unit').forEach(function(u){
+        var id = u.id, any = false;
+        document.querySelectorAll('.week[data-unit="'+id+'"]').forEach(function(w){
+          if(!w.classList.contains('hidden')) any = true;
+        });
+        u.classList.toggle('hidden', !any);
+      });
+    });
+  });
+  document.querySelectorAll('button[data-copy]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var url = location.origin + location.pathname + '#' + b.dataset.copy;
+      var done = function(){ var t=b.textContent; b.textContent='copied';
+        setTimeout(function(){ b.textContent=t; }, 1400); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(url).then(done, done);
+      } else {
+        var ta=document.createElement('textarea'); ta.value=url; document.body.appendChild(ta);
+        ta.select(); try{document.execCommand('copy');}catch(e){} ta.remove(); done();
+      }
+    });
+  });
+})();
+</script>

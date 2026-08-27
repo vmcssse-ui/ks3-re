@@ -1,98 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KS3 Religious Education — Harlington School</title>
+<title>Harlington School RE — Key Stage 3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Public+Sans:wght@400..800&display=swap">
 <style>
 :root{
-  --g900:#052e16; --g800:#14532d; --g700:#15803d; --g600:#16a34a;
-  --g100:#dcfce7; --g50:#f0fdf4;
-  --b700:#1d4ed8; --b100:#dbeafe;
-  --bg:#f6faf7; --card:#fff; --ink:#12211a; --mut:#5d7268; --line:#dde9e1;
-  --shadow:0 1px 2px rgba(5,46,22,.06),0 10px 30px -14px rgba(5,46,22,.22);
+  --paper:#FDFAF7; --card:#FFFFFF; --ink:#1F1611; --ink-2:#57463B; --ink-3:#867467;
+  --rule:#EBDFD5; --y7:#C2410C; --y9:#3E1163;
+  --shadow:0 1px 2px rgba(31,22,17,.05), 0 8px 24px -16px rgba(31,22,17,.28);
 }
-@media (prefers-color-scheme:dark){
- :root{--bg:#0a1310;--card:#111f18;--ink:#e6f4ec;--mut:#8fa89b;--line:#20362b;
-  --g100:#14532d;--g50:#0f2318;--g700:#4ade80;--b100:#16233f;--b700:#93b4fd;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#171210; --card:#221A16; --ink:#F4ECE5; --ink-2:#C6B5A8; --ink-3:#96857A;
+    --rule:#3A2C23; --y7:#FDA96A; --y9:#C6A4E2;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#171210; --card:#221A16; --ink:#F4ECE5; --ink-2:#C6B5A8; --ink-3:#96857A;
+  --rule:#3A2C23; --y7:#FDA96A; --y9:#C6A4E2;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -18px rgba(0,0,0,.8);
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);
- font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.wrap{max-width:940px;margin:0 auto;padding:0 22px 80px}
-header{background:linear-gradient(160deg,var(--g800),var(--g600));color:#fff;
- padding:56px 0 46px}
-.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.85;margin:0 0 8px}
-h1{margin:0 0 10px;font-size:clamp(28px,5vw,44px);letter-spacing:-.02em;line-height:1.08}
-header p{margin:0;opacity:.92;max-width:60ch}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
- gap:16px;margin-top:34px}
-.card{display:block;text-decoration:none;color:inherit;background:var(--card);
- border:1px solid var(--line);border-radius:15px;padding:24px 22px 22px;
- box-shadow:var(--shadow);transition:.16s}
-.card:hover{transform:translateY(-2px);border-color:var(--g600)}
-.card .yr{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
- font-weight:700;padding:3px 10px;border-radius:999px;display:inline-block;
- background:var(--g100);color:var(--g700)}
-.card.y9 .yr{background:var(--b100);color:var(--b700)}
-.card h2{margin:13px 0 7px;font-size:21px;letter-spacing:-.01em}
-.card p{margin:0 0 14px;color:var(--mut);font-size:14.5px}
-.meta{font-size:12.5px;color:var(--mut);border-top:1px solid var(--line);
- padding-top:11px;margin:0}
-.go{color:var(--g700);font-weight:600;font-size:14px}
-.card.y9 .go{color:var(--b700)}
-.soon{opacity:.6;pointer-events:none}
-.soon .yr{background:var(--line);color:var(--mut)}
-footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
- color:var(--mut);font-size:13px}
+body{margin:0; background:var(--paper); color:var(--ink); padding:0 24px;
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased}
+.wrap{max-width:880px; margin:0 auto; padding:72px 0 96px}
+.eyebrow{font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+  font-weight:700; color:var(--ink-3); margin:0}
+h1{font-family:Newsreader,Georgia,serif; font-weight:600; letter-spacing:-.01em;
+  font-size:clamp(34px,6vw,52px); line-height:1.04; margin:10px 0 0}
+.lede{margin:14px 0 0; max-width:60ch; color:var(--ink-2); font-size:17px}
+.grid{display:grid; gap:16px; margin-top:36px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{display:block; text-decoration:none; color:inherit; background:var(--card);
+  border:1px solid var(--rule); border-radius:2px; padding:22px 22px 20px;
+  box-shadow:var(--shadow); border-top:3px solid var(--accent, var(--rule))}
+.card:hover{border-color:var(--accent, var(--rule))}
+.card .yr{font-size:12px; letter-spacing:.16em; text-transform:uppercase;
+  font-weight:700; color:var(--accent, var(--ink-3))}
+.card h2{font-family:Newsreader,Georgia,serif; font-weight:600; font-size:26px;
+  margin:6px 0 0; letter-spacing:-.01em}
+.card p{margin:8px 0 0; color:var(--ink-2); font-size:14.5px}
+.card .go{margin-top:14px; font-size:13.5px; font-weight:700; color:var(--accent, var(--ink))}
+.y7{--accent:var(--y7)} .y9{--accent:var(--y9)}
+.soon{opacity:.62; cursor:default}
+footer{margin-top:44px; padding-top:20px; border-top:1px solid var(--rule);
+  color:var(--ink-3); font-size:14px}
+code{font-size:13px}
 </style>
 </head>
 <body>
-<header>
- <div class="wrap">
-  <p class="eyebrow">Harlington School</p>
-  <h1>KS3 Religious Education</h1>
-  <p>Weekly pages for each year group — every lesson's deck, worksheets,
-     assessment and booklet in one place, dated to the school calendar.</p>
- </div>
-</header>
+<div class="wrap">
+  <p class="eyebrow">Harlington School · Religious Education</p>
+  <h1>Key Stage 3</h1>
+  <p class="lede">Every KS3 RE lesson of the year, in order, with its deck,
+    worksheets and papers one click away. Pick a year group.</p>
 
-<main class="wrap">
- <div class="grid">
+  <div class="grid">
+    <a class="card y7" href="year7.html">
+      <span class="yr">Year 7</span>
+      <h2>Week by week</h2>
+      <p>Beliefs, Hinduism, Buddhism, Sikhism, Heroes of Faith and Film and
+        Faith — 38 weeks, with a completion booklet for every unit.</p>
+      <div class="go">Open the Year 7 page →</div>
+    </a>
+    <a class="card y9" href="year9.html">
+      <span class="yr">Year 9</span>
+      <h2>Week by week</h2>
+      <p>Humanism and Christianity in society, the law, and forgiveness —
+        37 weeks, five unit booklets and the Student Companion.</p>
+      <div class="go">Open the Year 9 page →</div>
+    </a>
+    <div class="card soon">
+      <span class="yr">Year 8</span>
+      <h2>Coming next</h2>
+      <p>The Year 8 scheme has not been built into this site yet.</p>
+    </div>
+  </div>
 
-  <a class="card y8" href="year8.html">
-   <span class="yr">Year 8</span>
-   <h2>Year 8 Weekly</h2>
-   <p>Six units — Prejudice and Discrimination, Judaism, Christianity, Islam,
-      Humanism, Death and Afterlife — plus the End of Year exam.</p>
-   <p class="meta">38 weeks · 6 unit booklets · 2026&ndash;27<br>
-    <span class="go">Open Year 8 &rarr;</span></p>
-  </a>
-
-  <a class="card y9" href="year9.html">
-   <span class="yr">Year 9</span>
-   <h2>Year 9 Weekly</h2>
-   <p>Humanism and Society, Christianity and Society, Humanism and the Law,
-      Islam and the Law, Islam and Forgiveness, plus the End of Year test.</p>
-   <p class="meta">37 weeks · 5 unit booklets · Student Companion<br>
-    <span class="go">Open Year 9 &rarr;</span></p>
-  </a>
-
-  <span class="card soon">
-   <span class="yr">Year 7</span>
-   <h2>Year 7 Weekly</h2>
-   <p>Not built yet. The Year 7 library is on SharePoint and can be turned
-      into a weekly page the same way.</p>
-   <p class="meta">Coming later</p>
-  </span>
-
- </div>
-
- <footer>
-  <p>Links open in SharePoint. Decks and DIT lessons open in PowerPoint Online;
-     Publisher files download.</p>
- </footer>
-</main>
+  <footer>Resources live on the RE SharePoint under
+    <code>Year 11 / Philosophy / KS3 Ai / KS3</code>. You need to be signed in
+    to your school account for the links to open.</footer>
+</div>
 </body>
 </html>

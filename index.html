@@ -1,25 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Harlington School RE — KS3</title>
-<meta http-equiv="refresh" content="0; url=year9.html">
-<link rel="canonical" href="year9.html">
+<title>KS3 Religious Education — Harlington School</title>
 <style>
-  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#3E1163;
-       color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-       text-align:center;padding:24px}
-  a{color:#fff}
+:root{
+  --g900:#052e16; --g800:#14532d; --g700:#15803d; --g600:#16a34a;
+  --g100:#dcfce7; --g50:#f0fdf4;
+  --b700:#1d4ed8; --b100:#dbeafe;
+  --bg:#f6faf7; --card:#fff; --ink:#12211a; --mut:#5d7268; --line:#dde9e1;
+  --shadow:0 1px 2px rgba(5,46,22,.06),0 10px 30px -14px rgba(5,46,22,.22);
+}
+@media (prefers-color-scheme:dark){
+ :root{--bg:#0a1310;--card:#111f18;--ink:#e6f4ec;--mut:#8fa89b;--line:#20362b;
+  --g100:#14532d;--g50:#0f2318;--g700:#4ade80;--b100:#16233f;--b700:#93b4fd;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:940px;margin:0 auto;padding:0 22px 80px}
+header{background:linear-gradient(160deg,var(--g800),var(--g600));color:#fff;
+ padding:56px 0 46px}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.85;margin:0 0 8px}
+h1{margin:0 0 10px;font-size:clamp(28px,5vw,44px);letter-spacing:-.02em;line-height:1.08}
+header p{margin:0;opacity:.92;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+ gap:16px;margin-top:34px}
+.card{display:block;text-decoration:none;color:inherit;background:var(--card);
+ border:1px solid var(--line);border-radius:15px;padding:24px 22px 22px;
+ box-shadow:var(--shadow);transition:.16s}
+.card:hover{transform:translateY(-2px);border-color:var(--g600)}
+.card .yr{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+ font-weight:700;padding:3px 10px;border-radius:999px;display:inline-block;
+ background:var(--g100);color:var(--g700)}
+.card.y9 .yr{background:var(--b100);color:var(--b700)}
+.card h2{margin:13px 0 7px;font-size:21px;letter-spacing:-.01em}
+.card p{margin:0 0 14px;color:var(--mut);font-size:14.5px}
+.meta{font-size:12.5px;color:var(--mut);border-top:1px solid var(--line);
+ padding-top:11px;margin:0}
+.go{color:var(--g700);font-weight:600;font-size:14px}
+.card.y9 .go{color:var(--b700)}
+.soon{opacity:.6;pointer-events:none}
+.soon .yr{background:var(--line);color:var(--mut)}
+footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+ color:var(--mut);font-size:13px}
 </style>
 </head>
 <body>
-  <div>
-    <p style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.7;margin:0">
-      Harlington School · Religious Studies</p>
-    <h1 style="font-size:34px;margin:10px 0 6px">Key Stage 3</h1>
-    <p style="opacity:.85;margin:0 0 18px">Taking you to the Year 9 page…</p>
-    <p><a href="year9.html">Year 9, week by week</a></p>
-  </div>
+<header>
+ <div class="wrap">
+  <p class="eyebrow">Harlington School</p>
+  <h1>KS3 Religious Education</h1>
+  <p>Weekly pages for each year group — every lesson's deck, worksheets,
+     assessment and booklet in one place, dated to the school calendar.</p>
+ </div>
+</header>
+
+<main class="wrap">
+ <div class="grid">
+
+  <a class="card y8" href="year8.html">
+   <span class="yr">Year 8</span>
+   <h2>Year 8 Weekly</h2>
+   <p>Six units — Prejudice and Discrimination, Judaism, Christianity, Islam,
+      Humanism, Death and Afterlife — plus the End of Year exam.</p>
+   <p class="meta">38 weeks · 6 unit booklets · 2026&ndash;27<br>
+    <span class="go">Open Year 8 &rarr;</span></p>
+  </a>
+
+  <a class="card y9" href="year9.html">
+   <span class="yr">Year 9</span>
+   <h2>Year 9 Weekly</h2>
+   <p>Humanism and Society, Christianity and Society, Humanism and the Law,
+      Islam and the Law, Islam and Forgiveness, plus the End of Year test.</p>
+   <p class="meta">37 weeks · 5 unit booklets · Student Companion<br>
+    <span class="go">Open Year 9 &rarr;</span></p>
+  </a>
+
+  <span class="card soon">
+   <span class="yr">Year 7</span>
+   <h2>Year 7 Weekly</h2>
+   <p>Not built yet. The Year 7 library is on SharePoint and can be turned
+      into a weekly page the same way.</p>
+   <p class="meta">Coming later</p>
+  </span>
+
+ </div>
+
+ <footer>
+  <p>Links open in SharePoint. Decks and DIT lessons open in PowerPoint Online;
+     Publisher files download.</p>
+ </footer>
+</main>
 </body>
 </html>

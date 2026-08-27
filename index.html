@@ -10,19 +10,19 @@
 <style>
 :root{
   --paper:#FDFAF7; --card:#FFFFFF; --ink:#1F1611; --ink-2:#57463B; --ink-3:#867467;
-  --rule:#EBDFD5; --y7:#C2410C; --y9:#3E1163;
+  --rule:#EBDFD5; --y7:#C2410C; --y8:#14532D; --y9:#3E1163;
   --shadow:0 1px 2px rgba(31,22,17,.05), 0 8px 24px -16px rgba(31,22,17,.28);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --paper:#171210; --card:#221A16; --ink:#F4ECE5; --ink-2:#C6B5A8; --ink-3:#96857A;
-    --rule:#3A2C23; --y7:#FDA96A; --y9:#C6A4E2;
+    --rule:#3A2C23; --y7:#FDA96A; --y8:#4ADE80; --y9:#C6A4E2;
     --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -18px rgba(0,0,0,.8);
   }
 }
 :root[data-theme="dark"]{
   --paper:#171210; --card:#221A16; --ink:#F4ECE5; --ink-2:#C6B5A8; --ink-3:#96857A;
-  --rule:#3A2C23; --y7:#FDA96A; --y9:#C6A4E2;
+  --rule:#3A2C23; --y7:#FDA96A; --y8:#4ADE80; --y9:#C6A4E2;
   --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -18px rgba(0,0,0,.8);
 }
 *{box-sizing:border-box}
@@ -47,7 +47,7 @@ h1{font-family:Newsreader,Georgia,serif; font-weight:600; letter-spacing:-.01em;
   margin:6px 0 0; letter-spacing:-.01em}
 .card p{margin:8px 0 0; color:var(--ink-2); font-size:14.5px}
 .card .go{margin-top:14px; font-size:13.5px; font-weight:700; color:var(--accent, var(--ink))}
-.y7{--accent:var(--y7)} .y9{--accent:var(--y9)}
+.y7{--accent:var(--y7)} .y8{--accent:var(--y8)} .y9{--accent:var(--y9)}
 .soon{opacity:.62; cursor:default}
 footer{margin-top:44px; padding-top:20px; border-top:1px solid var(--rule);
   color:var(--ink-3); font-size:14px}
@@ -59,7 +59,8 @@ code{font-size:13px}
   <p class="eyebrow">Harlington School · Religious Education</p>
   <h1>Key Stage 3</h1>
   <p class="lede">Every KS3 RE lesson of the year, in order, with its deck,
-    worksheets and papers one click away. Pick a year group.</p>
+    worksheets, assessments and booklets one click away, dated to the school
+    calendar. Pick a year group.</p>
 
   <div class="grid">
     <a class="card y7" href="year7.html">
@@ -69,6 +70,13 @@ code{font-size:13px}
         Faith — 38 weeks, with a completion booklet for every unit.</p>
       <div class="go">Open the Year 7 page →</div>
     </a>
+    <a class="card y8" href="year8.html">
+      <span class="yr">Year 8</span>
+      <h2>Week by week</h2>
+      <p>Prejudice and Discrimination, Judaism, Christianity, Islam, Humanism
+        and Death and the Afterlife, plus the End of Year exam.</p>
+      <div class="go">Open the Year 8 page →</div>
+    </a>
     <a class="card y9" href="year9.html">
       <span class="yr">Year 9</span>
       <h2>Week by week</h2>
@@ -76,11 +84,6 @@ code{font-size:13px}
         37 weeks, five unit booklets and the Student Companion.</p>
       <div class="go">Open the Year 9 page →</div>
     </a>
-    <div class="card soon">
-      <span class="yr">Year 8</span>
-      <h2>Coming next</h2>
-      <p>The Year 8 scheme has not been built into this site yet.</p>
-    </div>
   </div>
 
   <footer>Resources live on the RE SharePoint under

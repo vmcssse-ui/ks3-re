@@ -87,7 +87,13 @@ def p(content="", line=240, before=0, after=0, bdr="", ind=None, jc=None, tabs=N
     pr += "</w:pPr>"
     return "<w:p>%s%s</w:p>" % (pr, content)
 
-def drawing(rid, emu, uid):
+def drawing(rid, emu, uid, ratio=1.0):
+    """Inline image `emu` wide; ratio is height/width (1.0 for the square icons)."""
+    cy = int(emu * ratio)
+    return _drawing_xml(rid, emu, cy, uid)
+
+def _drawing_xml(rid, cx, cy, uid):
+    emu = cx
     return ('<w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0">'
             '<wp:extent cx="%d" cy="%d"/><wp:docPr id="%d" name="icon"/><a:graphic>'
             '<a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">'
@@ -96,7 +102,7 @@ def drawing(rid, emu, uid):
             '<pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="%d" cy="%d"/></a:xfrm>'
             '<pic:prstGeom prst="rect"><a:avLst/></pic:prstGeom></pic:spPr></pic:pic>'
             '</a:graphicData></a:graphic></wp:inline></w:drawing></w:r>'
-            % (emu, emu, uid, uid + 1, rid, emu, emu)).replace("pic:prstGeom", "a:prstGeom")
+            % (cx, cy, uid, uid + 1, rid, cx, cy)).replace("pic:prstGeom", "a:prstGeom")
 
 def tbl(rows, borders=True, width=CONTENT_W):
     b = "single" if borders else "none"

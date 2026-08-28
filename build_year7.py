@@ -467,6 +467,8 @@ SUMMARIES = {
 }
 
 LEARNING_JOURNEY = "RESOURCES/YEAR 7 LEARNING JOURNEY.docx"
+JOURNEY_2PP = "RESOURCES/Y7_Learning_Journey.docx"
+JOURNEY_PDF = "RESOURCES/Y7_Learning_Journey.pdf"
 EXPECTATIONS = "RESOURCES/EXPECTATIONS PPT.pptx"
 
 KINDS = {
@@ -818,7 +820,9 @@ def render():
        one click away. Decks open in PowerPoint Online — you need to be signed
        in to your school account.</p>
     <div class="top">
-      {btn("Learning Journey", sp(LEARNING_JOURNEY), "▤")}
+      {btn("Learning Journey — stick-in (Word)", sp(JOURNEY_2PP), "▤")}
+      {btn("Learning Journey — stick-in (PDF)", sp(JOURNEY_PDF), "✎")}
+      {btn("Learning Journey — department sheet", sp(LEARNING_JOURNEY), "▤")}
       {btn("Expectations deck", sp(EXPECTATIONS), "▶")}
       {btn("All Year 7 files", sp("", folder=True), "❐")}
     </div>
@@ -855,6 +859,9 @@ def render():
       editing it by hand.</p>
     <p><b>Unit booklets</b> sit in each unit's own RESOURCES folder. There is no
       Student Companion at Year 7 — the booklets carry the year on their own.</p>
+    <p><b>The stick-in Learning Journey</b> is two A4 sides: the year ahead with a
+      red/amber/green box per unit, and the department's assessment record.
+      Print it double-sided and glue it inside the front cover in week 1.</p>
     <p><b>Gaps in the library.</b> Unit 2 has no introduction-to-Hinduism lesson,
       so the unit opens on Diwali; Unit 5 and Unit 6 have no assessment folder.</p>
   </footer>

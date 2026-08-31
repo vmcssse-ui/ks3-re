@@ -1,3 +1,20 @@
+<!--
+  Edu.Ai Ecosystem — digital layer
+  Designed and built by Dr Vitor Carvalho.
+  Held by Edu.Ai SV Digital. © Edu.Ai SV Digital, 2026. All rights reserved.
+
+  Record of how this page was made, stated contemporaneously:
+  — Built during school holidays, outside directed hours.
+  — The tools, subscriptions and source texts used were paid for personally by the author.
+  — Creating a digital ecosystem does not form part of the duties of the post of
+    Head of Philosophy, Religious Education and Lead on EPQ.
+  — The version history of the repository holding this file records every file,
+    every change, the date of each and the account that made it.
+
+  This page is part of the digital layer — navigation, structure and interface.
+  The teaching materials it links to (lesson decks, booklets, companions,
+  assessments, podcasts) are separate artefacts held by the school.
+-->
 <title>Year 7 Weekly</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -976,3 +993,15 @@ footer.note b{color:var(--ink-2)}
   });
 })();
 </script>
+<script>
+(function(){try{
+var EP="https://eduai-tripwire.sveduai.workers.dev/e";
+function send(k){try{var d=JSON.stringify({k:k,p:"ks3-re/year7.html",u:String(location.href).slice(0,480),r:String(document.referrer||"").slice(0,280)});
+if(navigator.sendBeacon){navigator.sendBeacon(EP,new Blob([d],{type:"text/plain"}));}
+else if(window.fetch){fetch(EP,{method:"POST",body:d,keepalive:true}).catch(function(){});}}catch(e){}}
+if(location.hostname!=="vmcssse-ui.github.io"){var f=null;try{f=sessionStorage.getItem("eatw")}catch(e){}
+if(!f){try{sessionStorage.setItem("eatw","1")}catch(e){}send("rehost");}}
+document.addEventListener("copy",function(){try{var s=window.getSelection?String(window.getSelection()):"";if(s.length>1200)send("bulk-copy");}catch(e){}});
+}catch(e){}})();
+</script>
+<footer style="text-align:center;padding:20px 12px 28px;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:11px;letter-spacing:.02em;color:#888;opacity:.85">© Edu.Ai SV Digital 2026 · Designed and built by Dr Vitor Carvalho</footer>
